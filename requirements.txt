@@ -1,0 +1,9 @@
+Requirements file describes how to recreate the environment needed to properly use the package.
+
+# Needed packages/versions
+numpy
+pandas
+itertools
+string
+csv
+re
