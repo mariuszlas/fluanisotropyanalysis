@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 import pickle
-from flu_ani_analysis import flu_ani_analysis as fa
+from flu_ani_analysis.flu_ani_analysis_module import FA as fa
 
 # define well plate dimensions
 plate_dimensions = {'96':(8, 12), '384':(16, 24)}
@@ -47,7 +47,7 @@ def get_testing_data():
         with open(pkl_file, 'rb') as file:   # load the list with expexcted data frames from .pkl file
             expected_list = pickle.load(file)
 
-        actual_output = fa.FA.read_in_envision(csv_file = csv_file, data_type=data_type, size=size)   # execute the tested function
+        actual_output = fa.read_in_envision(csv_file = csv_file, data_type=data_type, size=size)   # execute the tested function
         actual_g = actual_output.g_factor
         actual_list = []
 
@@ -153,14 +153,20 @@ def test_list_C(get_testing_data):
         
 @pytest.mark.raises()
 def test_plate_size_error():
-    test_object = fa.FA.read_in_envision(csv_file=plate_1, data_type='plate', size=100)
+    """Test for error raised if size is not 384 or 96."""
+    
+    test_object = fa.read_in_envision(csv_file=plate_1, data_type='plate', size=100)
 
 
 @pytest.mark.raises()
 def test_incorrect_data_type_list():
-    test_object = fa.FA.read_in_envision(csv_file=plate_1, data_type='list', size=384)
+    """Test for error if data_type = list but raw data file is in plate format."""
+    
+    test_object = fa.read_in_envision(csv_file=plate_1, data_type='list', size=384)
     
     
 @pytest.mark.raises()
 def test_incorrect_data_type_plate():
-    test_object = fa.FA.read_in_envision(csv_file=list_A, data_type='plate', size=384)
+     """Test for error if data_type = plate but raw data file is in list format."""
+        
+    test_object = fa.read_in_envision(csv_file=list_A, data_type='plate', size=384)
