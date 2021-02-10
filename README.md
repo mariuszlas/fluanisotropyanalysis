@@ -1,4 +1,4 @@
-#Fluorescence Anisotropy Analysis
+# Fluorescence Anisotropy Analysis
 
-##Documentation
+## Documentation
 [flu_ani](https://mariuszlas.github.io/Fluorescence-Anisotropy-Analysis/)
