@@ -32,15 +32,21 @@ list_B_repeat_end_test = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-
 list_B_repeat_96_test = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\example outputs\\list_B_repeat_96_test.pkl"
 list_C_test = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\example outputs\\list_C_test.pkl"
 
+inval_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\example outputs\\test_inval_platemap.csv"
 
-HsHis6_PEX5C_vs_HsPEX5C = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\Hs-His6-PEX5C vs HsPEX5C.csv"
-HsPEX5C_Y467C_vs_AtPEX5C_WT = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\HsPEX5C Y467C vs AtPEX5C WT.csv"
-F606C_vs_AtPEX5C_WT_1_hour = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\F606C vs AtPEX5C WT 1 hour.csv"
+
+HsHis6_PEX5C_vs_HsPEX5C_p_s_corrected = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\example outputs\\HsHis6_PEX5C_vs_HsPEX5C_p_s_corrected.pkl"
+HsHis6_PEX5C_vs_HsPEX5C_calc_r_I = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\example outputs\\HsHis6_PEX5C_vs_HsPEX5C_calc_r_I_out.pkl"
+
+
+HsHis6_PEX5C_vs_HsPEX5C = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\real data\\Hs-His6-PEX5C vs HsPEX5C.csv"
+HsPEX5C_Y467C_vs_AtPEX5C_WT = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\real data\\HsPEX5C Y467C vs AtPEX5C WT.csv"
+F606C_vs_AtPEX5C_WT_1_hour = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\real data\\F606C vs AtPEX5C WT 1 hour.csv"
 
 plate_map_file = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\plate_map.csv"
-Hs_His6_PEX5C_vs_HsPEX5C_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\Hs-His6-PEX5C vs HsPEX5C platemap.csv"
-HsPEX6C_Y467C_vs_AtPEX5C_WT_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\HsPEX6C Y467C vs AtPEX5C WT platemap.csv"
-F606C_vs_AtPEX5C_WT_1_hour_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\F606C vs AtPEX5C WT 1 hour platemap.csv"
+Hs_His6_PEX5C_vs_HsPEX5C_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\real data\\Hs-His6-PEX5C vs HsPEX5C platemap.csv"
+HsPEX5C_Y467C_vs_AtPEX5C_WT_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\real data\\HsPEX5C Y467C vs AtPEX5C WT platemap.csv"
+F606C_vs_AtPEX5C_WT_1_hour_platemap = "C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\Test data\\real data\\F606C vs AtPEX5C WT 1 hour platemap.csv"
 
 # expected values of g-factor
 expected_g = {'plate_1': 1.15, 'plate_1_repeat': 1.15, 'plate_2_1': 1.15, 'plate_2_repeat': 1.15, 'plate_2_repeat_96': 1.0, 
@@ -187,7 +193,61 @@ def test_incorrect_data_type():
         
     test_object = fa.read_in_envision(data_csv=list_A, platemap_csv=plate_map_file, data_type='typo', size=384)
     
+
+def test_invalidate():
+    """Test whether the invalidate function turns the value of the 'Valid' column to False in a given set of well ids, columns and rows."""
     
+    example_platemap = pd.read_csv(inval_platemap, index_col=[0])   # read in an example platemap with invalidated well ids, rows and columns
+    test_object = fa.read_in_envision(data_csv=plate_2_repeat, platemap_csv=plate_map_file, data_type='plate', size=384)   # read in actual data and plate map
+    test_object.invalidate(wells=['A2', 'B3', 'E4'], rows=['C', 'G'], columns=[7,8,12,20])   # invalidate specific well ids, rows and columns
+    pd.testing.assert_frame_equal(test_object.plate_map, example_platemap, check_dtype=False)   # compare the two dfs without checking the data types because the example df was not read in using the read_in_envision function
+    
+@pytest.mark.raises()
+def test_invalidate_error():
+    """Test whether the 'invalidate' function raises an error if no arguments are passed."""
+    
+    test_object = fa.read_in_envision(data_csv=plate_2_repeat, platemap_csv=plate_map_file, data_type='plate', size=384)
+    test_object.invalidate()   # execute the invalidate function without specifying well ids, rows or columns to be invalidated
+    
+
+def test_background_correct():
+    """Tests whether the background correction function performs correct calculations to get the background corrected values of p and s channel signal"""
+    
+    with open(HsHis6_PEX5C_vs_HsPEX5C_p_s_corrected, 'rb') as file:   # load the list with expexcted data frames from .pkl file
+        expected_list = pickle.load(file)
+
+    test_object = fa.read_in_envision(data_csv=HsHis6_PEX5C_vs_HsPEX5C, platemap_csv=Hs_His6_PEX5C_vs_HsPEX5C_platemap, data_type='plate', size=384)   # execute the tested function
+    test_object.background_correct()
+    
+    # assert the p_corrected and s_corrected data frames are the same as the reference data frames 
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['p_corrected'], expected_list[0], atol=1E-6)
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['s_corrected'], expected_list[1], atol=1E-6)
+    
+    
+def test_calculate_r_i():
+    """Tests whether the calculate_r_I function performs correct calculations to get the raw and background corrected values of intensity and anisotropy"""
+    
+    with open(HsHis6_PEX5C_vs_HsPEX5C_calc_r_I, 'rb') as file:   # load the list with expexcted data frames from .pkl file
+        expected_list = pickle.load(file)
+    
+    test_object = fa.read_in_envision(data_csv=HsHis6_PEX5C_vs_HsPEX5C, platemap_csv=Hs_His6_PEX5C_vs_HsPEX5C_platemap, data_type='plate', size=384)
+    test_object.background_correct()
+    test_object.calculate_r_i(correct=True, plot_i=False, thr=50)
+    
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['i_raw'], expected_list[0], atol=1E-6)
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['r_raw'], expected_list[1], atol=1E-6)
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['i_corrected'], expected_list[2], atol=1E-6)
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['r_corrected'], expected_list[3], atol=1E-6)
+
+
+@pytest.mark.raises()
+def test_no_backg_subt():
+    """Test for an error raised if the calculate_r_i function is called with the correct parameter as True prior to the background subtraction"""
+    
+    test_object = fa.read_in_envision(data_csv=HsHis6_PEX5C_vs_HsPEX5C, platemap_csv=Hs_His6_PEX5C_vs_HsPEX5C_platemap, data_type='plate', size=384)
+    test_object.calculate_r_i(correct=True, plot_i=False, thr=80)
+
+"""
 def test_visualise():
     
     actual_img = 'C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\result_images\\actual_img.png'
@@ -201,4 +261,4 @@ def test_visualise():
     if os.path.isfile(actual_img):
         os.remove(actual_img)
     
-    assert result == None
+    assert result == None"""
