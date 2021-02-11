@@ -238,7 +238,8 @@ def test_calculate_r_i():
     pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['r_raw'], expected_list[1], atol=1E-6)
     pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['i_corrected'], expected_list[2], atol=1E-6)
     pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['r_corrected'], expected_list[3], atol=1E-6)
-
+    pd.testing.assert_frame_equal(test_object.data_dict['repeat_1']['data']['i_percent'], expected_list[4], atol=1E-6)
+    
 
 @pytest.mark.raises()
 def test_no_backg_subt():
