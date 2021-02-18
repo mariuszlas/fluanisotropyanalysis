@@ -1,4 +1,5 @@
 # Fluorescence Anisotropy Analysis
 
+
 ## Documentation
-[flu_ani](https://mariuszlas.github.io/Fluorescence-Anisotropy-Analysis/)
+The documentation of the flu_ani module can be accessed [here](https://mariuszlas.github.io/Fluorescence-Anisotropy-Analysis/)
