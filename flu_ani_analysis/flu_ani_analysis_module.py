@@ -26,7 +26,7 @@ class DataTypeError(Exception):
 # define well plate dimensions
 plate_dim = {96:(8, 12), 384:(16, 24)}
 
-# define header names
+# define header names for platemapping module
 pm.header_names = {'Well ID': {'dtype':str, 'long':True, 'short_row': False, 'short_col':False},
                 'Type': {'dtype':str, 'long':True, 'short_row': True, 'short_col':True},
                 'Contents': {'dtype':str, 'long':True, 'short_row': True, 'short_col':True},
@@ -66,10 +66,10 @@ class FA:
         new = pd.concat(frames, axis=1)   # join all p and s data frames into one df to run some stats
         nan = new.size - new.describe().loc['count'].sum()   # find number of 'nan' cells
         
-        # create a data frame to sotre the final fitting params
+        # create a data frame to store the final fitting params
         p_names = self.plate_map['Protein Name'].dropna().unique()   # get all protein names
         t_names = self.plate_map['Tracer Name'].dropna().unique()   # get all trcaer names 
-        final_fit = pd.DataFrame(index=pd.MultiIndex.from_product([p_names, t_names]), columns=['rmin', 'rmin error', 'rmax', 'rmax error', 'lambda', 'Kd'])   # create the final fit df as a class variable
+        final_fit = pd.DataFrame(index=pd.MultiIndex.from_product([p_names, t_names]), columns=['rmin', 'rmin error', 'rmax', 'rmax error', 'lambda', 'Kd', 'Kd error'])   # create the final fit df as a class variable
         final_fit["lambda"] = 1   # set the default lambda value as 1
         FA.final_fit = final_fit   # add the final_fit df as a class vriable
             
@@ -120,7 +120,6 @@ class FA:
             raise DataTypeError(f"'{data_type}' is not one of the two valid data types: plate or list.")
     
 
-                
     def _read_in_plate(csv_file, size):
         """Reads the raw data file and finds the information needed to extract data. Passes those parameters to pre_process_plate function and executes it.
         Returns a tuple of two elemnts: dictionary of data frames and g-factor.
@@ -393,13 +392,11 @@ class FA:
         
         for key, value in self.data_dict.items(): 
             metadata, data = value.values()   
-            ##### raise error if background correction has already been performed
-            #if 'p_corrected' or 's_corrected' in data:
-                #raise AttributeError ('The background correction has already been performed.')
 
             # create joined dfs of platemap and p or s
             p_df = self.plate_map.join(data['p'])  
             s_df = self.plate_map.join(data['s'])
+            
             # calculate p and s corrected and add them to data dictionary
             self.data_dict[key]['data']['p_corrected'] = FA._backg_correct(p_df, 'p_corrected')
             self.data_dict[key]['data']['s_corrected'] = FA._backg_correct(s_df, 's_corrected')
@@ -467,7 +464,7 @@ class FA:
         print('The fluorescence intensity and anisotropy have been successfully calculated!\n')
         
         if plot_i:   # plot the percentage intensity against the well ids for all repeats
-            FA._plot_i_percent(self.data_dict)
+            FA._plot_i_percent(self.data_dict, self.plate_map)
 
     def _calc_r_I(p, s, g, col_suffix):
         """Calculates either anisotropy or intensity and labels the resulting dfs according to the parameters passed
@@ -506,10 +503,9 @@ class FA:
         percent = (ir_rn - ic)/ir_rn * 100   
         percent.rename(columns={'i_corrected':'i_percent'}, inplace=True)
         joined = platemap.join(percent)   # join the percent data to platemap
-        subset = joined[(joined['Type'] != 'blank') & (joined['Type'] != 'empty')]   # subset only the non-blank and non-empty columns
-        return subset
+        return joined[['i_percent']]
         
-    def _plot_i_percent(data_d):
+    def _plot_i_percent(data_d, platemap):
         """Plot the percentage intensity against the well ids with a horizotanl threshold bar and preint the list of wells above the threshold for all repeats
         
         :param data_d: Dictionary with data for all repeats
@@ -517,11 +513,12 @@ class FA:
         
         st = ''   # empty string to which lists of wells to be printed are appended after checking data from each repeat
         fig = plt.figure(figsize=(8*int((len(data_d) + 2 - abs(len(data_d) - 2))/2), 4*int( math.ceil((len(data_d))/2)) ), tight_layout=True)   # plot a figure with variable size depending on the number subplots (i.e. repeats)
-        fig.suptitle('The percentage intensity of a non-blank well was plotted for all repeats', fontsize=14)   # add the figure title
+        #fig.suptitle('The percentage intensity of a non-blank well was plotted for all repeats', fontsize=14)   # add the figure title
         
         for key, value in data_d.items():   # iterate over all repeats
             metadata, data = value.values()
-            df_per = data['i_percent']
+            df = platemap.join(data['i_percent'])
+            df_per = df[(df['Type'] != 'blank') & (df['Type'] != 'empty')]   # subset only the non-blank and non-empty columns
             
             plt.subplot(int( math.ceil((len(data_d))/2) ), int( (len(data_d) + 2 - abs(len(data_d) - 2))/2 ), int(key[-1]))
             plt.bar(df_per.index, df_per['i_percent'])   # plot a bar plot with intensity percentage data 
@@ -549,9 +546,9 @@ class FA:
             
     def plot_i_percent(self):
         """This function only displays the results calculated by the calculate_r_i function and does not recalculate it."""
-        return FA._plot_i_percent(self.data_dict)
+        return FA._plot_i_percent(self.data_dict, self.plate_map)
     
-    ##### Functions for data fitting #####
+    
     def calc_data_to_fit(self):
         """Calculates data required for fitting a curve to the plot of anisotropy (or intensity) against protein concentration.
         The following data is calcualted for both intensity and anisotropy for all repeats: mean, standard devition and standard error.
@@ -594,131 +591,6 @@ class FA:
         split = dict(tuple(tosplit.groupby(['Protein Name', 'Tracer Name'])))   # split df based on multiindex so that a new df is created for each unique combination of protein and tracer
         
         return split
-
-    
-    def _r_func(pc, rmin, rmax, EC50, hill):
-        """Function for fitting a curve to the plot of anisotropy (or intensity) against protein concentration, 
-        where pc is protein concentration, rmin is the lower asymptote, rmax is the upper asymptote, 
-        EC50 is midpoint of transition (pc at point of inflection), hill is the slope
-        """
-        return (rmin - rmax) / (1 + (pc/EC50)**hill) + rmax
-    
-    def _init_params(df):
-        """Estimates initial parameters for the r_func that are passed to the curve fitting function
-        
-        :param df: Data frame containing mean values of anisotropy or intensity
-        :type df: pandas df
-        :return: List with estiamted parameters of min, max and EC50, hill is assumed to be 1
-        :rtype: list
-        """
-        rmin = df['mean'].min()
-        rmax = df['mean'].max()
-        mid = (rmax + rmin) / 2
-        mid_idx = df['mean'].sub(mid).abs().argmin()
-        EC50 = df.iloc[mid_idx]['Protein Concentration']
-        init_param = [rmin, rmax, EC50, 1]
-        return init_param
-    
-    def _logistic_fit(df, sig=None, **kwargs):
-        """Fits a curve to the plot of anisotropy (or intensity) against protein concentration
-        
-        :param df: Data frame containing mean values of anisotropy (or intensity)
-        :type df: pandas df
-        :param sig: A string specifying the error data passed to the SciPy curve_fit function, either 'std' or 'sem', default None
-        :type sig: str
-        :param **kwargs: Keyword arguments that can be passed into the scipy curve_fit function
-        :return: A list of fitting parameters along with their error in proper order so that it can be added to the fitting params data frame
-        :rtype: list
-        """
-        drop = df[df['Protein Concentration'] != 0].dropna()   # exclude the protein concentration = 0 point and any NaNs from data fitting
-        
-        if sig != None:   
-            sig = drop[sig]   # take the column with std or sem error data
-            
-        popt, pcov = curve_fit(FA._r_func, drop['Protein Concentration'], drop['mean'], sigma=sig, **kwargs)
-        perr = np.sqrt(np.diag(pcov))   # calculate the error of the fitting params
-        all_params = np.insert(popt, obj=[1,2,3,4], values=perr)   # insert the errors after the respective fitting parameter value
-        return list(all_params) 
-    
-    
-    def logistic_fit_all(self, sig=None, **kwargs):
-        """Fits a logistic curve to the plot of anisotropy (or intensity) against protein concentration for all repeats.
-        Returns the fitting parameters with associated errors for each repeat that are stored in the fitting paramters data frame in data dict.
-        The calc_data_to_fit function must be executed prior to data fitting.
-        
-        :param sig: A string specifying the error data passed to the SciPy curve_fit function, either 'std' or 'sem', default None
-        :type sig: str
-        :params **kwargs: Keyword arguments that can be passed to the scipy curve_fit function
-        """
-        errors = []   # list for storing the details of errors due to failed fitting
-        
-        for rep, value in self.data_dict.items():   # iterate over all repeats
-            metadata, data = value.values()
-            keys = list(data['r_mean'].keys())   # create a list of unique protein-tracer pairs
-            
-            for key in keys:   # iterate over all protein-tracer pairs
-                try:   # try fitting the curve to anisotropy data 
-                    r_mean = data['r_mean'][key]   # extract the df with mean anisotropy for a given protein-tracer pair
-                    params_r = FA._logistic_fit(r_mean, p0=FA._init_params(r_mean), sig=sig, **kwargs)   # fit the data to logistic curve using the initial parameteers
-                    data['fit_params'].loc[key, ['rmin','rmin error','rmax', 'rmax error', 'r_EC50', 'r_EC50 error', 'r_hill', 'r_hill error']] = params_r   # add the fitting parameters to the respective df
-                except RuntimeError as e:   # if fitting fails, added details about the error to the errors list and proceed intensity data fitting
-                    r_errorinfo = (rep, 'r', key, e)
-                    errors.append(r_errorinfo)
-                
-                try:   # try fitting the curve to intensity data
-                    i_mean = data['i_mean'][key]   # extract the df with i mean for a given protein-tracer pair
-                    params_i = FA._logistic_fit(i_mean, p0=FA._init_params(i_mean), sig=sig, **kwargs)
-                    data['fit_params'].loc[key, ['Ifree', 'Ifree error', 'Ibound','Ibound error', 'I_EC50', 'I_EC50 error', 'I_hill', 'I_hill error']] = params_i
-                except RuntimeError as e:   # if fitting fails, added details about the error to the errors list and proceed to to the next protein-tracer pair
-                    i_errorinfo = (rep, 'i', key, e)
-                    errors.append(i_errorinfo)
-        
-        if errors != []:   # raise a warning if fitting failed for any protein-tracer pair
-            warnings.warn(f"The curve fitting failed in the following cases:\n\n{errors}\n\nUse the 'logistic_fit_pair' function to adjust the initial guess for the parameters or pass other arguments to the fitting function.", RuntimeWarning)
-            
-    def logistic_fit_pair(self, rep, var, pair, sig=None, **kwargs):
-        """Fits a logistic curve to the plot of anisotropy (or intensity) against protein concentration only for the specified protein-tracer pair
-        Returns the fitting parameters with associated errors, the fitting parameters already present for this protein-tracer pair will be overwritten.
-        
-        :param rep: Repeat number, e.g. 'repeat_1'
-        :type rep: str
-        :param var: A one character string representing anisotropy ('r') or intensity ('I')
-        :type var: str
-        :param pair: A tuple of two strings representing the protein and tracer pair for which the fitting is to be performed, e.g. ('proteinA', 'tarcerB')
-        :type pair: tuple
-        :param sig: A string specifying the error data passed to the SciPy curve_fit function, either 'std' or 'sem', default None
-        :type sig: str
-        :param **kwargs: Keyword arguments that can be passed to the scipy curve_fit function
-        """
-        df = self.data_dict[rep]['data'][f'{var.lower()}_mean'][pair]   # extract the df with data to be fitted
-        if 'p0' not in kwargs:   # if the user did not pass their intial parameter guess, use the ones from init_params function
-            par = FA._logistic_fit(df, p0=FA._init_params(df), sig=sig, **kwargs)
-        else:
-            par = FA._logistic_fit(df, sig=sig, **kwargs)
-        
-        if var == 'r':   # if fitting done for anisotropy, add the resulting params to to fit_params df
-            self.data_dict[rep]['data']['fit_params'].loc[pair, ['rmin','rmin error','rmax', 'rmax error', 'r_EC50', 'r_EC50 error', 'r_hill', 'r_hill error']] = par
-        if var.lower() == 'i':
-            self.data_dict[rep]['data']['fit_params'].loc[pair, ['Ifree', 'Ifree error', 'Ibound','Ibound error', 'I_EC50', 'I_EC50 error', 'I_hill', 'I_hill error']] = par
-      
-        
-    def set_fitparams(self, rep, var, pair, **kwargs):
-        """Allows to set a value of any parameter in the fitting params data frame for specific protein-tracer pair and repeat
-        
-        :param rep: Repeat number, e.g. 'repeat_1'
-        :type rep: str
-        :param var: A one character string representing anisotropy ('r') or intensity ('i')
-        :type var: str
-        :param pair: A tuple of two strings representing the protein and tracer names for which the parameters will be changed, e.g. ('proteinA', 'tarcerB')
-        :type pair: tuple
-        :param **kwargs: Keyword arguments represeting the parameter and its value, e.g. lambda=1.5, rmin=0.30
-        """
-        if var in ['r', 'I'] and f'{var}_params' not in self.data_dict[rep]['data']:   # check whether fitting parameters data frame exists
-            raise AttributeError('The table with fitting parameters has not been created. Run the calc_data_to_fit function first.')
-            
-        for key, value in kwargs.items():   # iterate over the kwargs dictionary
-            self.data_dict[rep]['data']['fit_params'].loc[pair, key] = value   # overwrite the parameters in fitting params df with all params passed as keyword arguments
-            
             
     def calc_lambda(self, approve=True):
         """Calculates lambda value for each protein-tracer pair for all repeats. 
@@ -808,21 +680,235 @@ class FA:
             print('Selected values were saved.')
         button.on_click(btn_eventhandler)   #link the button event handler function with actual clicking of the button using 'on_click' function
         
+    
+    def _amount_bound(df, platemap, final_fit):
+
+        join_pm = platemap.join(df)   # join df with corrected anisotropy to the platemap df
+        subset = join_pm[(join_pm['Type'] != 'blank') & (join_pm['Type'] != 'empty')]   # take only non-blank and non-empty wells
+
+        re_idx = subset.set_index(pd.MultiIndex.from_frame(subset[['Protein Name', 'Tracer Name']])).rename_axis([None,None])   # replace the index with multiindex (protein-tracer name) and remove its names
+        join_ff = re_idx.join(final_fit)   # join the final fitting parameters to the anisotropy df on multiindex (protein-tracer)
+
+        # calcualte the amount bound (all parameters needed are already in the data frame)
+        join_ff['amount'] = (((((join_ff["lambda"] * (join_ff['rmax']-join_ff['r_corrected'])) / (join_ff['r_corrected'] - join_ff['rmin']))) +1) **(-1)) * join_ff['Tracer Concentration']   
+
+        # remove the redundant columns and set dtype of 'amount' column as float to avoid pandas DataError
+        drop = join_ff.drop(['r_corrected','Valid', 'rmin', 'rmax', 'rmin error', 'rmax error', "lambda", 'Kd'], axis=1).astype({'amount': 'float64'}) 
         
-    def _plot(data_df, params_df, pt_pair, fig, axs, err, var, rep, export=True, display=True, labels=True, dpi=250):
+        group = drop.groupby(['Protein Concentration', 'Tracer Concentration', 'Protein Name', 'Tracer Name'])
+        mean = group.mean()   
+        std = group.std()     
+        sem = group.sem()   
+        stdr = std.rename(columns={std.columns[-1]: 'std'})  # rename column to 'std' 
+        semr = sem.rename(columns={sem.columns[-1]: 'sem'})  # rename column to 'sem'
+        
+        merge = pd.concat([mean, stdr, semr], axis=1)   # merge the amount, std and sem data frames into one df
+        tosplit = merge.reset_index()   # remove multiindex
+        split = dict(tuple(tosplit.groupby(['Protein Name', 'Tracer Name'])))   # dictionary a data frame for each protein-tracer pair
+        return split
+            
+    def calc_amountbound(self):
+        """Calcualtes the fraction of tracer bound to the protein using the following formula: 
+        L_B =( ( (λ*(rmin-rmax⁡)) / (r-rmin ) +1) )^(-1) * L_T
+        Where L_B is the concentration of fluorescent tracer bound to the target protein, 
+        L_T is the total tracer concertation,
+        """
+        l = list(FA.final_fit[FA.final_fit['rmin'].isna()].index)   # list of indexes for which rmin and rmax are not defined
+        
+        if l != []: 
+            raise DataError(f"The 'rmin' and 'rmax' values are not defined for the following protein-tracer pairs: {l}.\nUse 'calc_lambda' function or 'set_fitparams' to choose 'rmin' and 'rmax' values.")
+                            
+        for key, value in self.data_dict.items():
+            metadata, data = value.values()
+            data['amount_bound'] = FA._amount_bound(data['r_corrected'], self.plate_map, FA.final_fit)   # create dictionary 'r_mean' with mean anisotropy data frames for each protein-tracer pair
+            
+            
+    ##### Curve fitting functions #####        
+            
+    def _r_func(pc, rmin, rmax, EC50, hill):
+        """Function for fitting a curve to the plot of anisotropy (or intensity) against protein concentration, 
+        where pc is protein concentration, rmin is the lower asymptote, rmax is the upper asymptote, 
+        EC50 is midpoint of transition (pc at point of inflection), hill is the slope
+        """
+        return (rmin - rmax) / (1 + (pc/EC50)**hill) + rmax
+    
+    def _init_params(df):
+        """Estimates initial parameters for the r_func that are passed to the curve fitting function
+        
+        :param df: Data frame containing mean values of anisotropy or intensity
+        :type df: pandas df
+        :return: List with estiamted parameters of min, max and EC50, hill is assumed to be 1
+        :rtype: list
+        """
+        rmin = df['mean'].min()
+        rmax = df['mean'].max()
+        mid = (rmax + rmin) / 2
+        mid_idx = df['mean'].sub(mid).abs().argmin()
+        EC50 = df.iloc[mid_idx]['Protein Concentration']
+        init_param = [rmin, rmax, EC50, 1]
+        return init_param
+    
+    def _logistic_fit(df, **kwargs):
+        """Fits a curve to the plot of anisotropy (or intensity) against protein concentration
+        
+        :param df: Data frame containing mean values of anisotropy (or intensity)
+        :type df: pandas df
+        :param sig: A string specifying the error data passed to the SciPy curve_fit function, either 'std' or 'sem', default None
+        :type sig: str
+        :param **kwargs: Keyword arguments that can be passed into the scipy curve_fit function
+        :return: A list of fitting parameters along with their error in proper order so that it can be added to the fitting params data frame
+        :rtype: list
+        """
+        drop = df[df['Protein Concentration'] != 0].dropna(subset=['mean'])   # exclude the protein concentration = 0 point and any NaN mean values from data fitting
+        
+        if 'sigma' in kwargs:  
+            sigma = drop[kwargs.pop('sigma')]   # take the column with std or sem error data
+        else:
+            sigma = None
+            
+        if 'p0' not in kwargs:   # user did not pass their initial guess
+            p0 = FA._init_params(drop)
+        else:   # user provided initial guess, remove p0 from kwargs and assign to p0 argument so that there is only one p0 arg passed to curve fit 
+            p0 = kwargs.pop('p0')
+                              
+        popt, pcov = curve_fit(FA._r_func, drop['Protein Concentration'], drop['mean'], p0=p0, sigma=sigma, **kwargs)
+        perr = np.sqrt(np.diag(pcov))   # calculate the error of the fitting params
+        all_params = np.insert(popt, obj=[1,2,3,4], values=perr)   # insert the errors after the respective fitting parameter value
+        return list(all_params) 
+    
+    def logistic_fit(self, prot=['all'], trac=['all'], rep=['all'], var='both', **kwargs):
+        """Fits a logistic curve to the plot of anisotropy (or intensity) against protein concentration for all repeats.
+        Returns the fitting parameters with associated errors for each repeat that are stored in the fitting paramters data frame in data dict.
+        The calc_data_to_fit function must be executed prior to data fitting.
+        
+        :param sig: A string specifying the error data passed to the SciPy curve_fit function, either 'std' or 'sem', default None
+        :type sig: str
+        :params **kwargs: Keyword arguments that can be passed to the scipy curve_fit function
+        """
+        # get data_dict and a list of protein-tracer names
+        data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
+        errors = []   # list for storing the details of errors due to failed fitting
+        
+        for rep, value in data_dict.items():   # iterate over all repeats
+            metadata, data = value.values()
+            
+            for pt_pair in pt_pairs:   # iterate over all protein-tracer pairs
+                if var == 'r' or var == 'both':
+                    try:   # try fitting the curve to anisotropy data 
+                        r_mean = data['r_mean'][pt_pair]   # extract the df with mean anisotropy for a given protein-tracer pair
+                        params_r = FA._logistic_fit(r_mean, **kwargs)   # fit the data to logistic curve using the initial parameteers
+                        data['fit_params'].loc[pt_pair, ['rmin','rmin error','rmax', 'rmax error', 'r_EC50', 'r_EC50 error', 'r_hill', 'r_hill error']] = params_r   # add the fitting parameters to the respective df
+
+                    except RuntimeError as e:   # if fitting fails, added details about the error to the errors list and proceed intensity data fitting
+                        r_errorinfo = (rep, 'r', pt_pair, e)
+                        errors.append(r_errorinfo)
+                
+                if var == 'i' or var == 'both':
+                    try:   # try fitting the curve to intensity data
+                        i_mean = data['i_mean'][pt_pair]   # extract the df with i mean for a given protein-tracer pair
+                        params_i = FA._logistic_fit(i_mean, **kwargs)
+                        data['fit_params'].loc[pt_pair, ['Ifree', 'Ifree error', 'Ibound','Ibound error', 'I_EC50', 'I_EC50 error', 'I_hill', 'I_hill error']] = params_i
+
+                    except RuntimeError as e:   # if fitting fails, added details about the error to the errors list and proceed to to the next protein-tracer pair
+                        i_errorinfo = (rep, 'i', pt_pair, e)
+                        errors.append(i_errorinfo)
+
+        if errors != []:   # raise a warning if fitting failed for any protein-tracer pair
+            warnings.warn(f"The curve fitting failed in the following cases:\n\n{errors}\n\nTry passing additional keyword arguments to the fitting function.", RuntimeWarning)
+                    
+            
+    def _LB(LT, PT, Kd):
+        """Function for fitting a curve to the plot of concentration of fluorescent tracer bound to the target protein against
+        protein concentration.
+        LB is the concentration of fluorescent tracer bound to the target protein
+        LT is total protein concentration
+        PT is total tracer concentration
+        Kd is dissociation constant
+        """
+        return ( (LT+PT+Kd) - np.sqrt( ( ((LT+PT+Kd)**2) - (4*LT*PT) ) ) ) / 2 
+    
+
+    def single_site_fit(self, prot=['all'], trac=['all'], rep=['all'], **kwargs):
+        
+        # get data_dict and a list of protein-tracer names
+        data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
+        errors = []   # list for storing the details of errors due to failed fitting
+        
+        if 'sigma' in kwargs:  
+            sigma = drop[kwargs.pop('sigma')]   # take the column with std or sem error data
+        else:
+            sigma = None
+        
+        for rep, value in data_dict.items():   # iterate over all repeats
+            metadata, data = value.values()
+            keys = list(data['amount_bound'].keys())   # create a list of unique protein-tracer pairs
+            
+            for pt_pair in pt_pairs:   # iterate over all protein-tracer pairs
+                try:   # try fitting the curve to anisotropy data 
+                    amount_b = data['amount_bound'][pt_pair]   # extract the df with mean amount bound for a given protein-tracer pair
+                    drop = amount_b[ (amount_b['Protein Concentration'] != 0) & (amount_b['Tracer Concentration'] != 0)].dropna(subset=['amount'])   # exclude the protein concentration = 0 point and any NaNs from data fitting
+                    
+                    if len(drop['Tracer Concentration'].dropna().unique()) == 1:   # check if the protein is titrated to a constant amount of tracer
+                        x_data, label = drop['Protein Concentration'], ['LT', 'LT error']   
+                    if len(drop['Protein Concentration'].dropna().unique()) == 1:   # check if the tracer is titrated to a constant amount of protein
+                        x_data, label = drop['Tracer Concentration'], ['PT', 'PT error']
+                    
+                    popt, pcov = curve_fit(FA._LB, x_data, drop['amount'], sigma=sigma, **kwargs)
+                    err = np.sqrt(np.diag(pcov))
+                    FA.final_fit.loc[pt_pair, (['Kd', 'Kd error']+label)] = [popt[1], err[1], popt[0], err[0]]   # add Kd and its error to final fit df
+                    
+                except RuntimeError as e:  
+                    error_info = (rep, pt_pair, e)
+                    errors.append(error_info)
+                
+        if errors != []:   # raise a warning if fitting failed for any protein-tracer pair
+            warnings.warn(f"The curve fitting failed in the following cases:\n\n{errors}\n\nTry passing additional keyword arguments to the fitting function", RuntimeWarning)
+    
+    ##### Anisotropy and biniding constant plotting functions #####
+    
+    def _get_items_to_plot(data_d, platemap, prot, trac, rep):
+        """Creates a list of tuples with protein-tracer names based on the 'prot' and 'trac' parameters 
+        and takes a subset of data_dict based on the 'rep' parameter.
+        """
+        if prot[0] == 'all' and trac[0] == 'all':   # all proteins and all tracers
+            pt_pairs = list(data_d['repeat_1']['data']['r_mean'].keys())   # 'r_mean' dict contains all protein-tracer names as dict keys
+            
+        elif prot[0] != 'all' and trac[0] == 'all':   # all tracers and some proteins
+            trac = list(platemap['Tracer Name'].dropna().unique())   # take all tracer names from the platemap
+            pt_pairs = [item for item in product(prot, trac)]
+            
+        elif prot[0] == 'all' and trac[0] != 'all':   # all proteins and some tracers
+            prot = list(platemap['Protein Name'].dropna().unique())   # take all protein names from the platemap
+            pt_pairs = [item for item in product(prot, trac)]
+            
+        elif prot[0] != 'all' and trac[0] != 'all':   # some proteins and some tracers
+            pt_pairs = [item for item in product(prot, trac)]
+        
+        # define a data dictionary to iterate through based on the 'rep' parameter:
+        if rep[0] == 'all':   # for all repeats use the whole data_dict
+            data_dict = data_d
+        else:   # for specific repeats use the subset of data_dict containg only the repeats specified in 'rep' parameter
+            data_dict = {key: value for key, value in data_d.items() if int(key[-1]) in rep}
+        
+        return data_dict, pt_pairs
+    
+    
+    def _plot_ani(data_df, params_df, pt_pair, fig, axs, err, var, rep, export, display, labels, dpi=250):
         """General function for plotting the anisotropy and intensity and saving the figures.
         
-        :param data_df: Data frame with mean values of anisotropy or intensity and their errors
+        :param data_df: Data frame with mean values of anisotropy or intensity and their associated errors
         :type data_df: pandas df
         :params_df: Data frame with fitting parameters
         :type params_df: pandas df
         :param pt_pair: protein-tracer pair for which the graph is to be generated
         :type pt_pair: tuple
-        :param fig: Figure on which the data is to be plotted, can either a single figure object or an indexed index axis object for plotting on a grid (e.g. axs[0, 1])
-        :type fig: matplotlib Figure or AxesSubplot
-        :param err: A string representing type of error data to displayed as error bars, either 'std' or 'sem'
+        :param fig: Figure on which the data is plotted, needed for saving the figure as png file
+        :type fig: matplotlib Figure
+        :param axs: Indexed axis object on which the data is to be plotted, (e.g. axs[0, 1])
+        :type axs: matplotlib AxesSubplot
+        :param err: Type of error data displayed as error bars, either standard deviation ('std') or standard error ('sem')
         :type err: str
-        :param var: Variable for which the plot is to be generated, either anisotropy ('r') or intensity ('i')
+        :param var: Variable for which the plot is to be generated ('r' or 'i')
         :type var: str
         :param repeat: Repeat number for labelling of the graph
         :type repeat: 'str'
@@ -839,107 +925,288 @@ class FA:
         #rp = params_df.loc[pt_pair, r].to_list()
         if var == 'r':   # define the parameters, legend text and legend coordinates characteristic for anisotropy data
             params = [params_df.loc[pt_pair, 'rmin'], params_df.loc[pt_pair, 'rmax'], params_df.loc[pt_pair, 'r_EC50'], params_df.loc[pt_pair, 'r_hill']]
-            text = "rmin=%.2f \u00B1 %.4f\nrmax=%.2f \u00B1 %.4f\nEC50=%.0f \u00B1 %.0f\nhill=%.2f \u00B1 %.2f" % (params_df.loc[pt_pair, 'rmin'], 
-                params_df.loc[pt_pair, 'rmin error'], params_df.loc[pt_pair, 'rmax'], params_df.loc[pt_pair, 'rmax error'], 
-                params_df.loc[pt_pair, 'r_EC50'], params_df.loc[pt_pair, 'r_EC50 error'], params_df.loc[pt_pair, 'r_hill'], params_df.loc[pt_pair, 'r_hill error'])
-            label_coords = (0.02, 0.72)
+            #text = "$r_{min}$ = %.2f \u00B1 %.4f\n$r_{max}$ = %.2f \u00B1 %.4f\n$EC_{50}$ = %.0f \u00B1%.0f\n$hill$ = %.2f \u00B1 %.2f" % (params_df.loc[pt_pair, 'rmin'], 
+            #    params_df.loc[pt_pair, 'rmin error'], params_df.loc[pt_pair, 'rmax'], params_df.loc[pt_pair, 'rmax error'], 
+            #    params_df.loc[pt_pair, 'r_EC50'], params_df.loc[pt_pair, 'r_EC50 error'], params_df.loc[pt_pair, 'r_hill'], params_df.loc[pt_pair, 'r_hill error'])
+            text = "$r_{min}$ = %.2f \u00B1 %.4f\n$r_{max}$ = %.2f \u00B1 %.4f\n$EC_{50}$ = %.0f \u00B1%.0f\n$hill$ = %.2f \u00B1 %.2f" % tuple(params_df.loc[pt_pair, ['rmin','rmin error','rmax','rmax error','r_EC50','r_EC50 error', 'r_hill', 'r_hill error']])
+            
+            label_coords = (0.02, 0.68)
             ylabel = 'Anisotropy'
+            
         if var.lower() == 'i':   # define the parameters, legend text and legend coordinates characteristic for intensity data
             params = [params_df.loc[pt_pair, 'Ifree'], params_df.loc[pt_pair, 'Ibound'], params_df.loc[pt_pair, 'I_EC50'], params_df.loc[pt_pair, 'I_hill']]
-            text = "Ifree=%.0f \u00B1 %.0f\nIbound=%.0f \u00B1 %.0f\nEC50=%.0f \u00B1 %.0f\nhill=%.2f \u00B1 %.2f" % (params_df.loc[pt_pair, 'Ifree'], 
+            text = "$I_{free}$ = %.0f \u00B1 %.0f\n$I_{bound}$ = %.0f \u00B1 %.0f\n$EC_{50}$ = %.0f \u00B1 %.0f\n$hill$ = %.2f \u00B1 %.2f" % (params_df.loc[pt_pair, 'Ifree'], 
                 params_df.loc[pt_pair, 'Ifree error'], params_df.loc[pt_pair, 'Ibound'], params_df.loc[pt_pair, 'Ibound error'], 
                 params_df.loc[pt_pair, 'I_EC50'], params_df.loc[pt_pair, 'I_EC50 error'], params_df.loc[pt_pair, 'I_hill'], params_df.loc[pt_pair, 'I_hill error'])
             label_coords = (0.02, 0.03)
             ylabel = 'Intensity'
         
-        drop = data_df[data_df['Protein Concentration'] != 0].dropna()   # exclude the protein concentration = 0 point and any NaNs from plotting
+        drop = data_df[data_df['Protein Concentration'] != 0].dropna(subset=['mean'])   # exclude the protein concentration = 0 point and any NaNs from plotting
         axs.errorbar(drop['Protein Concentration'], drop['mean'], yerr=drop[err], color='black', fmt='o', capsize=3, marker='s')
         axs.set_xscale('symlog')
         axs.set_ylabel(ylabel)
-        axs.set_xlabel(f'{pt_pair[0]} concentration (nM)')
+        axs.set_xlabel(f'[{pt_pair[0]}] (nM)')
         axs.plot(drop['Protein Concentration'], FA._r_func(drop['Protein Concentration'], *params), color='blue')
         
         if labels == True:   # display legend and a box with fitting parameters on the graph
-            axs.set_title(f'{rep}, Protein: {pt_pair[0]}, Tracer: {pt_pair[1]}')
-            axs.legend(['logistic fitted curve'])
-            axs.annotate(text, xy=label_coords, xycoords='axes fraction', bbox=dict(boxstyle="round", fc="w"))
+            axs.set_title(f'Protein: {pt_pair[0]}, Tracer: {pt_pair[1]}')
+            axs.legend(['logistic fitted curve'], frameon=False, fontsize=11)
+            axs.annotate(text, xy=label_coords, xycoords='axes fraction', fontsize=11)
             
         if export == True:   # save figures in the same directory as the notebook
             fig.savefig(f"{rep}_{var}_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+        
         if type(export) == str:   # save figures in the user defined directory
             fig.savefig(f"{export}{rep}_{var}_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+        
         if display == False:   
             plt.close(fig)
                 
-    def export_ani_figs(self, err='std', export=True, dpi=250):
-        """Saves single figures of annisotropy and intensity for each protein-tracer pair for all repeats in the same directory as this notebook or
-        in user defined directory if the path is provided. figures for all repeats.
+   
+    def plot_ani(self, prot=['all'], trac=['all'], rep=['all'], err='std'):   
+        """Plots anisotropy and intensity against protein concentration with a fitted logistic curve for specific repeats and 
+        protein-tracer pairs. A separate figure for each repeat is created with anisotropy and intensity graphs for all 
+        specified proteins and tracers side by side. 
+        
+        :param prot: List of protein names for which the graphs will be created, defaults to ['all']
+        :type prot: list of str
+        :param trac: List of tracer names for which the graphs will be created, defaults to ['all']
+        :type trac: list of str
+        :param rep: List of repeat numbers for which the graphs will be created, defaults to ['all']
+        :type rep: list of ints
+        :param err: Type of error data displayed as error bars, either standard deviation ('std') or standard error ('sem')
+        :type err: str
+        """
+        # get data_dict and a list of protein-tracer names
+        data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
+        
+        for key, value in data_dict.items():   # iterte over all repeats and create a sperate figure for each repeat
+            metadata, data = value.values()
+            fig, axs = plt.subplots(len(pt_pairs), 2, figsize=(2*6.4, len(pt_pairs)*4.8), tight_layout=True)   # grid for subplots has two columns and a variable number of rows, figsize automatically scales up
+            fig.suptitle(f"Repeat {key[-1]}", fontsize=16)
+
+            for idx, pt_pair in enumerate(pt_pairs):   # for each portein-tracer pair plot two graphs: anisotropy and intensity
+                r_data_df = data['r_mean'][pt_pair]   # extract the df with anisotropy
+                i_data_df = data['i_mean'][pt_pair]   # and intensity
+                
+                if len(pt_pairs) == 1:   # for only one protein-tracer pair the subplot grid 1-dimensional
+                    FA._plot_ani(data_df=r_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig, axs=axs[0], err=err, var='r', rep=key, export=False, display=True, labels=True)
+                    FA._plot_ani(data_df=i_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig, axs=axs[1], err=err, var='i', rep=key, export=False, display=True, labels=True)
+                else:   # for more than one protein-tracer pair the subplot grid 2-dimensional
+                    FA._plot_ani(data_df=r_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig, axs=axs[idx,0], err=err, var='r', rep=key, export=False, display=True, labels=True)
+                    FA._plot_ani(data_df=i_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig, axs=axs[idx,1], err=err, var='i', rep=key, export=False, display=True, labels=True)
+                
+
+    def save_ani_figs(self, prot=['all'], trac=['all'], rep=['all'], var='both', path='', err='std', leg=False, dpi=250):
+        """Saves single figures of anisotropy and intensity for each protein-tracer pair for all repeats in the same directory as this notebook or
+        in user defined directory if the path is provided.
         
         :param err: A string representing type of error data to displayed as error bars, either 'std' or 'sem', default 'std'
         :type err: str
         :param dpi: Resolution of the figure in points per inch
         :type dpi: int
         """
+        # get data_dict and a list of protein-tracer names
+        data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
+        
         for key, value in self.data_dict.items():   # iterate over all repeats
             metadata, data = value.values()
             pairs = list(data['r_mean'].keys())   # generate a list of protein-tracer names
                                 
             for pt_pair in pairs:   # iterate over each protein-tracer pair in
-                r_data_df = data['r_mean'][pt_pair]   # extract the df with anisotropy
-                i_data_df = data['i_mean'][pt_pair]   # and intensity
+                if var == 'r' or var == 'both':
+                    r_data_df = data['r_mean'][pt_pair]   # extract the df with anisotropy
+                    fig_r, ax_r = plt.subplots(figsize=(6.4, 4.8), tight_layout=True)   # create a figure with a single axis for anisotropy 
+                    FA._plot_ani(data_df=r_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig_r, axs=ax_r, err=err, var='r', rep=key, export=path, display=False, labels=leg, dpi=dpi)
                 
-                fig_r, ax_r = plt.subplots(figsize=(6.4, 4.8), tight_layout=True)   # create a figure with a single axis for anisotropy 
-                fig_i, ax_i = plt.subplots(figsize=(6.4, 4.8), tight_layout=True)   # and intensity graphs
-                
-                # execute the general plotting function with the correct parameters
-                FA._plot(data_df=r_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig_r, axs=ax_r, err=err, var='r', rep=key, export=export, display=False, labels=False, dpi=dpi)
-                FA._plot(data_df=i_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig_i, axs=ax_i, err=err, var='i', rep=key, export=export, display=False, labels=False, dpi=dpi)
+                if var == 'i' or var == 'both':
+                    i_data_df = data['i_mean'][pt_pair]   
+                    fig_i, ax_i = plt.subplots(figsize=(6.4, 4.8), tight_layout=True)   
+                    FA._plot_ani(data_df=i_data_df, params_df=data['fit_params'], pt_pair=pt_pair, fig=fig_i, axs=ax_i, err=err, var='i', rep=key, export=path, display=False, labels=leg, dpi=dpi)
+        
+        print('The figures were successfully exported.')
     
-    def plot_ani_all(self, err='std'):   
-        """Plots anisotropy and intensity side by side for each protein-tracer pair on separate figures for all repeats.
+    def _plot_kd(data_df, rep, pt_pair, err, leg, exp, dpi):
+        """Plots amount bound against protein or tracer concentration with a fitted curve on a separate figure for a specific protein-tracer pair.
         
-        :param err: A string representing type of error data to displayed as error bars, either 'std' or 'sem', default 'std'
-        :type err: str
-        """
-        for key, value in self.data_dict.items():   # iterte over all repeats
-            metadata, data = value.values()
-            keys = list(data['r_mean'].keys())
-            fig, axs = plt.subplots(len(keys), 2, figsize=(2*6.4, len(keys)*4.8), tight_layout=True)   # grid for subplots has two columns and a variable number of rows, figsize automatically scales up
-            fig.suptitle(key, fontsize=18)
-
-            for idx, item in enumerate(keys):   # for each portein-tracer pair plot two graphs: anisotropy and intensity
-                r_data_df = data['r_mean'][item]   # extract the df with anisotropy
-                i_data_df = data['i_mean'][item]   # intensity
-                FA._plot(data_df=r_data_df, params_df=data['fit_params'], pt_pair=item, fig=fig, axs=axs[idx,0], err=err, var='r', rep=key, export=False, display=True, labels=True)
-                FA._plot(data_df=i_data_df, params_df=data['fit_params'], pt_pair=item, fig=fig, axs=axs[idx,1], err=err, var='i', rep=key, export=False, display=True, labels=True)
-                
-    def plot_ani(self, rep, var, pair, err='std', export=False, labels=True, dpi=250):
-        """Plots a single variable (anisotropy or intensity) for a specified protein-tracer pair.
-        
-        :param rep: Repeat number (e.g. 'repeat_1')
+        :param data_df: Data frame with mean values of amount of tracer bound and their associated errors
+        :type data_df: pandas df
+        :param rep: Repeat number for labelling of the graph
         :type rep: 'str'
-        :param pair: protein-tracer pair for which the graph is to be generated
-        :type pair: tuple
-        :param err: A string representing type of error data to displayed as error bars, either 'std' or 'sem'
+        :param pt_pair: Protein and tracer names for which data will be plotted
+        :type pt_pair: tuples
+        :param err: Type of error data displayed as error bars, either standard deviation ('std') or standard error ('sem')
         :type err: str
-        :param var: Variable for which the plot is to be generated, either anisotropy ('r') or intensity ('i')
-        :type var: str
-        :param export: Determines whether the figure will be saved, can be either bool or string with directory path
-        :type export: bool or 'str'
-        :param labels: Determines whether the legend and box with fitting parameters will be displayed on the figure, default True
-        :type labels: bool
+        :param leg: Determines whether the legend and box with fitting parameters will be displayed on the figure, default True
+        :type leg: bool
+        :param exp: Determines whether the figure will be saved, can be either bool or string with directory path
+        :type exp: bool or 'str'
         :param dpi: Resolution of the figure in points per inch
         :type dpi: int
         """
-        data_df = self.data_dict[rep]['data'][f'{var}_mean'][pair]
-        params_df = self.data_dict[rep]['data']['fit_params']
-        fig, ax = plt.subplots(figsize=(6.4, 4.8), tight_layout=True)   # create a figure with a single axis
+        drop = data_df[ (data_df['Protein Concentration'] != 0) & (data_df['Tracer Concentration'] != 0)].dropna(subset=['amount'])   # exclude the protein concentration = 0 point and any NaNs from data fitting
+        fig, axs = plt.subplots(1, 1, figsize=(6.4, 4.8), tight_layout=True)
         
-        # execut the general plotting function with correct parameters
-        return FA._plot(data_df=data_df, params_df=params_df, pt_pair=pair, fig=fig, axs=ax, err=err, var=var, rep=rep, export=export, display=True, labels=labels, dpi=dpi)
+        # define the x axis data and labels for protein and tracer titration cases
+        if len(drop['Tracer Concentration'].unique()) == 1:   
+            text = '$L_{T}$ = %.2f\u00B1 %.2f\n$K_{d}$ = %.2f \u00B1 %.2f' % (FA.final_fit.loc[pt_pair, 'LT'], 
+                FA.final_fit.loc[pt_pair, 'LT error'], FA.final_fit.loc[pt_pair, 'Kd'], FA.final_fit.loc[pt_pair, 'Kd error'])  
+            x_data = drop['Protein Concentration']
+            x_label = pt_pair[0]
+            params = [FA.final_fit.loc[pt_pair, 'LT'], FA.final_fit.loc[pt_pair, 'Kd']]
+        
+        if len(drop['Protein Concentration'].unique()) == 1:
+            text = '$P_{T}$ = %.2f\u00B1 %.2f\n$K_{d}$ = %.2f \u00B1 %.2f' % (FA.final_fit.loc[pt_pair, 'PT'], 
+                FA.final_fit.loc[pt_pair, 'PT error'], FA.final_fit.loc[pt_pair, 'Kd'], FA.final_fit.loc[pt_pair, 'Kd error'])  
+            x_data = drop['Tracer Concentration']
+            x_label = pt_pair[1]
+            params = [FA.final_fit.loc[pt_pair, 'PT'], FA.final_fit.loc[pt_pair, 'Kd']]
+            
+        axs.errorbar(x_data, drop['amount'], yerr=drop[err], color='black', fmt='o', capsize=3, marker='s')
+        axs.set_xscale('symlog')
+        axs.set_ylabel('[Fluorescent Tracer Bound] (nM)')
+        axs.set_xlabel(f'[{x_label}] (nM)')
+        axs.plot(x_data, FA._LB(x_data, *params), color='blue')
+        
+        if leg == True:   # display the figure title, legend and annotation with fitting params
+            axs.set_title(f'Repeat {rep[-1]}, Protein: {pt_pair[0]}, Tracer: {pt_pair[1]}')
+            axs.legend([f'single site fitted curve'], fontsize=11, frameon=False)
+            axs.annotate(text, xy=(0.02, 0.80), xycoords='axes fraction', fontsize=11)
+        plt.show()
+        
+        if exp == True:   # save the figure to the same directory as the notebook
+            fig.savefig(f"{rep}_Kd_plot_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+        if type(exp) == str:   # save the figure to user defined directory
+            fig.savefig(f"{exp}{rep}_Kd_plot_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
     
-    
-    def export_params(self, directory='', file_type='csv'):
+    def _overlay_kd_plots(plate_map, data_dict, pt_pairs, err, leg, exp, dpi):   
+        """Creates a figure with overlayed plots for specified protein-tracer pairs and repeats 
+        
+        :param plate_map: Platemap
+        :type plate_map: pandas df
+        :param data_dict: Data dictionary containing the specific repeats for which data will be plotted
+        :type data_dict: dict
+        :param pt_pairs: List of protein-tracer names for which data will be plotted
+        :type pt_pairs: list of tuples
+        :param err: Type of error data displayed as error bars, either standard deviation ('std') or standard error ('sem')
+        :type err: str
+        :param leg: Determines whether the legend and box with fitting parameters will be displayed on the figure, default True
+        :type leg: bool
+        :param exp: Determines whether the figure will be saved, can be either bool or string with directory path
+        :type exp: bool or 'str'
+        :param dpi: Resolution of the figure in points per inch
+        :type dpi: int
+        """
+        # define the x axis data and labels for protein and tracer titration cases
+        if len(plate_map['Tracer Concentration'].dropna().unique()) == 1:     
+            x_data_label, x_label, param = 'Protein Concentration', 'Protein', 'LT'
+        
+        if len(plate_map['Protein Concentration'].dropna().unique()) == 1:   
+            x_data_label, x_label, param = 'Tracer Concentration', 'Tracer', 'PT'
+
+        fig, axs = plt.subplots(1, 1, figsize=(6.4, 4.8), tight_layout=True) 
+        leg_text = []   # list to store the legend text
+        cmaps = ['Blues', 'Greens', 'Oranges', 'Purples', 'Reds', 'Greys', 'YlOrBr', 'YlOrRd', 'OrRd', 'PuRd', 'RdPu', 'BuPu',
+            'GnBu', 'PuBu', 'YlGnBu', 'PuBuGn', 'BuGn', 'YlGn']
+        iter_cmaps = iter(cmaps)
+        
+        for key, value in data_dict.items():   # iterte through all repeats of the defined data_dict
+            metadata, data = value.values()
+            
+            for pt_pair in pt_pairs:    # iterate through the list of protein-tracer names to plot its data on the same figure
+                
+                data_df = data['amount_bound'][pt_pair]   # extract the correct df with amount bound for a given protein-tracer pair
+                drop = data_df[ (data_df['Protein Concentration'] != 0) & (data_df['Tracer Concentration'] != 0)].dropna(subset=['amount'])   # exclude the protein concentration = 0 point and any NaNs from data fitting
+                x_data = drop[x_data_label]
+                params = [FA.final_fit.loc[pt_pair, param], FA.final_fit.loc[pt_pair, 'Kd']]
+
+                text2 = '$L_{T}$ = %.2f\u00B1 %.2f\n$K_{d}$ = %.2f \u00B1 %.2f' % (FA.final_fit.loc[pt_pair, 'LT'], 
+                    FA.final_fit.loc[pt_pair, f'LT error'], FA.final_fit.loc[pt_pair, 'Kd'], FA.final_fit.loc[pt_pair, 'Kd error'])  
+                text = f"rep {key[-1]}, {pt_pair[0]}, {pt_pair[1]}\n{text2}"
+                leg_text.append(text)
+                
+                cmap = plt.cm.get_cmap(next(iter_cmaps))   # take the next color map from the list 
+                axs.errorbar(x_data, drop['amount'], yerr=drop[err], fmt='o', capsize=3, marker='s', color=cmap(0.95))
+                axs.plot(x_data, FA._LB(x_data, *params), color=cmap(0.50))  
+                
+        axs.set_xscale('symlog')
+        axs.set_ylabel('[Fluorescent Tracer Bound] (nM)')
+        axs.set_xlabel(f'[{x_label}] (nM)')
+
+        if leg == True:   # display the figure title, legend and annotation with fitting params
+            axs.set_title(f'Overlayed plot')
+            lbox = axs.legend(leg_text, fontsize=11, frameon=False, loc='upper left', bbox_to_anchor=(1.03, 0.95))#, bbox_transform=fig.transFigure)#, xycoords='axes fraction')
+            fig.canvas.draw()   # draw the  canvas so that figure and legend size is defined
+            # calculate the length by which the figure will be widened to accomodate the legend
+            w = (lbox.get_window_extent().width + (0.06 * axs.get_window_extent().width)) / fig.dpi
+            fig.set_size_inches(6.4+w, 4.8)   # resize the figure
+            
+        plt.show()
+        
+        if exp == True:   # save the figure to the same directory as the notebook
+            fig.savefig(f"Overlayed_Kd_plot.png", dpi=dpi) #
+        if type(exp) == str:   # save the figure to user defined directory
+            fig.savefig(f"{exp}Overlayed_Kd_plot.png",dpi=dpi)
+        
+        
+    def plot_kd(self, prot=['all'], trac=['all'], rep=['all'], err='std', overlay=False, legend=True, export=False, dpi=250):   
+        """Plots the concentration of fluorescent tracer bound to target protein against the protein (or tracer) concentration.
+        
+        :param prot: List of protein names for which the graphs will be created, defaults to ['all']
+        :type prot: list of str
+        :param trac: List of tracer names for which the graphs will be created, defaults to ['all']
+        :type trac: list of str
+        :param rep: List of repeat numbers for which the graphs will be created, defaults to ['all']
+        :type rep: list of ints
+        :param err: Type of error data displayed as error bars, either standard deviation ('std') or standard error ('sem')
+        :type err: str
+        :param overlay: Overlayes the data on a single figure, defaults to False
+        :type overlay: bool
+        :param legend: Display the figure title and legend, defaults to True
+        :type legend: bool
+        :param export: Saves the figures as png files in the same location as the Notebook or in a specified directory
+        :type export: bool or str
+        :param dpi: Resolution of the exported figure in dots per inches
+        :type dpi: int
+        """
+        data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
+        
+        if overlay == False:
+            for key, value in data_dict.items():   # iterte through all repeats of the defined data_dict
+                metadata, data = value.values()
+
+                for pt_pair in pt_pairs:    # iterate through the list of protein-tracer names to create a separate figure for each pair
+                    data_df = data['amount_bound'][pt_pair]   # extract the correct df with amount bound for a given protein-tracer pair
+                    FA._plot_kd(data_df=data_df, rep=key, pt_pair=pt_pair, err=err, leg=legend, exp=export, dpi=dpi)
+        else:
+            FA._overlay_kd_plots(plate_map=self.plate_map, data_dict=data_dict, pt_pairs=pt_pairs, err=err, leg=legend, exp=export, dpi=dpi)
+        
+        
+    ##### Fittig params set, export and import functions #####
+        
+    def set_fitparams(self, pair, final=True, rep=None, var=None, **kwargs):
+        """Allows to set a value of any parameter in the fitting params data frame for specific protein-tracer pair and repeat
+        
+        :param rep: Repeat number, e.g. 'repeat_1'
+        :type rep: str
+        :param var: A one character string representing anisotropy ('r') or intensity ('i')
+        :type var: str
+        :param pair: A tuple of two strings representing the protein and tracer names for which the parameters will be changed, e.g. ('proteinA', 'tarcerB')
+        :type pair: tuple
+        :param **kwargs: Keyword arguments represeting the parameter and its value, e.g. lambda=1.5, rmin=0.30
+        """
+        if final == True:
+            for key, value in kwargs.items():   # iterate over the kwargs dictionary
+                FA.final_fit.loc[pair, key] = value   # overwrite the parameters in fitting params df with all params passed as keyword arguments
+        
+        if final == False: 
+            if var in ['r', 'I'] and f'{var}_params' not in self.data_dict[rep]['data']:   # check whether fitting parameters data frame exists
+                raise AttributeError('The table with fitting parameters has not been created. Run the calc_data_to_fit function first.')
+
+            for key, value in kwargs.items():   # iterate over the kwargs dictionary
+                self.data_dict[rep]['data']['fit_params'].loc[pair, key] = value   # overwrite the parameters in fitting params df with all params passed as keyword arguments
+
+    def export_params(self, path='', file_type='csv'):
         """Export the final fit parameters and 
         
         :param directory: A path for the directory in which the files will be saved, defaults to the same directory as this notebook
@@ -947,17 +1214,17 @@ class FA:
         :param file_type: String deermienig the type of file generated, either 'csv' or 'excel', defaults to csv
         """
         if file_type == 'csv':   # export as csv file
-            FA.final_fit.to_csv(path_or_buf=f"{directory}final_fit_parameters.csv")
+            FA.final_fit.to_csv(path_or_buf=f"{path}final_fit_parameters.csv")
         if file_type == 'excel':   # export as excel file
-            FA.final_fit.to_excel(excel_writer=f"{directory}{key}final_fit_parameters.xlsx")
+            FA.final_fit.to_excel(excel_writer=f"{path}{key}final_fit_parameters.xlsx")
     
         for key, value in self.data_dict.items():   #iterate over all repeats
             metadata, data = value.values()
             
             if file_type == 'csv':   # export as csv file
-                data['fit_params'].to_csv(path_or_buf=f"{directory}{key}_fitting_parameters.csv")
+                data['fit_params'].to_csv(path_or_buf=f"{path}{key}_fitting_parameters.csv")
             if file_type == 'excel':   # export as excel file
-                data['fit_params'].to_excel(excel_writer=f"{directory}{key}_fitting_parameters.xlsx")
+                data['fit_params'].to_excel(excel_writer=f"{path}{key}_fitting_parameters.xlsx")
         
         print(f'The fitting parameters were exported to {file_type} files.')
         
@@ -969,26 +1236,10 @@ class FA:
         """
         with open(csv_file) as file:   # read the csv into pandas df
             df = pd.read_csv(file, sep=',', index_col=[0,1], engine='python', encoding='utf-8')   # import with multiindex
-            indexes = list(df.index)   # create a list protein-tracer names
+            indexes = list(df.index)   # create a list with protein-tracer names
         
         for col in df.columns:   # iterate over the imported columns
             if col not in FA.final_fit.columns:   # if there is no such column in final_fit df, raise a warning, otherwise column with wrong name will be added to final_fit
                 warnings.warn(f"The final_fit data frame does not contain matching columns: '{col}'")
             else:   # overwrite the existing values in the final_fit df with the ones from imported df
                 FA.final_fit.loc[FA.final_fit.index.intersection(indexes), col] = df.loc[df.index.intersection(indexes), col]
-            
-            
-    def calc_amountbound(self):
-        """Calcualtes the fraction of tracer bound to the protein using the following formula: L_B/L_T =( ( (λ*(rmin-rmax⁡)) / (r-rmin ) +1) )**(-1)
-        Where L_B is the concentration of fluorescent tracer bound to the target protein, 
-        L_T is the total tracer concertation,"""
-
-        for key, value in self.data_dict.items():
-            metadata, data = value.values()
-            keys = list(data['r_mean'].keys())
-
-            for pt_pair, df in data['r_mean'].items():
-                lam = FA.final_fit.loc[pt_pair, "lambda"]
-                rmin = FA.final_fit.loc[pt_pair, 'rmin']
-                rmax = FA.final_fit.loc[pt_pair, 'rmax']
-                df['amount'] = ( ( ( ( (lam * (rmax-rmin)) / (df['mean'] - rmin) ) )+1) **(-1)) * 200
