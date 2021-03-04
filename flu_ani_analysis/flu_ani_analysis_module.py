@@ -616,7 +616,7 @@ class FA:
         mean = group.mean()   
         std = group.std()     
         sem = group.sem()    
-        meanr = mean.rename(columns={mean.columns[-1]: 'mean'})
+        meanr = mean.rename(columns={mean.columns[-1]: 'mean'}).drop('Valid', axis=1)
         stdr = std.rename(columns={std.columns[-1]: 'std'}).drop('Valid', axis=1)   # rename the std column and remove the 'Valid' column
         semr = sem.rename(columns={sem.columns[-1]: 'sem'}).drop('Valid', axis=1)   # rename the sem column and remove the 'Valid' column
         
@@ -1291,7 +1291,7 @@ class FA:
             if file_type == 'csv':   # export as csv file
                 data['fit_params'].to_csv(path_or_buf=f"{path}{key}_fitting_parameters.csv")
             if file_type == 'excel':   # export as excel file
-                data['fit_params'].to_excel(excel_writer=f"{path}single_repeat_fitting_parameters.xlsx", sheet_name=f'{key}')
+                data['fit_params'].to_excel(excel_writer=f"{path}{key}_single_repeat_fitting_parameters.xlsx")
         
         print(f'The fitting parameters were exported to the {file_type} files.')
         
