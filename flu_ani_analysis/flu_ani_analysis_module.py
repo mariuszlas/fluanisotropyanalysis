@@ -53,16 +53,7 @@ class FA:
         self.data_dict = data_dict
         self.g_factor = g_factor
         self.plate_map = plate_map
-        self.type = None   # string describing type of titration ('Protein' or 'Tracer')
-        
-        # determine the type of titration based on the protein and tracer concentration values
-        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
-            self.type, param = 'Protein', 'LT'
-        elif len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
-            self.type, param = 'Tracer', 'PT'
-        else:
-            raise DataError('Type of titration could not be determined. Ensure the platemap contains a single value for Protein Concentration or Tracer Concentration depending on titration type.')
-
+       
         # create list of all p and s data frames to run some stats
         frames = []   
         for repeat in self.data_dict.values():   
@@ -78,7 +69,7 @@ class FA:
         p_names = self.plate_map['Protein Name'].dropna().unique()   # get all protein names
         t_names = self.plate_map['Tracer Name'].dropna().unique()   # get all trcaer names 
         final_fit = pd.DataFrame(index=pd.MultiIndex.from_product([p_names, t_names]), 
-            columns=['rmin', 'rmin error', 'rmax', 'rmax error', 'lambda', f'{param}', f'{param} error','Kd', 'Kd error'])  
+            columns=['rmin', 'rmin error', 'rmax', 'rmax error', 'lambda', 'Kd', 'Kd error'])  
         final_fit["lambda"] = 1   # set the default lambda value as 1
         FA.final_fit = final_fit   # add the final_fit df as a class vriable
             
@@ -411,12 +402,17 @@ class FA:
         The backgorund correction is done by subtracting the mean value of blank p (or s) channel intensity for a given 
         protein (or tracer) concentration from each non-blank value of the p (or s) channel intensity for that concentration. 
         """
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = 'Protein'
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = 'Tracer'
+        
         for key, value in self.data_dict.items(): 
             metadata, data = value.values()   
-
+        
             # calculate p and s corrected data frame using _background_correct func and add it to data dictionary
-            self.data_dict[key]['data']['p_corrected'] = FA._background_correct(data['p'], self.plate_map, self.type)
-            self.data_dict[key]['data']['s_corrected'] = FA._background_correct(data['s'], self.plate_map, self.type)
+            self.data_dict[key]['data']['p_corrected'] = FA._background_correct(data['p'], self.plate_map, t_type)
+            self.data_dict[key]['data']['s_corrected'] = FA._background_correct(data['s'], self.plate_map, t_type)
             
         print('Background correction has been successfully performed!')
             
@@ -582,12 +578,17 @@ class FA:
         """Calculates data required for fitting a logistic curve to anisotropy and intensity data, i.e. the mean anisotropy and intensity
         over the number of replicates for each specific protein (or tracer) concentration along with standard deviation and standard error.
         """
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = 'Protein'
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = 'Tracer'
+        
         for key, value in self.data_dict.items():
             metadata, data = value.values()
             
             # create dictionaries 'r_mean'and 'i_mean' containing mean anisotropy and intensity data frames for each protein-tracer pair
-            data['r_mean'] = FA._calc_mean_r_i(data['r_corrected'], self.plate_map, self.type)   
-            data['i_mean'] = FA._calc_mean_r_i(data['i_corrected'], self.plate_map, self.type)   
+            data['r_mean'] = FA._calc_mean_r_i(data['r_corrected'], self.plate_map, t_type)   
+            data['i_mean'] = FA._calc_mean_r_i(data['i_corrected'], self.plate_map, t_type)   
             
             # create data frame for storing the fitting params and set lambda value to 1
             cols = ['rmin','rmin error', 'rmax', f'rmax error', 'r_EC50', 'r_EC50 error', 'r_hill', 'r_hill error', 'Ifree', 
@@ -717,12 +718,17 @@ class FA:
         """
         pt_pairs = list(FA.final_fit[FA.final_fit['rmin'].isna()].index)   # list of indexes for which rmin and rmax are not defined
         
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = 'Protein'
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = 'Tracer'
+        
         if pt_pairs != []: 
-            raise DataError(f"The 'rmin' and 'rmax' values are not defined for the following protein-tracer pairs: {l}.\nUse 'calc_lambda' function or 'set_fitparams' to choose 'rmin' and 'rmax' values.")
+            raise DataError(f"The 'rmin' and 'rmax' values are not defined for the following protein-tracer pairs: {pt_pairs}.\nUse 'calc_lambda' function or 'set_fitparams' to choose 'rmin' and 'rmax' values.")
                             
         for key, value in self.data_dict.items():
             metadata, data = value.values()
-            data['amount_bound'] = FA._calc_amount_bound(data['r_corrected'], self.plate_map, self.type)   # create dictionary 'r_mean' with mean anisotropy data frames for each protein-tracer pair
+            data['amount_bound'] = FA._calc_amount_bound(data['r_corrected'], self.plate_map, t_type)   # create dictionary 'r_mean' with mean anisotropy data frames for each protein-tracer pair
             
     
     def _calc_amount_bound(df, platemap, t_type):
@@ -789,13 +795,17 @@ class FA:
         return init_param
     
     def _curve_fit(func, df, t_type, var, **kwargs):
-        """Fits a curve to the plot of anisotropy (or intensity) against protein concentration
+        """Fits a curve to the plot of specified variable against protein (or tracer) concentration using pre-defined funcion.
         
-        :param df: Data frame containing mean values of anisotropy (or intensity)
+        :param func: Funcion describing the curve
+        :type func: func
+        :param df: Data frame containing mean values of anisotropy, intensity or amount bound and their errors (std and sem).
         :type df: pandas df
         :param t_type: Type of titration ('Protein' or 'Tracer')
         :type t_type: str
         :param **kwargs: Keyword arguments that can be passed into the scipy curve_fit function
+        :param var: Type of fitting perormetd, either logisitic ('log') or single site ('ssb').
+        :type var: str
         :return: A list of fitting parameters along with their error in proper order so that it can be added to the fitting params data frame
         :rtype: list
         """
@@ -819,7 +829,7 @@ class FA:
         if var == 'log':
             all_params = np.insert(popt, obj=[1,2,3,4], values=perr)   # insert the errors after the respective fitting parameter value
         else:
-            all_params = np.insert(popt, obj=[1,2], values=perr)
+            all_params = np.insert(popt[::-1], obj=[1,2], values=perr[::-1])
         
         return list(all_params) 
     
@@ -841,6 +851,11 @@ class FA:
         data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
         errors = []   # list for storing the details of errors due to failed fitting
         
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = 'Protein'
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = 'Tracer'
+        
         for rep, value in data_dict.items():   # iterate over all repeats
             metadata, data = value.values()
             
@@ -848,7 +863,7 @@ class FA:
                 if var == 'r' or var == 'both':
                     try:   # try fitting the curve to anisotropy data 
                         r_mean = data['r_mean'][pt_pair]   # extract the df with mean anisotropy for a given protein-tracer pair
-                        params_r = FA._curve_fit(FA._r_func, r_mean, self.type, 'log', **kwargs)   # fit the data to logistic curve using the initial parameteers
+                        params_r = FA._curve_fit(FA._r_func, r_mean, t_type, 'log', **kwargs)   # fit the data to logistic curve using the initial parameteers
                         data['fit_params'].loc[pt_pair, ['rmin','rmin error','rmax', 'rmax error', 'r_EC50', 'r_EC50 error', 'r_hill', 'r_hill error']] = params_r   # add the fitting parameters to the respective df
 
                     except RuntimeError as e:   # if fitting fails, added details about the error to the errors list and proceed intensity data fitting
@@ -858,7 +873,7 @@ class FA:
                 if var == 'i' or var == 'both':
                     try:   # try fitting the curve to intensity data
                         i_mean = data['i_mean'][pt_pair]   # extract the df with i mean for a given protein-tracer pair
-                        params_i = FA._curve_fit(FA._r_func, i_mean, self.type, 'log', **kwargs)
+                        params_i = FA._curve_fit(FA._r_func, i_mean, t_type, 'log', **kwargs)
                         data['fit_params'].loc[pt_pair, ['Ifree', 'Ifree error', 'Ibound','Ibound error', 'I_EC50', 'I_EC50 error', 'I_hill', 'I_hill error']] = params_i
 
                     except RuntimeError as e:   # if fitting fails, added details about the error to the errors list and proceed to to the next protein-tracer pair
@@ -871,7 +886,7 @@ class FA:
             
     def _LB(LT, PT, Kd):
         """Function for fitting a curve to the plot of concentration of fluorescent tracer bound to the target protein against
-        protein concentration.
+        protein (or tracer) concentration.
         LB is the concentration of fluorescent tracer bound to the target protein
         LT is total protein concentration
         PT is total tracer concentration
@@ -896,18 +911,23 @@ class FA:
         data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
         errors = []   # list for storing the details of errors due to failed fitting
         
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = 'Protein'
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = 'Tracer'
+        
         for rep, value in data_dict.items():   # iterate over all repeats
             metadata, data = value.values()
             
             for pt_pair in pt_pairs:   # iterate over all protein-tracer pairs
                 try:   # try fitting the curve to anisotropy data 
                     amount_b = data['amount_bound'][pt_pair]   # extract the df with mean amount bound for a given protein-tracer pair
-                    params = FA._curve_fit(FA._LB, amount_b, self.type, 'ssb', **kwargs)
+                    params = FA._curve_fit(FA._LB, amount_b, t_type, 'ssb', **kwargs)
                     
-                    if self.type == 'Protein':
-                        FA.final_fit.loc[pt_pair, ['LT', 'LT error', 'Kd', 'Kd error', ]] = params  
+                    if t_type == 'Protein':
+                        FA.final_fit.loc[pt_pair, ['Kd', 'Kd error', 'LT', 'LT error']] = params  
                     else:
-                        FA.final_fit.loc[pt_pair, ['PT', 'PT error', 'Kd', 'Kd error', ]] = params
+                        FA.final_fit.loc[pt_pair, ['Kd', 'Kd error', 'PT', 'PT error']] = params
                     
                 except RuntimeError as e:  
                     error_info = (rep, pt_pair, e)
@@ -978,7 +998,7 @@ class FA:
         """
         if var == 'r':   # define the parameters, legend text and legend coordinates characteristic for anisotropy data
             params = [params_df.loc[pt_pair, 'rmin'], params_df.loc[pt_pair, 'rmax'], params_df.loc[pt_pair,'r_EC50'], params_df.loc[pt_pair,'r_hill']]
-            text = "$r_{min}$ = %.2f \u00B1 %.4f\n$r_{max}$ = %.2f \u00B1 %.4f\n$EC_{50}$ = %.0f \u00B1%.0f\n$hill$ = %.2f \u00B1 %.2f" % tuple(params_df.loc[pt_pair, ['rmin',
+            text = "$r_{min}$ = %.4f \u00B1 %.4f\n$r_{max}$ = %.4f \u00B1 %.4f\n$EC_{50}$ = %.2f \u00B1 %.2f\n$hill$ = %.2f \u00B1 %.2f" % tuple(params_df.loc[pt_pair, ['rmin',
             'rmin error','rmax','rmax error','r_EC50','r_EC50 error', 'r_hill', 'r_hill error']])
             label_coords = (0.02, 0.68)
             ylabel = 'Anisotropy'
@@ -990,17 +1010,16 @@ class FA:
             label_coords = (0.02, 0.03)
             ylabel = 'Intensity'
         
-        if t_type == 'Protein':
-            xlabel = f'[{pt_pair[0]}] (nM)'
-        else:
-            xlabel = f'[{pt_pair[1]}] (nM)'
-            
-        drop = data_df[data_df[f'{t_type} Concentration'] != 0].dropna(subset=['mean'])   # exclude the protein concentration = 0 point and any NaNs from plotting
-        axs.errorbar(drop[f'{t_type} Concentration'], drop['mean'], yerr=drop[err], color='black', fmt='o', capsize=3, marker='s')
-        axs.set_xscale('symlog')
+        drop = data_df[data_df[f'{t_type[0]} Concentration'] != 0].dropna(subset=['mean'])   # exclude the protein concentration = 0 point and any NaNs from plotting
+        axs.errorbar(drop[f'{t_type[0]} Concentration'], drop['mean'], yerr=drop[err], color='black', fmt='o', capsize=3, marker='s')
+        axs.set_xscale('log')
         axs.set_ylabel(ylabel)
-        axs.set_xlabel(xlabel)
-        axs.plot(drop[f'{t_type} Concentration'], FA._r_func(drop[f'{t_type} Concentration'], *params), color='blue')
+        axs.set_xlabel(f'[{pt_pair[int(t_type[1])]}] (nM)')
+        
+        minc = drop[f'{t_type[0]} Concentration'].min()
+        maxc = drop[f'{t_type[0]} Concentration'].max()
+        vir_data = np.logspace(np.log10(minc), np.log10(maxc), 100)
+        axs.plot(vir_data, FA._r_func(vir_data, *params), color='blue')
         
         if leg == True:   # display legend and a box with fitting parameters on the graph
             axs.set_title(f'Protein: {pt_pair[0]}, Tracer: {pt_pair[1]}')
@@ -1008,10 +1027,10 @@ class FA:
             axs.annotate(text, xy=label_coords, xycoords='axes fraction', fontsize=11)
             
         if exp == True:   # save figures in the same directory as the notebook
-            fig.savefig(f"{rep}_{var}_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+            fig.savefig(f"rep_{rep[-1]}_{var}_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
         
         if type(exp) == str:   # save figures in the user defined directory
-            fig.savefig(f"{exp}{rep}_{var}_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+            fig.savefig(f"{exp}rep_{rep[-1]}_{var}_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
         
         if disp == False:   
             plt.close(fig)
@@ -1027,12 +1046,17 @@ class FA:
         :param trac: List of tracer names for which the graphs are created, defaults to ['all'].
         :type trac: list of str
         :param rep: List of repeat numbers for which the graphs are created, defaults to ['all'].
-        :type rep: list of ints
+        :type rep: list of int
         :param err: Type of error data displayed as error bars, either standard deviation ('std') or standard error ('sem'), defaults to 'std'.
         :type err: str
         """
         # get data_dict and a list of protein-tracer names
         data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
+        
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = ('Protein', 0)
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = ('Tracer', 1)
         
         for key, value in data_dict.items():   # iterte over all repeats and create a sperate figure for each repeat
             metadata, data = value.values()
@@ -1043,13 +1067,13 @@ class FA:
             for idx, pt_pair in enumerate(pt_pairs):   # for each portein-tracer pair plot two graphs: anisotropy and intensity
                 r_data_df, i_data_df = data['r_mean'][pt_pair], data['i_mean'][pt_pair]   # extract the df with anisotropy and intensity
         
-                if len(pt_pairs) == 1:   # for only one protein-tracer pair the subplot grid 1-dimensional
-                    FA._plot_ani(r_data_df, fit_params, pt_pair, self.type, fig, axs[0], err, 'r', key)
-                    FA._plot_ani(i_data_df, fit_params, pt_pair, self.type, fig, axs[1], err, 'i', key)
+                if len(pt_pairs) == 1:   # for only one protein-tracer pair the subplot grid is 1-dimensional
+                    FA._plot_ani(r_data_df, fit_params, pt_pair, t_type, fig, axs[0], err, 'r', key)
+                    FA._plot_ani(i_data_df, fit_params, pt_pair, t_type, fig, axs[1], err, 'i', key)
                 
-                else:   # for more than one protein-tracer pair the subplot grid 2-dimensional
-                    FA._plot_ani(r_data_df, fit_params, pt_pair, self.type, fig, axs[idx,0], err, 'r', key)
-                    FA._plot_ani(i_data_df, fit_params, pt_pair, self.type, fig, axs[idx,1], err, 'i', key)
+                else:   # for more than one protein-tracer pair the subplot grid is 2-dimensional
+                    FA._plot_ani(r_data_df, fit_params, pt_pair, t_type, fig, axs[idx,0], err, 'r', key)
+                    FA._plot_ani(i_data_df, fit_params, pt_pair, t_type, fig, axs[idx,1], err, 'i', key)
                 
 
     def save_ani_figs(self, prot=['all'], trac=['all'], rep=['all'], var='both', path='', err='std', leg=False, dpi=250):
@@ -1130,10 +1154,14 @@ class FA:
             params = [FA.final_fit.loc[pt_pair, 'PT'], FA.final_fit.loc[pt_pair, 'Kd']]
             
         axs.errorbar(drop[f'{t_type} Concentration'], drop['mean'], yerr=drop[err], color='black', fmt='o', capsize=3, marker='s')
-        axs.set_xscale('symlog')
+        axs.set_xscale('log')
         axs.set_ylabel('[Fluorescent Tracer Bound] (nM)')
         axs.set_xlabel(xlabel)
-        axs.plot(drop[f'{t_type} Concentration'], FA._LB(drop[f'{t_type} Concentration'], *params), color='blue')
+        
+        minc = drop[f'{t_type} Concentration'].min()
+        maxc = drop[f'{t_type} Concentration'].max()
+        vir_data = np.logspace(np.log10(minc),np.log10(maxc), 100)
+        axs.plot(vir_data, FA._LB(vir_data, *params), color='blue')
         
         if leg == True:   # display the figure title, legend and annotation with fitting params
             axs.set_title(f'Repeat {rep[-1]}, Protein: {pt_pair[0]}, Tracer: {pt_pair[1]}')
@@ -1143,9 +1171,9 @@ class FA:
         plt.show()
         
         if exp == True:   # save the figure to the same directory as the notebook
-            fig.savefig(f"{rep}_Kd_plot_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+            fig.savefig(f"Kd_plot_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
         if type(exp) == str:   # save the figure to user defined directory
-            fig.savefig(f"{exp}{rep}_Kd_plot_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
+            fig.savefig(f"{exp}Kd_plot_{str(pt_pair[0])}_{str(pt_pair[1])}.png", dpi=dpi)
     
     def _overlay_kd_plots(plate_map, data_dict, pt_pairs, t_type, err, leg, exp, dpi):   
         """Creates a figure with overlayed plots for specified protein-tracer pairs and repeats 
@@ -1181,6 +1209,7 @@ class FA:
                 data_df = data['amount_bound'][pt_pair]   # extract the correct df with amount bound for a given protein-tracer pair
                 drop = data_df[ data_df[f'{t_type} Concentration'] != 0].dropna(subset=['mean'])   # exclude the protein concentration = 0 point and any NaNs from data fitting
                 
+                
                 if t_type == 'Protein':     
                     params = [FA.final_fit.loc[pt_pair, 'LT'], FA.final_fit.loc[pt_pair, 'Kd']]
                     text = '$L_{T}$ = %.2f\u00B1 %.2f\n$K_{d}$ = %.2f \u00B1 %.2f' % tuple(FA.final_fit.loc[pt_pair, ['LT','LT error','Kd','Kd error']])  
@@ -1189,14 +1218,18 @@ class FA:
                     params = [FA.final_fit.loc[pt_pair, 'PT'], FA.final_fit.loc[pt_pair, 'Kd']]
                     text = '$P_{T}$ = %.2f\u00B1 %.2f\n$K_{d}$ = %.2f \u00B1 %.2f' % tuple(FA.final_fit.loc[pt_pair, ['PT','PT error','Kd','Kd error']]) 
                     
-                text2 = f"rep {key[-1]}, {pt_pair[0]}, {pt_pair[1]}\n{text}"
-                leg_text.append(text2)
+                text_long = f"rep {key[-1]}, {pt_pair[0]}, {pt_pair[1]}\n{text}"
+                leg_text.append(text_long)
                 
+                minc = drop[f'{t_type} Concentration'].min()
+                maxc = drop[f'{t_type} Concentration'].max()
+                vir_data = np.logspace(np.log10(minc),np.log10(maxc), 100)
                 cmap = plt.cm.get_cmap(next(iter_cmaps))   # take the next color map from the list 
-                axs.errorbar(drop[f'{t_type} Concentration'], drop['mean'], yerr=drop[err], fmt='o', capsize=3, marker='s', color=cmap(0.95))
-                axs.plot(drop[f'{t_type} Concentration'], FA._LB(drop[f'{t_type} Concentration'], *params), color=cmap(0.50))  
                 
-        axs.set_xscale('symlog')
+                axs.errorbar(drop[f'{t_type} Concentration'], drop['mean'], yerr=drop[err], fmt='o', capsize=3, marker='s', color=cmap(0.95))
+                axs.plot(vir_data, FA._LB(vir_data, *params), color=cmap(0.50))  
+                
+        axs.set_xscale('log')
         axs.set_ylabel('[Fluorescent Tracer Bound] (nM)')
         axs.set_xlabel(f'[{t_type}] (nM)')
 
@@ -1239,15 +1272,20 @@ class FA:
         """
         data_dict, pt_pairs = FA._get_items_to_plot(self.data_dict, self.plate_map, prot, trac, rep)
         
+        if len(self.plate_map['Tracer Concentration'].dropna().unique()) == 1:   # protein is titrated to a constant amount of tracer
+            t_type = 'Protein'
+        if len(self.plate_map['Protein Concentration'].dropna().unique()) == 1:   # tracer is titrated to a constant amount of protein
+            t_type = 'Tracer'
+        
         if overlay == False:
             for key, value in data_dict.items():   # iterte through all repeats of the defined data_dict
                 metadata, data = value.values()
 
                 for pt_pair in pt_pairs:    # iterate through the list of protein-tracer names to create a separate figure for each pair
                     data_df = data['amount_bound'][pt_pair]   # extract the correct df with amount bound for a given protein-tracer pair
-                    FA._plot_kd(data_df, key, pt_pair, self.type, err, legend, export, dpi)
+                    FA._plot_kd(data_df, key, pt_pair, t_type, err, legend, export, dpi)
         else:
-            FA._overlay_kd_plots(self.plate_map, data_dict, pt_pairs, self.type, err, legend, export, dpi)
+            FA._overlay_kd_plots(self.plate_map, data_dict, pt_pairs, t_type, err, legend, export, dpi)
         
         
     ##### Fittig params set, export and import functions #####
@@ -1283,7 +1321,7 @@ class FA:
         if file_type == 'csv':   # export as csv file
             FA.final_fit.to_csv(path_or_buf=f"{path}final_fit_parameters.csv")
         if file_type == 'excel':   # export as excel file
-            FA.final_fit.to_excel(excel_writer=f"{path}final_fit_parameters.xlsx")
+            FA.final_fit.to_excel(excel_writer=f"{path}all_fitting_parameters.xlsx")
     
         for key, value in self.data_dict.items():   #iterate over all repeats
             metadata, data = value.values()
@@ -1291,7 +1329,8 @@ class FA:
             if file_type == 'csv':   # export as csv file
                 data['fit_params'].to_csv(path_or_buf=f"{path}{key}_fitting_parameters.csv")
             if file_type == 'excel':   # export as excel file
-                data['fit_params'].to_excel(excel_writer=f"{path}{key}_single_repeat_fitting_parameters.xlsx")
+                with pd.ExcelWriter(f"{path}all_fitting_parameters.xlsx", engine='openpyxl', mode='a') as writer:
+                    data['fit_params'].to_excel(writer, sheet_name=f"{key}_fit_params")
         
         print(f'The fitting parameters were exported to the {file_type} files.')
         
@@ -1311,3 +1350,38 @@ class FA:
                 warnings.warn(f"The final_fit data frame does not contain matching columns: '{col}'")
             else:   # overwrite the existing values in the final_fit df with the ones from imported df
                 FA.final_fit.loc[FA.final_fit.index.intersection(indexes), col] = df.loc[df.index.intersection(indexes), col]
+                
+                
+    def export_data(self, path=''):
+        """Saves the mean anisotropy, intensity and amount bound data along with their standard deviation 
+        and standard error in excel file.
+        
+        :param path: Path to the folder in wchich the excel file is saved.
+        :type path: str
+        """
+        c = 0   # count number of iterations
+        for key, value in self.data_dict.items():
+            
+            metadata, data = value.values()
+            pt_pairs = list(data['r_mean'].keys())   # list of all protein-tracer names
+
+            for pt_pair in pt_pairs:
+                
+                # remove redundant columns and rename the remaining ones for anisotropy, intensity and amount bound dfs
+                r_df = data['r_mean'][pt_pair].drop(['Protein Name','Tracer Name'], axis=1)
+                r_df2 = r_df.rename(columns={'mean': 'anisotropy mean', 'std': 'ani std', 'sem': 'ani sem'}).set_index('Protein Concentration')
+                i_df = data['i_mean'][pt_pair].drop(['Protein Name','Tracer Name'], axis=1)
+                i_df2 = i_df.rename(columns={'mean': 'intensity mean', 'std': 'int std', 'sem': 'int sem'}).set_index('Protein Concentration')
+                ab_df = data['amount_bound'][pt_pair].drop(['Protein Name','Tracer Name'], axis=1)
+                ab_df2 = ab_df.rename(columns={'mean': 'amount bound mean', 'std': 'ab std', 'sem': 'ab sem'}).set_index('Protein Concentration')
+                
+                # join the anisotropy, intensity and amount bound dfs together 
+                m = pd.concat([r_df2, i_df2, ab_df2], axis=1)
+                
+                if c == 0:   # for the first iteration create the excel file
+                    m.to_excel(excel_writer=f"{path}Anisotropy Data.xlsx", sheet_name=f'rep_{key[-1]}_{pt_pair[0][:11]}_{pt_pair[1][:11]}')
+                
+                else:     # for next iterations append new sheet to the existing excel file 
+                    with pd.ExcelWriter(f"{path}Anisotropy Data.xlsx", engine='openpyxl', mode='a') as writer:
+                        m.to_excel(writer, sheet_name=f'rep_{key[-1]}_{pt_pair[0][:11]}_{pt_pair[1][:11]}')
+                c = c + 1
