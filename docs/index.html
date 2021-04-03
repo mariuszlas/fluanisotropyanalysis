@@ -5,7 +5,7 @@
   <meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
    <meta content="pdoc 0.9.2" name="generator"/>
    <title>
-    flu_ani_analysis.flu_ani_analysis API documentation
+    fluanisotropyanalysis.flu_ani_analysis API documentation
    </title>
    <meta content="" name="description"/>
    <link as="style" crossorigin="" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" rel="preload stylesheet"/>
@@ -34,7 +34,7 @@
      <h1 class="title">
       Module
       <code>
-       flu_ani_analysis.flu_ani_analysis
+       fluanisotropyanalysis.flu_ani_analysis
       </code>
      </h1>
     </header>
@@ -1783,7 +1783,7 @@ class FA:
                 else:     # for next iterations append new sheet to the existing excel file 
                     with pd.ExcelWriter(f"{path}Anisotropy Data.xlsx", engine='openpyxl', mode='a') as writer:
                         m.to_excel(writer, sheet_name=f'rep_{key[-1]}_{ptc[0][:7]}_{ptc[1][:7]}_{ptc[2][:7]}')
-        </code></pre>
+            </code></pre>
      </details>
     </section>
     <section>
@@ -1797,7 +1797,7 @@ class FA:
       Classes
      </h2>
      <dl>
-      <dt id="flu_ani_analysis.flu_ani_analysis.DataError">
+      <dt id="fluanisotropyanalysis.flu_ani_analysis.DataError">
        <code class="flex name class">
         <span>
          class
@@ -1840,7 +1840,7 @@ class FA:
         </li>
        </ul>
       </dd>
-      <dt id="flu_ani_analysis.flu_ani_analysis.DataTypeError">
+      <dt id="fluanisotropyanalysis.flu_ani_analysis.DataTypeError">
        <code class="flex name class">
         <span>
          class
@@ -1883,7 +1883,7 @@ class FA:
         </li>
        </ul>
       </dd>
-      <dt id="flu_ani_analysis.flu_ani_analysis.FA">
+      <dt id="fluanisotropyanalysis.flu_ani_analysis.FA">
        <code class="flex name class">
         <span>
          class
@@ -3640,7 +3640,7 @@ class FA:
         Static methods
        </h3>
        <dl>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.read_in_envision">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.read_in_envision">
          <code class="name flex">
           <span>
            def
@@ -3759,7 +3759,7 @@ def read_in_envision(cls, data_csv, platemap_csv, data_type='plate', size=384):
         Methods
        </h3>
        <dl>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.background_correct">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.background_correct">
          <code class="name flex">
           <span>
            def
@@ -3805,7 +3805,7 @@ protein, tracer or competitor concentration from each non-blank value of the p (
     print('Background correction was successfully performed!')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.calc_amount_bound">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.calc_amount_bound">
          <code class="name flex">
           <span>
            def
@@ -3854,7 +3854,7 @@ along with its standard deviation and standard error.
     print('The amount of fluorescent tracer bound was successfully calculated.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.calc_lambda">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.calc_lambda">
          <code class="name flex">
           <span>
            def
@@ -3917,7 +3917,7 @@ a single value can be saved for each protein-tracer pair which will be used in s
         return FA._widget(self.data_dict, w_info, df)</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.calc_mean_r_i">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.calc_mean_r_i">
          <code class="name flex">
           <span>
            def
@@ -3970,7 +3970,7 @@ This data is required for fitting a logistic curve to anisotropy and intensity p
     print('The mean anisotropy and intensity were successfully calculated.') </code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.calc_r_i">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.calc_r_i">
          <code class="name flex">
           <span>
            def
@@ -4083,7 +4083,7 @@ well ids for all repeats is displayed along with a summary of wells above the th
         print('The fluorescence intensity and anisotropy were successfully calculated!\n')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.export_data">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.export_data">
          <code class="name flex">
           <span>
            def
@@ -4152,7 +4152,7 @@ and standard error into excel file.
                     m.to_excel(writer, sheet_name=f'rep_{key[-1]}_{ptc[0][:7]}_{ptc[1][:7]}_{ptc[2][:7]}')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.export_params">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.export_params">
          <code class="name flex">
           <span>
            def
@@ -4226,7 +4226,7 @@ and standard error into excel file.
     print(f'The fitting parameters were exported to the {file_type} files.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.import_params">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.import_params">
          <code class="name flex">
           <span>
            def
@@ -4285,7 +4285,7 @@ and standard error into excel file.
         warnings.warn(f"The final_fit data frame does not contain following columns:\n'{col_diff}'")</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.invalidate">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.invalidate">
          <code class="name flex">
           <span>
            def
@@ -4381,7 +4381,7 @@ To validate previously invalidated wells, rows and/or columns, pass the addition
         raise TypeError('No arguments were passed. Specify the wells, rows and/or columns to be invalidated!')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.logisitc_fit_com">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.logisitc_fit_com">
          <code class="name flex">
           <span>
            def
@@ -4495,7 +4495,7 @@ parameters with associated errors for each repeat that are stored in the fitting
         print('The logistic curve fitting was successfully performed.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.logistic_fit">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.logistic_fit">
          <code class="name flex">
           <span>
            def
@@ -4614,7 +4614,7 @@ Returns the fitting parameters with associated errors for each repeat that are s
         print('The logistic curve fitting was successfully performed.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.plot_ani">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.plot_ani">
          <code class="name flex">
           <span>
            def
@@ -4721,7 +4721,7 @@ and intensity graphs for all specified proteins and tracers arranged in two colu
                 FA._plot_ani(i_data_df, fit_params, ptc, t_type, fig, axs[idx,1], err, 'i', key, unit, exp=False, disp=True, leg=legend, dpi=250)</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.plot_ani_com">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.plot_ani_com">
          <code class="name flex">
           <span>
            def
@@ -4855,7 +4855,7 @@ proteins, tracers and competitors.
             FA._plot_ani_com(r_data_df, fit_params, ptc, err, key, unit, exp=export, leg=legend, dpi=dpi)</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.plot_i_percent">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.plot_i_percent">
          <code class="name flex">
           <span>
            def
@@ -4886,7 +4886,7 @@ proteins, tracers and competitors.
     return FA._plot_i_percent(self.data_dict, self.plate_map)</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.plot_ic50">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.plot_ic50">
          <code class="name flex">
           <span>
            def
@@ -5027,7 +5027,7 @@ Calculates the binding constant (Ki) for each competitor.
                 print(f'LT = {params[4]:,.1f} {unit}, LT* = {params[5]:,.1f} {unit}')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.plot_kd">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.plot_kd">
          <code class="name flex">
           <span>
            def
@@ -5165,7 +5165,7 @@ Calculates the binding constant (Ki) for each competitor.
         FA._overlay_kd_plots(self.plate_map, data_dict, ptc_list, t_type, err, unit, export, legend, dpi)</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.save_ani_figs">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.save_ani_figs">
          <code class="name flex">
           <span>
            def
@@ -5312,7 +5312,7 @@ directory as this notebook or in user defined directory if the path is provided.
     print('The figures were successfully exported.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.set_fitparams">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.set_fitparams">
          <code class="name flex">
           <span>
            def
@@ -5377,7 +5377,7 @@ directory as this notebook or in user defined directory if the path is provided.
         warnings.warn(f'No such columns in the final_fit data frame:\n{wrong_cols}')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.single_site_fit">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.single_site_fit">
          <code class="name flex">
           <span>
            def
@@ -5475,7 +5475,7 @@ protein (or tracer) concentration. The resulting fitting parameters are stored i
         print('The single site curve fitting was successfully performed.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.single_site_fit_com">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.single_site_fit_com">
          <code class="name flex">
           <span>
            def
@@ -5575,7 +5575,7 @@ competitor concentration. The rsulting fitting parameters are stired in the fitt
         print('The single site curve fitting was successfully performed.')</code></pre>
          </details>
         </dd>
-        <dt id="flu_ani_analysis.flu_ani_analysis.FA.visualise">
+        <dt id="fluanisotropyanalysis.flu_ani_analysis.FA.visualise">
          <code class="name flex">
           <span>
            def
@@ -5745,7 +5745,7 @@ parameters must be passed as tuple of two strings specifying the repeat number a
         </dd>
        </dl>
       </dd>
-      <dt id="flu_ani_analysis.flu_ani_analysis.PlateSizeError">
+      <dt id="fluanisotropyanalysis.flu_ani_analysis.PlateSizeError">
        <code class="flex name class">
         <span>
          class
@@ -5807,8 +5807,8 @@ parameters must be passed as tuple of two strings specifying the repeat number a
       <ul>
        <li>
         <code>
-         <a href="index.html" title="flu_ani_analysis">
-          flu_ani_analysis
+         <a href="index.html" title="fluanisotropyanalysis">
+          fluanisotropyanalysis
          </a>
         </code>
        </li>
@@ -5824,7 +5824,7 @@ parameters must be passed as tuple of two strings specifying the repeat number a
        <li>
         <h4>
          <code>
-          <a href="#flu_ani_analysis.flu_ani_analysis.DataError" title="flu_ani_analysis.flu_ani_analysis.DataError">
+          <a href="#fluanisotropyanalysis.flu_ani_analysis.DataError" title="fluanisotropyanalysis.flu_ani_analysis.DataError">
            DataError
           </a>
          </code>
@@ -5833,7 +5833,7 @@ parameters must be passed as tuple of two strings specifying the repeat number a
        <li>
         <h4>
          <code>
-          <a href="#flu_ani_analysis.flu_ani_analysis.DataTypeError" title="flu_ani_analysis.flu_ani_analysis.DataTypeError">
+          <a href="#fluanisotropyanalysis.flu_ani_analysis.DataTypeError" title="fluanisotropyanalysis.flu_ani_analysis.DataTypeError">
            DataTypeError
           </a>
          </code>
@@ -5842,7 +5842,7 @@ parameters must be passed as tuple of two strings specifying the repeat number a
        <li>
         <h4>
          <code>
-          <a href="#flu_ani_analysis.flu_ani_analysis.FA" title="flu_ani_analysis.flu_ani_analysis.FA">
+          <a href="#fluanisotropyanalysis.flu_ani_analysis.FA" title="fluanisotropyanalysis.flu_ani_analysis.FA">
            FA
           </a>
          </code>
@@ -5850,154 +5850,154 @@ parameters must be passed as tuple of two strings specifying the repeat number a
         <ul class="two-column">
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.background_correct" title="flu_ani_analysis.flu_ani_analysis.FA.background_correct">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.background_correct" title="fluanisotropyanalysis.flu_ani_analysis.FA.background_correct">
             background_correct
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.calc_amount_bound" title="flu_ani_analysis.flu_ani_analysis.FA.calc_amount_bound">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.calc_amount_bound" title="fluanisotropyanalysis.flu_ani_analysis.FA.calc_amount_bound">
             calc_amount_bound
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.calc_lambda" title="flu_ani_analysis.flu_ani_analysis.FA.calc_lambda">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.calc_lambda" title="fluanisotropyanalysis.flu_ani_analysis.FA.calc_lambda">
             calc_lambda
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.calc_mean_r_i" title="flu_ani_analysis.flu_ani_analysis.FA.calc_mean_r_i">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.calc_mean_r_i" title="fluanisotropyanalysis.flu_ani_analysis.FA.calc_mean_r_i">
             calc_mean_r_i
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.calc_r_i" title="flu_ani_analysis.flu_ani_analysis.FA.calc_r_i">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.calc_r_i" title="fluanisotropyanalysis.flu_ani_analysis.FA.calc_r_i">
             calc_r_i
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.export_data" title="flu_ani_analysis.flu_ani_analysis.FA.export_data">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.export_data" title="fluanisotropyanalysis.flu_ani_analysis.FA.export_data">
             export_data
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.export_params" title="flu_ani_analysis.flu_ani_analysis.FA.export_params">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.export_params" title="fluanisotropyanalysis.flu_ani_analysis.FA.export_params">
             export_params
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.import_params" title="flu_ani_analysis.flu_ani_analysis.FA.import_params">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.import_params" title="fluanisotropyanalysis.flu_ani_analysis.FA.import_params">
             import_params
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.invalidate" title="flu_ani_analysis.flu_ani_analysis.FA.invalidate">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.invalidate" title="fluanisotropyanalysis.flu_ani_analysis.FA.invalidate">
             invalidate
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.logisitc_fit_com" title="flu_ani_analysis.flu_ani_analysis.FA.logisitc_fit_com">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.logisitc_fit_com" title="fluanisotropyanalysis.flu_ani_analysis.FA.logisitc_fit_com">
             logisitc_fit_com
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.logistic_fit" title="flu_ani_analysis.flu_ani_analysis.FA.logistic_fit">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.logistic_fit" title="fluanisotropyanalysis.flu_ani_analysis.FA.logistic_fit">
             logistic_fit
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.plot_ani" title="flu_ani_analysis.flu_ani_analysis.FA.plot_ani">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.plot_ani" title="fluanisotropyanalysis.flu_ani_analysis.FA.plot_ani">
             plot_ani
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.plot_ani_com" title="flu_ani_analysis.flu_ani_analysis.FA.plot_ani_com">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.plot_ani_com" title="fluanisotropyanalysis.flu_ani_analysis.FA.plot_ani_com">
             plot_ani_com
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.plot_i_percent" title="flu_ani_analysis.flu_ani_analysis.FA.plot_i_percent">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.plot_i_percent" title="fluanisotropyanalysis.flu_ani_analysis.FA.plot_i_percent">
             plot_i_percent
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.plot_ic50" title="flu_ani_analysis.flu_ani_analysis.FA.plot_ic50">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.plot_ic50" title="fluanisotropyanalysis.flu_ani_analysis.FA.plot_ic50">
             plot_ic50
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.plot_kd" title="flu_ani_analysis.flu_ani_analysis.FA.plot_kd">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.plot_kd" title="fluanisotropyanalysis.flu_ani_analysis.FA.plot_kd">
             plot_kd
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.read_in_envision" title="flu_ani_analysis.flu_ani_analysis.FA.read_in_envision">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.read_in_envision" title="fluanisotropyanalysis.flu_ani_analysis.FA.read_in_envision">
             read_in_envision
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.save_ani_figs" title="flu_ani_analysis.flu_ani_analysis.FA.save_ani_figs">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.save_ani_figs" title="fluanisotropyanalysis.flu_ani_analysis.FA.save_ani_figs">
             save_ani_figs
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.set_fitparams" title="flu_ani_analysis.flu_ani_analysis.FA.set_fitparams">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.set_fitparams" title="fluanisotropyanalysis.flu_ani_analysis.FA.set_fitparams">
             set_fitparams
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.single_site_fit" title="flu_ani_analysis.flu_ani_analysis.FA.single_site_fit">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.single_site_fit" title="fluanisotropyanalysis.flu_ani_analysis.FA.single_site_fit">
             single_site_fit
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.single_site_fit_com" title="flu_ani_analysis.flu_ani_analysis.FA.single_site_fit_com">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.single_site_fit_com" title="fluanisotropyanalysis.flu_ani_analysis.FA.single_site_fit_com">
             single_site_fit_com
            </a>
           </code>
          </li>
          <li>
           <code>
-           <a href="#flu_ani_analysis.flu_ani_analysis.FA.visualise" title="flu_ani_analysis.flu_ani_analysis.FA.visualise">
+           <a href="#fluanisotropyanalysis.flu_ani_analysis.FA.visualise" title="fluanisotropyanalysis.flu_ani_analysis.FA.visualise">
             visualise
            </a>
           </code>
@@ -6007,7 +6007,7 @@ parameters must be passed as tuple of two strings specifying the repeat number a
        <li>
         <h4>
          <code>
-          <a href="#flu_ani_analysis.flu_ani_analysis.PlateSizeError" title="flu_ani_analysis.flu_ani_analysis.PlateSizeError">
+          <a href="#fluanisotropyanalysis.flu_ani_analysis.PlateSizeError" title="fluanisotropyanalysis.flu_ani_analysis.PlateSizeError">
            PlateSizeError
           </a>
          </code>
