@@ -1,6 +1,7 @@
 # Fluorescence Anisotropy Analysis
 
 Read and analyse data from fluorescence anisotropy assays.
+
 The pacakge is best used within the interactive environment of [Jupyter Notebook](https://jupyter.org/) (accessible via [Anaconda](https://www.anaconda.com/products/individual)).
 
 ## Documentation
