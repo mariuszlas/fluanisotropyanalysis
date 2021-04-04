@@ -1,0 +1,386 @@
+﻿Experiment Title,,,,,,,,,
+Well ID,Type,Contents,Protein Name,Protein Concentration,Tracer Name,Tracer Concentration,Competitor Name,Competitor Concentration,Concentration Units
+A1,Compound,,Protein,5000,Tracer,50,Competitor 1,500000,nM
+A2,Compound,,Protein,5000,Tracer,50,Competitor 1,250000,nM
+A3,Compound,,Protein,5000,Tracer,50,Competitor 1,125000,nM
+A4,Compound,,Protein,5000,Tracer,50,Competitor 1,62500,nM
+A5,Compound,,Protein,5000,Tracer,50,Competitor 1,31250,nM
+A6,Compound,,Protein,5000,Tracer,50,Competitor 1,15625,nM
+A7,Compound,,Protein,5000,Tracer,50,Competitor 1,7812.5,nM
+A8,Compound,,Protein,5000,Tracer,50,Competitor 1,3906.25,nM
+A9,Compound,,Protein,5000,Tracer,50,Competitor 1,1953.125,nM
+A10,Compound,,Protein,5000,Tracer,50,Competitor 1,976.5625,nM
+A11,Compound,,Protein,5000,Tracer,50,Competitor 1,488.28125,nM
+A12,Compound,,Protein,5000,Tracer,50,Competitor 1,244.140625,nM
+A13,Compound,,Protein,5000,Tracer,50,Competitor 1,122.0703125,nM
+A14,Compound,,Protein,5000,Tracer,50,Competitor 1,61.03515625,nM
+A15,Compound,,Protein,5000,Tracer,50,Competitor 1,30.51757813,nM
+A16,Compound,,Protein,5000,Tracer,50,Competitor 1,15.25878906,nM
+A17,,,,,,,,,
+A18,,,,,,,,,
+A19,Blank,,Protein,5000,,,Competitor 2,500000,nM
+A20,Blank,,Protein,5000,,,Competitor 2,500000,nM
+A21,Blank,,Protein,5000,,,Competitor 2,500000,nM
+A22,Compound,,Protein,5000,Tracer,50,Competitor 2,500000,nM
+A23,Compound,,Protein,5000,Tracer,50,Competitor 2,500000,nM
+A24,Compound,,Protein,5000,Tracer,50,Competitor 2,500000,nM
+B1,Blank,,Protein,5000,,,Competitor 1,500000,nM
+B2,Blank,,Protein,5000,,,Competitor 1,250000,nM
+B3,Blank,,Protein,5000,,,Competitor 1,125000,nM
+B4,Blank,,Protein,5000,,,Competitor 1,62500,nM
+B5,Blank,,Protein,5000,,,Competitor 1,31250,nM
+B6,Blank,,Protein,5000,,,Competitor 1,15625,nM
+B7,Blank,,Protein,5000,,,Competitor 1,7812.5,nM
+B8,Blank,,Protein,5000,,,Competitor 1,3906.25,nM
+B9,Blank,,Protein,5000,,,Competitor 1,1953.125,nM
+B10,Blank,,Protein,5000,,,Competitor 1,976.5625,nM
+B11,Blank,,Protein,5000,,,Competitor 1,488.28125,nM
+B12,Blank,,Protein,5000,,,Competitor 1,244.140625,nM
+B13,Blank,,Protein,5000,,,Competitor 1,122.0703125,nM
+B14,Blank,,Protein,5000,,,Competitor 1,61.03515625,nM
+B15,Blank,,Protein,5000,,,Competitor 1,30.51757813,nM
+B16,Blank,,Protein,5000,,,Competitor 1,15.25878906,nM
+B17,,,,,,,,,
+B18,,,,,,,,,
+B19,Blank,,Protein,5000,,,Competitor 2,250000,nM
+B20,Blank,,Protein,5000,,,Competitor 2,250000,nM
+B21,Blank,,Protein,5000,,,Competitor 2,250000,nM
+B22,Compound,,Protein,5000,Tracer,50,Competitor 2,250000,nM
+B23,Compound,,Protein,5000,Tracer,50,Competitor 2,250000,nM
+B24,Compound,,Protein,5000,Tracer,50,Competitor 2,250000,nM
+C1,Compound,,Protein,5000,Tracer,50,Competitor 3,500000,nM
+C2,Compound,,Protein,5000,Tracer,50,Competitor 3,250000,nM
+C3,Compound,,Protein,5000,Tracer,50,Competitor 3,125000,nM
+C4,Compound,,Protein,5000,Tracer,50,Competitor 3,62500,nM
+C5,Compound,,Protein,5000,Tracer,50,Competitor 3,31250,nM
+C6,Compound,,Protein,5000,Tracer,50,Competitor 3,15625,nM
+C7,Compound,,Protein,5000,Tracer,50,Competitor 3,7812.5,nM
+C8,Compound,,Protein,5000,Tracer,50,Competitor 3,3906.25,nM
+C9,Compound,,Protein,5000,Tracer,50,Competitor 3,1953.125,nM
+C10,Compound,,Protein,5000,Tracer,50,Competitor 3,976.5625,nM
+C11,Compound,,Protein,5000,Tracer,50,Competitor 3,488.28125,nM
+C12,Compound,,Protein,5000,Tracer,50,Competitor 3,244.140625,nM
+C13,Compound,,Protein,5000,Tracer,50,Competitor 3,122.0703125,nM
+C14,Compound,,Protein,5000,Tracer,50,Competitor 3,61.03515625,nM
+C15,Compound,,Protein,5000,Tracer,50,Competitor 3,30.51757813,nM
+C16,Compound,,Protein,5000,Tracer,50,Competitor 3,15.25878906,nM
+C17,,,,,,,,,
+C18,,,,,,,,,
+C19,Blank,,Protein,5000,,,Competitor 2,125000,nM
+C20,Blank,,Protein,5000,,,Competitor 2,125000,nM
+C21,Blank,,Protein,5000,,,Competitor 2,125000,nM
+C22,Compound,,Protein,5000,Tracer,50,Competitor 2,125000,nM
+C23,Compound,,Protein,5000,Tracer,50,Competitor 2,125000,nM
+C24,Compound,,Protein,5000,Tracer,50,Competitor 2,125000,nM
+D1,Compound,,Protein,5000,Tracer,50,Competitor 3,500000,nM
+D2,Compound,,Protein,5000,Tracer,50,Competitor 3,250000,nM
+D3,Compound,,Protein,5000,Tracer,50,Competitor 3,125000,nM
+D4,Compound,,Protein,5000,Tracer,50,Competitor 3,62500,nM
+D5,Compound,,Protein,5000,Tracer,50,Competitor 3,31250,nM
+D6,Compound,,Protein,5000,Tracer,50,Competitor 3,15625,nM
+D7,Compound,,Protein,5000,Tracer,50,Competitor 3,7812.5,nM
+D8,Compound,,Protein,5000,Tracer,50,Competitor 3,3906.25,nM
+D9,Compound,,Protein,5000,Tracer,50,Competitor 3,1953.125,nM
+D10,Compound,,Protein,5000,Tracer,50,Competitor 3,976.5625,nM
+D11,Compound,,Protein,5000,Tracer,50,Competitor 3,488.28125,nM
+D12,Compound,,Protein,5000,Tracer,50,Competitor 3,244.140625,nM
+D13,Compound,,Protein,5000,Tracer,50,Competitor 3,122.0703125,nM
+D14,Compound,,Protein,5000,Tracer,50,Competitor 3,61.03515625,nM
+D15,Compound,,Protein,5000,Tracer,50,Competitor 3,30.51757813,nM
+D16,Compound,,Protein,5000,Tracer,50,Competitor 3,15.25878906,nM
+D17,,,,,,,,,
+D18,,,,,,,,,
+D19,Blank,,Protein,5000,,,Competitor 2,62500,nM
+D20,Blank,,Protein,5000,,,Competitor 2,62500,nM
+D21,Blank,,Protein,5000,,,Competitor 2,62500,nM
+D22,Compound,,Protein,5000,Tracer,50,Competitor 2,62500,nM
+D23,Compound,,Protein,5000,Tracer,50,Competitor 2,62500,nM
+D24,Compound,,Protein,5000,Tracer,50,Competitor 2,62500,nM
+E1,Compound,,Protein,5000,Tracer,50,Competitor 3,500000,nM
+E2,Compound,,Protein,5000,Tracer,50,Competitor 3,250000,nM
+E3,Compound,,Protein,5000,Tracer,50,Competitor 3,125000,nM
+E4,Compound,,Protein,5000,Tracer,50,Competitor 3,62500,nM
+E5,Compound,,Protein,5000,Tracer,50,Competitor 3,31250,nM
+E6,Compound,,Protein,5000,Tracer,50,Competitor 3,15625,nM
+E7,Compound,,Protein,5000,Tracer,50,Competitor 3,7812.5,nM
+E8,Compound,,Protein,5000,Tracer,50,Competitor 3,3906.25,nM
+E9,Compound,,Protein,5000,Tracer,50,Competitor 3,1953.125,nM
+E10,Compound,,Protein,5000,Tracer,50,Competitor 3,976.5625,nM
+E11,Compound,,Protein,5000,Tracer,50,Competitor 3,488.28125,nM
+E12,Compound,,Protein,5000,Tracer,50,Competitor 3,244.140625,nM
+E13,Compound,,Protein,5000,Tracer,50,Competitor 3,122.0703125,nM
+E14,Compound,,Protein,5000,Tracer,50,Competitor 3,61.03515625,nM
+E15,Compound,,Protein,5000,Tracer,50,Competitor 3,30.51757813,nM
+E16,Compound,,Protein,5000,Tracer,50,Competitor 3,15.25878906,nM
+E17,,,,,,,,,
+E18,,,,,,,,,
+E19,Blank,,Protein,5000,,,Competitor 2,31250,nM
+E20,Blank,,Protein,5000,,,Competitor 2,31250,nM
+E21,Blank,,Protein,5000,,,Competitor 2,31250,nM
+E22,Compound,,Protein,5000,Tracer,50,Competitor 2,31250,nM
+E23,Compound,,Protein,5000,Tracer,50,Competitor 2,31250,nM
+E24,Compound,,Protein,5000,Tracer,50,Competitor 2,31250,nM
+F1,Blank,,Protein,5000,,,Competitor 3,500000,nM
+F2,Blank,,Protein,5000,,,Competitor 3,250000,nM
+F3,Blank,,Protein,5000,,,Competitor 3,125000,nM
+F4,Blank,,Protein,5000,,,Competitor 3,62500,nM
+F5,Blank,,Protein,5000,,,Competitor 3,31250,nM
+F6,Blank,,Protein,5000,,,Competitor 3,15625,nM
+F7,Blank,,Protein,5000,,,Competitor 3,7812.5,nM
+F8,Blank,,Protein,5000,,,Competitor 3,3906.25,nM
+F9,Blank,,Protein,5000,,,Competitor 3,1953.125,nM
+F10,Blank,,Protein,5000,,,Competitor 3,976.5625,nM
+F11,Blank,,Protein,5000,,,Competitor 3,488.28125,nM
+F12,Blank,,Protein,5000,,,Competitor 3,244.140625,nM
+F13,Blank,,Protein,5000,,,Competitor 3,122.0703125,nM
+F14,Blank,,Protein,5000,,,Competitor 3,61.03515625,nM
+F15,Blank,,Protein,5000,,,Competitor 3,30.51757813,nM
+F16,Blank,,Protein,5000,,,Competitor 3,15.25878906,nM
+F17,,,,,,,,,
+F18,,,,,,,,,
+F19,Blank,,Protein,5000,,,Competitor 2,15625,nM
+F20,Blank,,Protein,5000,,,Competitor 2,15625,nM
+F21,Blank,,Protein,5000,,,Competitor 2,15625,nM
+F22,Compound,,Protein,5000,Tracer,50,Competitor 2,15625,nM
+F23,Compound,,Protein,5000,Tracer,50,Competitor 2,15625,nM
+F24,Compound,,Protein,5000,Tracer,50,Competitor 2,15625,nM
+G1,Blank,,Protein,5000,,,Competitor 3,500000,nM
+G2,Blank,,Protein,5000,,,Competitor 3,250000,nM
+G3,Blank,,Protein,5000,,,Competitor 3,125000,nM
+G4,Blank,,Protein,5000,,,Competitor 3,62500,nM
+G5,Blank,,Protein,5000,,,Competitor 3,31250,nM
+G6,Blank,,Protein,5000,,,Competitor 3,15625,nM
+G7,Blank,,Protein,5000,,,Competitor 3,7812.5,nM
+G8,Blank,,Protein,5000,,,Competitor 3,3906.25,nM
+G9,Blank,,Protein,5000,,,Competitor 3,1953.125,nM
+G10,Blank,,Protein,5000,,,Competitor 3,976.5625,nM
+G11,Blank,,Protein,5000,,,Competitor 3,488.28125,nM
+G12,Blank,,Protein,5000,,,Competitor 3,244.140625,nM
+G13,Blank,,Protein,5000,,,Competitor 3,122.0703125,nM
+G14,Blank,,Protein,5000,,,Competitor 3,61.03515625,nM
+G15,Blank,,Protein,5000,,,Competitor 3,30.51757813,nM
+G16,Blank,,Protein,5000,,,Competitor 3,15.25878906,nM
+G17,,,,,,,,,
+G18,,,,,,,,,
+G19,Blank,,Protein,5000,,,Competitor 2,7812.5,nM
+G20,Blank,,Protein,5000,,,Competitor 2,7812.5,nM
+G21,Blank,,Protein,5000,,,Competitor 2,7812.5,nM
+G22,Compound,,Protein,5000,Tracer,50,Competitor 2,7812.5,nM
+G23,Compound,,Protein,5000,Tracer,50,Competitor 2,7812.5,nM
+G24,Compound,,Protein,5000,Tracer,50,Competitor 2,7812.5,nM
+H1,Blank,,Protein,5000,,,Competitor 3,500000,nM
+H2,Blank,,Protein,5000,,,Competitor 3,250000,nM
+H3,Blank,,Protein,5000,,,Competitor 3,125000,nM
+H4,Blank,,Protein,5000,,,Competitor 3,62500,nM
+H5,Blank,,Protein,5000,,,Competitor 3,31250,nM
+H6,Blank,,Protein,5000,,,Competitor 3,15625,nM
+H7,Blank,,Protein,5000,,,Competitor 3,7812.5,nM
+H8,Blank,,Protein,5000,,,Competitor 3,3906.25,nM
+H9,Blank,,Protein,5000,,,Competitor 3,1953.125,nM
+H10,Blank,,Protein,5000,,,Competitor 3,976.5625,nM
+H11,Blank,,Protein,5000,,,Competitor 3,488.28125,nM
+H12,Blank,,Protein,5000,,,Competitor 3,244.140625,nM
+H13,Blank,,Protein,5000,,,Competitor 3,122.0703125,nM
+H14,Blank,,Protein,5000,,,Competitor 3,61.03515625,nM
+H15,Blank,,Protein,5000,,,Competitor 3,30.51757813,nM
+H16,Blank,,Protein,5000,,,Competitor 3,15.25878906,nM
+H17,,,,,,,,,
+H18,,,,,,,,,
+H19,Blank,,Protein,5000,,,Competitor 2,3906.25,nM
+H20,Blank,,Protein,5000,,,Competitor 2,3906.25,nM
+H21,Blank,,Protein,5000,,,Competitor 2,3906.25,nM
+H22,Compound,,Protein,5000,Tracer,50,Competitor 2,3906.25,nM
+H23,Compound,,Protein,5000,Tracer,50,Competitor 2,3906.25,nM
+H24,Compound,,Protein,5000,Tracer,50,Competitor 2,3906.25,nM
+I1,Compound,,Protein,5000,Tracer,50,Competitor 4,500000,nM
+I2,Compound,,Protein,5000,Tracer,50,Competitor 4,250000,nM
+I3,Compound,,Protein,5000,Tracer,50,Competitor 4,125000,nM
+I4,Compound,,Protein,5000,Tracer,50,Competitor 4,62500,nM
+I5,Compound,,Protein,5000,Tracer,50,Competitor 4,31250,nM
+I6,Compound,,Protein,5000,Tracer,50,Competitor 4,15625,nM
+I7,Compound,,Protein,5000,Tracer,50,Competitor 4,7812.5,nM
+I8,Compound,,Protein,5000,Tracer,50,Competitor 4,3906.25,nM
+I9,Compound,,Protein,5000,Tracer,50,Competitor 4,1953.125,nM
+I10,Compound,,Protein,5000,Tracer,50,Competitor 4,976.5625,nM
+I11,Compound,,Protein,5000,Tracer,50,Competitor 4,488.28125,nM
+I12,Compound,,Protein,5000,Tracer,50,Competitor 4,244.140625,nM
+I13,Compound,,Protein,5000,Tracer,50,Competitor 4,122.0703125,nM
+I14,Compound,,Protein,5000,Tracer,50,Competitor 4,61.03515625,nM
+I15,Compound,,Protein,5000,Tracer,50,Competitor 4,30.51757813,nM
+I16,Compound,,Protein,5000,Tracer,50,Competitor 4,15.25878906,nM
+I17,,,,,,,,,
+I18,,,,,,,,,
+I19,Blank,,Protein,5000,,,Competitor 2,1953.125,nM
+I20,Blank,,Protein,5000,,,Competitor 2,1953.125,nM
+I21,Blank,,Protein,5000,,,Competitor 2,1953.125,nM
+I22,Compound,,Protein,5000,Tracer,50,Competitor 2,1953.125,nM
+I23,Compound,,Protein,5000,Tracer,50,Competitor 2,1953.125,nM
+I24,Compound,,Protein,5000,Tracer,50,Competitor 2,1953.125,nM
+J1,Compound,,Protein,5000,Tracer,50,Competitor 4,500000,nM
+J2,Compound,,Protein,5000,Tracer,50,Competitor 4,250000,nM
+J3,Compound,,Protein,5000,Tracer,50,Competitor 4,125000,nM
+J4,Compound,,Protein,5000,Tracer,50,Competitor 4,62500,nM
+J5,Compound,,Protein,5000,Tracer,50,Competitor 4,31250,nM
+J6,Compound,,Protein,5000,Tracer,50,Competitor 4,15625,nM
+J7,Compound,,Protein,5000,Tracer,50,Competitor 4,7812.5,nM
+J8,Compound,,Protein,5000,Tracer,50,Competitor 4,3906.25,nM
+J9,Compound,,Protein,5000,Tracer,50,Competitor 4,1953.125,nM
+J10,Compound,,Protein,5000,Tracer,50,Competitor 4,976.5625,nM
+J11,Compound,,Protein,5000,Tracer,50,Competitor 4,488.28125,nM
+J12,Compound,,Protein,5000,Tracer,50,Competitor 4,244.140625,nM
+J13,Compound,,Protein,5000,Tracer,50,Competitor 4,122.0703125,nM
+J14,Compound,,Protein,5000,Tracer,50,Competitor 4,61.03515625,nM
+J15,Compound,,Protein,5000,Tracer,50,Competitor 4,30.51757813,nM
+J16,Compound,,Protein,5000,Tracer,50,Competitor 4,15.25878906,nM
+J17,,,,,,,,,
+J18,,,,,,,,,
+J19,Blank,,Protein,5000,,,Competitor 2,976.5625,nM
+J20,Blank,,Protein,5000,,,Competitor 2,976.5625,nM
+J21,Blank,,Protein,5000,,,Competitor 2,976.5625,nM
+J22,Compound,,Protein,5000,Tracer,50,Competitor 2,976.5625,nM
+J23,Compound,,Protein,5000,Tracer,50,Competitor 2,976.5625,nM
+J24,Compound,,Protein,5000,Tracer,50,Competitor 2,976.5625,nM
+K1,Compound,,Protein,5000,Tracer,50,Competitor 4,500000,nM
+K2,Compound,,Protein,5000,Tracer,50,Competitor 4,250000,nM
+K3,Compound,,Protein,5000,Tracer,50,Competitor 4,125000,nM
+K4,Compound,,Protein,5000,Tracer,50,Competitor 4,62500,nM
+K5,Compound,,Protein,5000,Tracer,50,Competitor 4,31250,nM
+K6,Compound,,Protein,5000,Tracer,50,Competitor 4,15625,nM
+K7,Compound,,Protein,5000,Tracer,50,Competitor 4,7812.5,nM
+K8,Compound,,Protein,5000,Tracer,50,Competitor 4,3906.25,nM
+K9,Compound,,Protein,5000,Tracer,50,Competitor 4,1953.125,nM
+K10,Compound,,Protein,5000,Tracer,50,Competitor 4,976.5625,nM
+K11,Compound,,Protein,5000,Tracer,50,Competitor 4,488.28125,nM
+K12,Compound,,Protein,5000,Tracer,50,Competitor 4,244.140625,nM
+K13,Compound,,Protein,5000,Tracer,50,Competitor 4,122.0703125,nM
+K14,Compound,,Protein,5000,Tracer,50,Competitor 4,61.03515625,nM
+K15,Compound,,Protein,5000,Tracer,50,Competitor 4,30.51757813,nM
+K16,Compound,,Protein,5000,Tracer,50,Competitor 4,15.25878906,nM
+K17,,,,,,,,,
+K18,,,,,,,,,
+K19,Blank,,Protein,5000,,,Competitor 2,488.28125,nM
+K20,Blank,,Protein,5000,,,Competitor 2,488.28125,nM
+K21,Blank,,Protein,5000,,,Competitor 2,488.28125,nM
+K22,Compound,,Protein,5000,Tracer,50,Competitor 2,488.28125,nM
+K23,Compound,,Protein,5000,Tracer,50,Competitor 2,488.28125,nM
+K24,Compound,,Protein,5000,Tracer,50,Competitor 2,488.28125,nM
+L1,Blank,,Protein,5000,,,Competitor 4,500000,nM
+L2,Blank,,Protein,5000,,,Competitor 4,250000,nM
+L3,Blank,,Protein,5000,,,Competitor 4,125000,nM
+L4,Blank,,Protein,5000,,,Competitor 4,62500,nM
+L5,Blank,,Protein,5000,,,Competitor 4,31250,nM
+L6,Blank,,Protein,5000,,,Competitor 4,15625,nM
+L7,Blank,,Protein,5000,,,Competitor 4,7812.5,nM
+L8,Blank,,Protein,5000,,,Competitor 4,3906.25,nM
+L9,Blank,,Protein,5000,,,Competitor 4,1953.125,nM
+L10,Blank,,Protein,5000,,,Competitor 4,976.5625,nM
+L11,Blank,,Protein,5000,,,Competitor 4,488.28125,nM
+L12,Blank,,Protein,5000,,,Competitor 4,244.140625,nM
+L13,Blank,,Protein,5000,,,Competitor 4,122.0703125,nM
+L14,Blank,,Protein,5000,,,Competitor 4,61.03515625,nM
+L15,Blank,,Protein,5000,,,Competitor 4,30.51757813,nM
+L16,Blank,,Protein,5000,,,Competitor 4,15.25878906,nM
+L17,,,,,,,,,
+L18,,,,,,,,,
+L19,Blank,,Protein,5000,,,Competitor 2,244.140625,nM
+L20,Blank,,Protein,5000,,,Competitor 2,244.140625,nM
+L21,Blank,,Protein,5000,,,Competitor 2,244.140625,nM
+L22,Compound,,Protein,5000,Tracer,50,Competitor 2,244.140625,nM
+L23,Compound,,Protein,5000,Tracer,50,Competitor 2,244.140625,nM
+L24,Compound,,Protein,5000,Tracer,50,Competitor 2,244.140625,nM
+M1,Blank,,Protein,5000,,,Competitor 4,500000,nM
+M2,Blank,,Protein,5000,,,Competitor 4,250000,nM
+M3,Blank,,Protein,5000,,,Competitor 4,125000,nM
+M4,Blank,,Protein,5000,,,Competitor 4,62500,nM
+M5,Blank,,Protein,5000,,,Competitor 4,31250,nM
+M6,Blank,,Protein,5000,,,Competitor 4,15625,nM
+M7,Blank,,Protein,5000,,,Competitor 4,7812.5,nM
+M8,Blank,,Protein,5000,,,Competitor 4,3906.25,nM
+M9,Blank,,Protein,5000,,,Competitor 4,1953.125,nM
+M10,Blank,,Protein,5000,,,Competitor 4,976.5625,nM
+M11,Blank,,Protein,5000,,,Competitor 4,488.28125,nM
+M12,Blank,,Protein,5000,,,Competitor 4,244.140625,nM
+M13,Blank,,Protein,5000,,,Competitor 4,122.0703125,nM
+M14,Blank,,Protein,5000,,,Competitor 4,61.03515625,nM
+M15,Blank,,Protein,5000,,,Competitor 4,30.51757813,nM
+M16,Blank,,Protein,5000,,,Competitor 4,15.25878906,nM
+M17,,,,,,,,,
+M18,,,,,,,,,
+M19,Blank,,Protein,5000,,,Competitor 2,122.0703125,nM
+M20,Blank,,Protein,5000,,,Competitor 2,122.0703125,nM
+M21,Blank,,Protein,5000,,,Competitor 2,122.0703125,nM
+M22,Compound,,Protein,5000,Tracer,50,Competitor 2,122.0703125,nM
+M23,Compound,,Protein,5000,Tracer,50,Competitor 2,122.0703125,nM
+M24,Compound,,Protein,5000,Tracer,50,Competitor 2,122.0703125,nM
+N1,Blank,,Protein,5000,,,Competitor 4,500000,nM
+N2,Blank,,Protein,5000,,,Competitor 4,250000,nM
+N3,Blank,,Protein,5000,,,Competitor 4,125000,nM
+N4,Blank,,Protein,5000,,,Competitor 4,62500,nM
+N5,Blank,,Protein,5000,,,Competitor 4,31250,nM
+N6,Blank,,Protein,5000,,,Competitor 4,15625,nM
+N7,Blank,,Protein,5000,,,Competitor 4,7812.5,nM
+N8,Blank,,Protein,5000,,,Competitor 4,3906.25,nM
+N9,Blank,,Protein,5000,,,Competitor 4,1953.125,nM
+N10,Blank,,Protein,5000,,,Competitor 4,976.5625,nM
+N11,Blank,,Protein,5000,,,Competitor 4,488.28125,nM
+N12,Blank,,Protein,5000,,,Competitor 4,244.140625,nM
+N13,Blank,,Protein,5000,,,Competitor 4,122.0703125,nM
+N14,Blank,,Protein,5000,,,Competitor 4,61.03515625,nM
+N15,Blank,,Protein,5000,,,Competitor 4,30.51757813,nM
+N16,Blank,,Protein,5000,,,Competitor 4,15.25878906,nM
+N17,,,,,,,,,
+N18,,,,,,,,,
+N19,Blank,,Protein,5000,,,Competitor 2,61.03515625,nM
+N20,Blank,,Protein,5000,,,Competitor 2,61.03515625,nM
+N21,Blank,,Protein,5000,,,Competitor 2,61.03515625,nM
+N22,Compound,,Protein,5000,Tracer,50,Competitor 2,61.03515625,nM
+N23,Compound,,Protein,5000,Tracer,50,Competitor 2,61.03515625,nM
+N24,Compound,,Protein,5000,Tracer,50,Competitor 2,61.03515625,nM
+O1,,,,,,,,,
+O2,,,,,,,,,
+O3,,,,,,,,,
+O4,,,,,,,,,
+O5,,,,,,,,,
+O6,,,,,,,,,
+O7,,,,,,,,,
+O8,,,,,,,,,
+O9,,,,,,,,,
+O10,,,,,,,,,
+O11,,,,,,,,,
+O12,,,,,,,,,
+O13,,,,,,,,,
+O14,,,,,,,,,
+O15,,,,,,,,,
+O16,,,,,,,,,
+O17,,,,,,,,,
+O18,,,,,,,,,
+O19,Blank,,Protein,5000,,,Competitor 2,30.51757813,nM
+O20,Blank,,Protein,5000,,,Competitor 2,30.51757813,nM
+O21,Blank,,Protein,5000,,,Competitor 2,30.51757813,nM
+O22,Compound,,Protein,5000,Tracer,50,Competitor 2,30.51757813,nM
+O23,Compound,,Protein,5000,Tracer,50,Competitor 2,30.51757813,nM
+O24,Compound,,Protein,5000,Tracer,50,Competitor 2,30.51757813,nM
+P1,,,,,,,,,
+P2,,,,,,,,,
+P3,,,,,,,,,
+P4,,,,,,,,,
+P5,,,,,,,,,
+P6,,,,,,,,,
+P7,,,,,,,,,
+P8,,,,,,,,,
+P9,,,,,,,,,
+P10,,,,,,,,,
+P11,,,,,,,,,
+P12,,,,,,,,,
+P13,,,,,,,,,
+P14,,,,,,,,,
+P15,,,,,,,,,
+P16,,,,,,,,,
+P17,,,,,,,,,
+P18,,,,,,,,,
+P19,Blank,,Protein,5000,,,Competitor 2,15.25878906,nM
+P20,Blank,,Protein,5000,,,Competitor 2,15.25878906,nM
+P21,Blank,,Protein,5000,,,Competitor 2,15.25878906,nM
+P22,Compound,,Protein,5000,Tracer,50,Competitor 2,15.25878906,nM
+P23,Compound,,Protein,5000,Tracer,50,Competitor 2,15.25878906,nM
+P24,Compound,,Protein,5000,Tracer,50,Competitor 2,15.25878906,nM

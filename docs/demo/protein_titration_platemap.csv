@@ -1,4 +1,4 @@
-﻿Experiment Title,Hs-His6-PEX5C vs HsPEX5C,,,,,,,,
+﻿Experiment Title,Protein 1 vs Protein 2,,,,,,,,
 Well ID,Type,Contents,Protein Name,Protein Concentration,Tracer Name,Tracer Concentration,Competitor Name,Competitor Concentration,Concentration Units
 A1,Compound,,Protein 1,10000,Tracer,200,,,nM
 A2,Compound,,Protein 1,6666.67,Tracer,200,,,nM
