@@ -11,6 +11,7 @@ import matplotlib.gridspec as gridspec
 import matplotlib.ticker as mtick
 from itertools import product
 from scipy.optimize import curve_fit
+from IPython.display import display
 from platemapping import plate_map as pm
 
 # define custom errors
