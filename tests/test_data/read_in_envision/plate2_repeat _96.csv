@@ -1,0 +1,285 @@
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Formula,Measurement date,
+1,1,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,17/11/2020 13:39:13,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,173997,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,197652,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+Calculated results: Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,144.9,137.1,103.1,,,,,,,,,,
+B,,,,,,,,,,,,,
+C,144.5,116.4,151.9,,,,,,,,,,
+D,,,,,,,,,,,,,
+E,,,,,,,,,,,,,
+F,,,,,,,,,,,,,
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,1,,14.52,18.78,18.68,61.8,62.3,18.88,18.98,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),0,17/11/2020 13:39:13,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,173997,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,197652,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+Results for Copy of Kris FP Fluorescein anisotropy(1) - P channel (RFU)
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,354407,359936,541823,,,,,,,,,,
+B,,,,,,,,,,,,,
+C,347603,433543,300738,,,,,,,,,,
+D,,,,,,,,,,,,,
+E,,,,,,,,,,,,,
+F,,,,,,,,,,,,,
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,1,,14.52,18.78,18.68,61.8,62.3,18.88,18.98,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),0,17/11/2020 13:39:13,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,173997,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,197652,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+Results for Copy of Kris FP Fluorescein anisotropy(1) - S channel (RFU)
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,474543,474351,666357,,,,,,,,,,
+B,,,,,,,,,,,,,
+C,465058,547744,408441,,,,,,,,,,
+D,,,,,,,,,,,,,
+E,,,,,,,,,,,,,
+F,,,,,,,,,,,,,
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Formula,Measurement date,
+1,2,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,17/11/2020 13:39:18,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,173997,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,197652,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+Calculated results: Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,144.2,136.2,101,,,,,,,,,,
+B,,,,,,,,,,,,,
+C,143.2,117.6,148.3,,,,,,,,,,
+D,,,,,,,,,,,,,
+E,,,,,,,,,,,,,
+F,,,,,,,,,,,,,
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,2,,14.52,18.68,18.68,62.3,62.3,18.98,18.98,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),0,17/11/2020 13:39:18,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,173997,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,197652,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+Results for Copy of Kris FP Fluorescein anisotropy(1) - P channel (RFU)
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,352962,357763,541382,,,,,,,,,,
+B,,,,,,,,,,,,,
+C,344433,431089,302132,,,,,,,,,,
+D,,,,,,,,,,,,,
+E,,,,,,,,,,,,,
+F,,,,,,,,,,,,,
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,2,,14.52,18.68,18.68,62.3,62.3,18.98,18.98,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),0,17/11/2020 13:39:18,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,173997,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,197652,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+Results for Copy of Kris FP Fluorescein anisotropy(1) - S channel (RFU)
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,471940,470628,663083,,,,,,,,,,
+B,,,,,,,,,,,,,
+C,459522,545970,407351,,,,,,,,,,
+D,,,,,,,,,,,,,
+E,,,,,,,,,,,,,
+F,,,,,,,,,,,,,
+G,,,,,,,,,,,,,
+H,,,,,,,,,,,,,
+
+
+Basic assay information 
+Assay ID: ,,,,23162
+Assay Started: ,,,,17/11/2020 13:38:50
+Assay Finished: ,,,,17/11/2020 13:39:26
+Assay Exported: ,,,,17/11/2020 13:43:30
+Protocol ID: ,,,,100737
+Protocol Name: ,,,,Copy of 18122017 Opt FA
+Serial#: ,,,,1041378
+
+
+
+Protocol information
+Protocol:
+Protocol name,,,,Copy of 18122017 Opt FA
+Number of assay repeats,,,,1
+Start assay repeat each,,,,N/A
+Number of plate repeats,,,,2
+Start plate repeat each,,,,N/A
+Is label meas. height used,,,,Yes
+Height of measurement,,,,Defined in label
+Is gripper height used,,,,No
+Mode of measurement,,,,By Columns
+Rotated plate,,,,No
+Soft move,,,,No
+Protocol notes,,,, 
+
+Plate type:
+Name of the plate type,,,,96 OptiPlate
+Number of rows,,,,8
+Number of columns,,,,12
+Number of the wells in the plate,,,,96
+Height of the plate,,,,14.6 mm
+
+Coordinates of corners:
+96 OptiPlate
+14.38 mm x------------------------------------------------------ x 113.38 mm
+11.24 mm                                                           11.24 mm
+
+14.39 mm x------------------------------------------------------ x 113.38 mm
+74.24 mm                                                           74.24 mm
+
+Platemap:
+Plate,,,,1
+Group,,,,1
+
+,01,02,03,04,05,06,07,08,09,10,11,12,
+A,- ,- ,- ,  ,  ,  ,  ,  ,  ,  ,  ,  
+B,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+C,- ,- ,- ,  ,  ,  ,  ,  ,  ,  ,  ,  
+D,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+E,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+F,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+G,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+H,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+
+ - - Undefined
+
+Calculations:
+Plate,,,,1
+ Formula index,,,,Calc 1
+ Formula name,,,,mP value for FP measurement
+ Formula,,,,mP value for FP measurement where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor
+
+Auto export parameters:
+Export format,,,,ListC
+Include basic assay information,,,,Yes
+Place assay information at,,,,End of file
+Include basic plate information,,,,Yes
+Place plate information at,,,,End of plate
+Include protocol information,,,,Yes
+Protocol info level,,,,Large
+Include error and warning information,,,,Yes
+Include background information,,,,Yes
+Add plate number to the file name,,,,Yes
+Each plate to separate file,,,,No
+Field separator to use,,,,System
+File name format,,,,<DefaultDataFolder>\<Date>\<ProtocolName>_<AssayID>.csv
+Columns (ListC),,,,Well Sample CalcResultI Signal MeasTime
+
+Event parameters:
+Command,,,,C:\Program Files\Microsoft Office\Office12\Excel.exe
+Command arguments,,,,<OutputFileName>
+
+Operations:
+Plate 1
+  Group 1
+    Shake
+      Duration,,,,5 s
+      Speed,,,,600
+      Diameter,,,,1 mm
+      Shake mode,,,,Orbital
+      Plate location,,,,Inside
+      First assay/plate repeat affected,,,,1
+      Last assay/plate repeat affected,,,,1
+    Measurement
+      Label,,,,Copy of Kris FP Fluorescein anisotropy(1)
+
+Labels:
+Copy of Kris FP Fluorescein anisotropy,,,,5000069
+Mirror,,,,FITC FP
+Exc. filter,,,,FITC FP 480
+Ems. filter,,,,FITC FP P-pol 535
+2nd ems. filter,,,,FITC FP S-pol 535
+Measurement height,,,,5 mm
+Number of flashes,,,,60
+Number of flashes integrated,,,,1
+PMT gain,,,,155
+2nd PMT gain,,,,0
+G-factor,,,,1
+Excitation light,,,,100%
+Reference excitation light,,,,100%
+Emission light,,,,100%
+Reference AD gain,,,,1
+Reference signal,,,,430260
+Last edited,,,,04/12/2018 07:59:00
+Last edited by,,,,EnVision
+Factory preset,,,,No
+
+Filters:
+FITC FP 480,,,,104
+Filter type,,,,Excitation
+Description,,,,X480 CWL=480nm BW=30nm Tmin=70%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved Fluorescence
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+FITC FP P-pol 535,,,,209
+Filter type,,,,Emission (P)
+Description,,,,M535p CWL=535nm BW=40nm Tmin=80%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved FluorescenceFluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+FITC FP S-pol 535,,,,208
+Filter type,,,,Emission (S)
+Description,,,,M535s CWL=535nm BW=40nm Tmin=80%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved FluorescenceFluorescence PolarizationFluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+Mirror modules:
+FITC FP,,,,431
+Used by,,,,Top
+Dual,,,,No
+Bias,,,,No
+Description,,,,D505fp
+Used with,,,,Fluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+Instrument:
+Serial number,,,,1041378
+Nickname,,,,EnVision
+
+
+
+
+
+
+Exported with EnVision Workstation version 1.13.3009.1401

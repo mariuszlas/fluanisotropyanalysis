@@ -1,0 +1,341 @@
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Formula,Measurement date,
+1,1,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,17/11/2020 13:33:43,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5130154,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5730478,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+-26.8,-34.9,-1.6,-21.8,-25.1,-17.9,33.9,-19,19.8,55.7,-28,40.7,67.7,-3.6,-40.9,6.8,-15.4,-26,-13.6,17.4,-2.4,58,-10.4,20.9,
+,,,,,,,,,,,,,,,,,,,,,,,,
+-1.3,-22.8,-31,3.2,-17.3,16.7,-31.7,-3.1,27.9,-7.3,32.1,-69.4,24.2,-10.8,-12.8,88.9,29,46.2,-9.2,-21.8,-20.3,-32,-15.6,-9.3,
+,,,,,,,,,,,,,,,,,,,,,,,,
+-23.8,21.5,14.5,-23.1,-14.9,3.5,1.7,-7.3,1.8,-8.9,-2.1,-3.2,16.2,16.1,25,41.8,-37,10.5,-34.4,-86.2,11.8,-38.2,-10.5,-7.8,
+,,,,,,,,,,,,,,,,,,,,,,,,
+-31.3,66.6,18.6,-20.1,-12.7,-67.6,-4,-4.1,21.5,-8.6,-25.8,25.4,12.9,72.3,25.3,-27,14.9,-31,-31.8,-56.8,-21.3,30.6,-28,-24.4,
+,,,,,,,,,,,,,,,,,,,,,,,,
+30.3,27.1,14.7,64.3,92.7,-0.9,6.8,1,64.9,30.4,49.3,17.1,4.8,-16.9,15.2,-29.9,-26.9,-18,21.3,-18.4,-37.4,-56.2,-18.1,-19.2,
+,,,,,,,,,,,,,,,,,,,,,,,,
+10.9,50.9,-17.7,-5.1,0.5,3.7,-13.4,31.4,-15.4,14.8,-2.2,10.9,46.4,-4.2,-1.4,-16.1,-28.4,-43.5,-17.7,-44.2,-27.6,-25.9,-44.2,-38,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,1,,14.4,18.98,18.8,61.7,61.5,18.98,18.9,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),0,17/11/2020 13:33:43,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5130154,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5730478,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+18781491,27318000,15885300,21036054,22823211,19070359,6854639,15348069,9178898,5116587,24798144,5622791,5285779,17788875,30507122,10110194,14236276,22615847,12174025,7747257,14475328,6088345,17233582,11476180,
+,,,,,,,,,,,,,,,,,,,,,,,,
+17682352,25542206,28037904,12162314,17808198,9662208,21511273,10788239,8096173,19002255,5674320,27893742,6330387,18687836,18445563,3498738,8781437,6078456,13754476,22041950,18250237,17730987,16866924,11972287,
+,,,,,,,,,,,,,,,,,,,,,,,,
+34003407,9165626,14432167,20991721,26150693,13621214,13509098,19824875,13174169,18269822,14776452,16987921,11811750,9007588,6719613,5660147,24534945,8320162,26730272,41065444,8805493,20776813,10280069,11638872,
+,,,,,,,,,,,,,,,,,,,,,,,,
+30380651,5701796,7842883,17906039,21431849,44320736,16991191,16541170,12761778,10857959,17134912,7475953,9545818,4283469,6764030,19040502,6928443,18090316,17215031,22431941,11683990,5346228,16190696,15246229,
+,,,,,,,,,,,,,,,,,,,,,,,,
+11522470,11487932,12756990,7610040,3799031,16271071,15723197,17646782,5127155,11517274,5614144,11909862,10709042,18747867,8625275,15090730,18762302,15171632,3632708,15982624,14974967,12431844,9353416,10465245,
+,,,,,,,,,,,,,,,,,,,,,,,,
+10889550,9973788,14854795,14909991,15524625,17754357,12981814,7814958,27455678,10863825,17281414,15385644,5789855,13650791,12187195,13819538,6299007,16290404,7598091,25057561,10428058,8041741,13500922,13085743,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,1,,14.4,18.98,18.8,61.7,61.5,18.98,18.9,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),0,17/11/2020 13:33:43,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5130154,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5730478,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+20469296,29296716,18210982,23159988,24960618,21160180,8436345,16993419,10981179,6578552,26965171,7015372,6961728,20308597,32327920,11786387,15873682,24691726,13625312,9225690,16566470,7863075,19410346,13761357,
+,,,,,,,,,,,,,,,,,,,,,,,,
+20283594,28063193,30302961,14075097,19781958,11489902,23217181,12329190,9845246,21536636,6957624,27911844,7640958,21030785,20674534,4808981,10702934,7667786,15527995,24265314,20153710,19127605,18800332,13514561,
+,,,,,,,,,,,,,,,,,,,,,,,,
+37288897,11003234,17084484,23049274,29190323,15773317,15588139,22466382,15204420,20638277,16922146,19413405,14030237,10698525,8123884,7076677,26203819,9772095,28695927,39727290,10368607,22136894,11576425,13177014,
+,,,,,,,,,,,,,,,,,,,,,,,,
+32818643,7492061,9361036,19781810,24030493,44510353,19385521,18866224,15322438,12273992,18715306,9045172,11264099,5694213,8182865,20743333,8209299,19554225,18576324,23024965,12874927,6536449,17604173,16697342,
+,,,,,,,,,,,,,,,,,,,,,,,,
+14078479,13946865,15107339,9953761,5261230,18679259,18328399,20334242,6714574,14074985,7125788,14174104,12435189,20845053,10224527,16347661,20447036,16829860,4359060,17716404,15978079,12775132,10374391,11582602,
+,,,,,,,,,,,,,,,,,,,,,,,,
+12799215,12699405,16488845,16971816,17871933,20569088,14533352,9569146,30616871,12868241,19787523,18084535,7306438,15567897,13975946,15388639,6843352,17173268,8434035,26376527,11347544,8781580,14211858,13945420,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Formula,Measurement date,
+1,2,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,17/11/2020 13:35:26,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5130154,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5730478,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+-35.9,-36.8,-7.2,-22.4,-27.1,-19.6,35,-21.6,18.9,49.4,-29,37.7,69.1,-3.8,-43.4,7.5,-15.4,-23.9,-16.2,17.3,-3.3,60.2,-10,20.7,
+,,,,,,,,,,,,,,,,,,,,,,,,
+-5.4,-25.5,-32.4,-0.9,-18.6,18.1,-34.4,-5.4,24.3,-8,29.7,-67.3,18.7,-8.8,-11.5,95.7,24.4,45.7,-12.6,-21.1,-18.9,-31,-16.5,-10.3,
+,,,,,,,,,,,,,,,,,,,,,,,,
+-24,20,11.3,-23.6,-16.6,1.1,-2.1,-10.5,-0.7,-9.1,-3,-1.9,16.2,12.9,28.2,39.3,-37.4,11.5,-33.8,-83,9,-39.1,-12.9,-9.3,
+,,,,,,,,,,,,,,,,,,,,,,,,
+-32.9,62.3,15.3,-20.3,-12.8,-70.4,-6.5,-6.9,18.7,-8.7,-26.8,21.5,11.7,76.5,24.7,-25.6,11,-29.3,-32.9,-54.3,-21.1,37,-29,-27.3,
+,,,,,,,,,,,,,,,,,,,,,,,,
+31.6,23.1,13.4,65.2,91.9,-2.4,5,-0.7,60.6,29,48.7,21.4,6.2,-14.9,13.1,-32.6,-29.4,-18.7,24.1,-17.8,-39.6,-57.8,-15.9,-21.8,
+,,,,,,,,,,,,,,,,,,,,,,,,
+14.2,49.4,-22,-5,0.5,5.4,-14.2,33.1,-15.3,12.6,1.3,13,46.8,-1,-2.9,-14.2,-14.7,-42.9,-16.8,-42.6,-24,-16.2,-45.6,-39.6,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,2,,14.4,18.8,18.7,61.5,61.8,18.9,19.1,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),0,17/11/2020 13:35:26,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5130154,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5730478,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+18964719,27435568,16237095,21291729,22591167,19241084,6888160,15349722,9046770,5172691,24719959,5567466,5271598,17719744,30675941,10029803,14047631,22477793,12781925,7790547,14367068,6043519,17348915,11421067,
+,,,,,,,,,,,,,,,,,,,,,,,,
+17751015,25382466,28254092,12358689,17942739,9664228,21523754,10778854,8102516,18992822,5712784,27462422,6643188,18393423,18411864,3429054,8708993,6069134,13841770,21909757,18210509,17640900,16722451,12055364,
+,,,,,,,,,,,,,,,,,,,,,,,,
+31691700,9125272,14503254,21406693,26217805,13527293,13465870,19795623,13211033,18229519,14766719,16922725,11753630,9047492,6649533,5679909,24581990,8228900,26569308,40874026,8831770,20682475,10397634,11593238,
+,,,,,,,,,,,,,,,,,,,,,,,,
+30178744,5972240,8301127,17901232,21402216,44850201,17020477,16550848,12522411,10821976,17151788,7519855,9521181,4245743,6707943,18777888,6985710,17933040,17161179,22570384,11633321,5290334,16417725,15205638,
+,,,,,,,,,,,,,,,,,,,,,,,,
+11016335,11803976,12722432,7676389,3747748,16232170,15681794,17820341,5144549,11542010,5571718,11794980,10590421,18608824,8637521,15084031,18737704,15134132,3596576,15883183,14913699,12450340,9345596,10406333,
+,,,,,,,,,,,,,,,,,,,,,,,,
+10837421,9773405,15274856,14789133,15477364,17491476,13012329,7739279,27381361,10943588,17081643,15235700,5732145,13588824,12123220,13652112,6018580,16195769,7652003,25021324,10343970,7905327,13538825,13026020,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Group,Label,ScanX,ScanY,Measinfo,Kinetics,Measurement date,
+1,2,,14.4,18.8,18.7,61.5,61.8,18.9,19.1,1,Copy of Kris FP Fluorescein anisotropy(1),0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),0,17/11/2020 13:35:26,
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5130154,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5730478,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+20296635,29313577,18404541,23410696,24606892,21274689,8495224,16904527,10804345,6566435,26824479,6904372,6962835,20223409,32343302,11709061,15664508,24643755,14231749,9274197,16414670,7839955,19557852,13688881,
+,,,,,,,,,,,,,,,,,,,,,,,,
+20192899,27736731,30455034,14187352,19881889,11524185,23104185,12261676,9781943,21492979,6972537,27596892,7930430,20784582,20690153,4777858,10516543,7648376,15522464,24153243,20163553,19065615,18608311,13581258,
+,,,,,,,,,,,,,,,,,,,,,,,,
+34736780,10921991,17059766,23482203,29164636,15591021,15422070,22293624,15172438,20586313,16881483,19386237,13960705,10676347,8090118,7066824,26228846,9683224,28558875,39801950,10340556,21993450,11651594,13086110,
+,,,,,,,,,,,,,,,,,,,,,,,,
+32492002,7781177,9842146,19766097,23992170,44790693,19321716,18772869,14948871,12230175,18694378,9027975,11209070,5691424,8104408,20515581,8211623,19448321,18479107,23280556,12825141,6552028,17817212,16556844,
+,,,,,,,,,,,,,,,,,,,,,,,,
+13494542,14217969,15026758,10060114,5182467,18576110,18215789,20466227,6680187,14067046,7062958,14158023,12331806,20770392,10197809,16252184,20318939,16764768,4340690,17626852,15843442,12753116,10411745,11456917,
+,,,,,,,,,,,,,,,,,,,,,,,,
+12823080,12406701,16811383,16836619,17817310,20331783,14546248,9508711,30539299,12906639,19695051,17983928,7239430,15594857,13860051,15260843,6721286,17091864,8508588,26424284,11337218,8801218,14211489,13838929,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+
+Basic assay information 
+Assay ID: ,,,,23161
+Assay Started: ,,,,17/11/2020 13:31:41
+Assay Finished: ,,,,17/11/2020 13:35:34
+Assay Exported: ,,,,17/11/2020 13:43:07
+Protocol ID: ,,,,100737
+Protocol Name: ,,,,Copy of 18122017 Opt FA
+Serial#: ,,,,1041378
+
+
+
+Protocol information
+Protocol:
+Protocol name,,,,Copy of 18122017 Opt FA
+Number of assay repeats,,,,1
+Start assay repeat each,,,,N/A
+Number of plate repeats,,,,2
+Start plate repeat each,,,,N/A
+Is label meas. height used,,,,Yes
+Height of measurement,,,,Defined in label
+Is gripper height used,,,,No
+Mode of measurement,,,,By Columns
+Rotated plate,,,,No
+Soft move,,,,No
+Protocol notes,,,, 
+
+Plate type:
+Name of the plate type,,,,384 Corning 3676
+Number of rows,,,,16
+Number of columns,,,,24
+Number of the wells in the plate,,,,384
+Height of the plate,,,,14.2 mm
+
+Coordinates of corners:
+384 Corning 3676 + Copy of Kris FP Fluorescein anisotropy
+12.23 mm x------------------------------------------------------ x 115.61 mm
+9.36 mm                                                            9.22 mm
+
+11.56 mm x------------------------------------------------------ x 116.75 mm
+76.25 mm                                                           76.38 mm
+
+Platemap:
+Plate,,,,1
+Group,,,,1
+
+,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
+A,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+B,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+C,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+D,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+E,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+F,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+G,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+H,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+I,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+J,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+K,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+L,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+M,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+N,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+O,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+P,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+
+ - - Undefined
+
+Calculations:
+Plate,,,,1
+ Formula index,,,,Calc 1
+ Formula name,,,,mP value for FP measurement
+ Formula,,,,mP value for FP measurement where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor
+
+Auto export parameters:
+Export format,,,,ListC
+Include basic assay information,,,,Yes
+Place assay information at,,,,End of file
+Include basic plate information,,,,Yes
+Place plate information at,,,,End of plate
+Include protocol information,,,,Yes
+Protocol info level,,,,Large
+Include error and warning information,,,,Yes
+Include background information,,,,Yes
+Add plate number to the file name,,,,Yes
+Each plate to separate file,,,,No
+Field separator to use,,,,System
+File name format,,,,<DefaultDataFolder>\<Date>\<ProtocolName>_<AssayID>.csv
+Columns (ListC),,,,Well Sample CalcResultI Signal MeasTime
+
+Event parameters:
+Command,,,,C:\Program Files\Microsoft Office\Office12\Excel.exe
+Command arguments,,,,<OutputFileName>
+
+Operations:
+Plate 1
+  Group 1
+    Shake
+      Duration,,,,5 s
+      Speed,,,,600
+      Diameter,,,,1 mm
+      Shake mode,,,,Orbital
+      Plate location,,,,Inside
+      First assay/plate repeat affected,,,,1
+      Last assay/plate repeat affected,,,,1
+    Measurement
+      Label,,,,Copy of Kris FP Fluorescein anisotropy(1)
+
+Labels:
+Copy of Kris FP Fluorescein anisotropy,,,,5000069
+Mirror,,,,FITC FP
+Exc. filter,,,,FITC FP 480
+Ems. filter,,,,FITC FP P-pol 535
+2nd ems. filter,,,,FITC FP S-pol 535
+Measurement height,,,,4.8 mm
+Number of flashes,,,,60
+Number of flashes integrated,,,,1
+PMT gain,,,,750
+2nd PMT gain,,,,0
+G-factor,,,,1.15
+Excitation light,,,,100%
+Reference excitation light,,,,100%
+Emission light,,,,100%
+Reference AD gain,,,,1
+Reference signal,,,,430260
+Last edited,,,,04/12/2018 07:59:00
+Last edited by,,,,EnVision
+Factory preset,,,,No
+
+Filters:
+FITC FP 480,,,,104
+Filter type,,,,Excitation
+Description,,,,X480 CWL=480nm BW=30nm Tmin=70%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved Fluorescence
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+FITC FP P-pol 535,,,,209
+Filter type,,,,Emission (P)
+Description,,,,M535p CWL=535nm BW=40nm Tmin=80%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved FluorescenceFluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+FITC FP S-pol 535,,,,208
+Filter type,,,,Emission (S)
+Description,,,,M535s CWL=535nm BW=40nm Tmin=80%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved FluorescenceFluorescence PolarizationFluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+Mirror modules:
+FITC FP,,,,431
+Used by,,,,Top
+Dual,,,,No
+Bias,,,,No
+Description,,,,D505fp
+Used with,,,,Fluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+Instrument:
+Serial number,,,,1041378
+Nickname,,,,EnVision
+
+
+
+
+Notifications for plate 1  repeat 1:
+WARNING: Some of the results may be invalid due to saturation of electronics. To fix the problem try to limit the excitation light or decrease the detector gain using the label editor.
+In a case of label using Fluorescence Monochromator you can also try to use less flashes  lower excitation wavelength or higher emission wavelength.
+
+WARNING: Measured signal is saturated in the following wells: G06
+
+Notifications for plate 1  repeat 2:
+WARNING: Some of the results may be invalid due to saturation of electronics. To fix the problem try to limit the excitation light or decrease the detector gain using the label editor.
+In a case of label using Fluorescence Monochromator you can also try to use less flashes  lower excitation wavelength or higher emission wavelength.
+
+WARNING: Measured signal is saturated in the following wells: G06
+
+
+
+Exported with EnVision Workstation version 1.13.3009.1401

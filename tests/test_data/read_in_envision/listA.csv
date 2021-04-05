@@ -1,0 +1,622 @@
+
+Basic assay information 
+Assay ID: ,,,,23160
+Assay Started: ,,,,17/11/2020 13:28:30
+Assay Finished: ,,,,17/11/2020 13:30:37
+Assay Exported: ,,,,17/11/2020 13:37:54
+Protocol ID: ,,,,100737
+Protocol Name: ,,,,Copy of 18122017 Opt FA
+Serial#: ,,,,1041378
+
+
+
+Protocol information
+Protocol:
+Protocol name,,,,Copy of 18122017 Opt FA
+Number of assay repeats,,,,1
+Start assay repeat each,,,,N/A
+Number of plate repeats,,,,1
+Start plate repeat each,,,,N/A
+Is label meas. height used,,,,Yes
+Height of measurement,,,,Defined in label
+Is gripper height used,,,,No
+Mode of measurement,,,,By Columns
+Rotated plate,,,,No
+Soft move,,,,No
+Protocol notes,,,, 
+
+Plate type:
+Name of the plate type,,,,384 Corning 3676
+Number of rows,,,,16
+Number of columns,,,,24
+Number of the wells in the plate,,,,384
+Height of the plate,,,,14.2 mm
+
+Coordinates of corners:
+384 Corning 3676 + Copy of Kris FP Fluorescein anisotropy
+12.23 mm x------------------------------------------------------ x 115.61 mm
+9.36 mm                                                            9.22 mm
+
+11.56 mm x------------------------------------------------------ x 116.75 mm
+76.25 mm                                                           76.38 mm
+
+Platemap:
+Plate,,,,1
+Group,,,,1
+
+,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,
+A,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+B,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+C,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+D,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+E,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+F,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+G,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+H,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+I,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+J,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+K,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- ,- 
+L,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+M,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+N,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+O,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+P,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  
+
+ - - Undefined
+
+Calculations:
+Plate,,,,1
+ Formula index,,,,Calc 1
+ Formula name,,,,mP value for FP measurement
+ Formula,,,,mP value for FP measurement where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor
+
+Auto export parameters:
+Export format,,,,ListC
+Include basic assay information,,,,Yes
+Place assay information at,,,,End of file
+Include basic plate information,,,,Yes
+Place plate information at,,,,End of plate
+Include protocol information,,,,Yes
+Protocol info level,,,,Large
+Include error and warning information,,,,Yes
+Include background information,,,,Yes
+Add plate number to the file name,,,,Yes
+Each plate to separate file,,,,No
+Field separator to use,,,,System
+File name format,,,,<DefaultDataFolder>\<Date>\<ProtocolName>_<AssayID>.csv
+Columns (ListC),,,,Well Sample CalcResultI Signal MeasTime
+
+Event parameters:
+Command,,,,C:\Program Files\Microsoft Office\Office12\Excel.exe
+Command arguments,,,,<OutputFileName>
+
+Operations:
+Plate 1
+  Group 1
+    Shake
+      Duration,,,,5 s
+      Speed,,,,600
+      Diameter,,,,1 mm
+      Shake mode,,,,Orbital
+      Plate location,,,,Inside
+      First assay/plate repeat affected,,,,1
+      Last assay/plate repeat affected,,,,1
+    Measurement
+      Label,,,,Copy of Kris FP Fluorescein anisotropy(1)
+
+Labels:
+Copy of Kris FP Fluorescein anisotropy,,,,5000069
+Mirror,,,,FITC FP
+Exc. filter,,,,FITC FP 480
+Ems. filter,,,,FITC FP P-pol 535
+2nd ems. filter,,,,FITC FP S-pol 535
+Measurement height,,,,4.8 mm
+Number of flashes,,,,60
+Number of flashes integrated,,,,1
+PMT gain,,,,750
+2nd PMT gain,,,,0
+G-factor,,,,1.15
+Excitation light,,,,100%
+Reference excitation light,,,,100%
+Emission light,,,,100%
+Reference AD gain,,,,1
+Reference signal,,,,430260
+Last edited,,,,04/12/2018 07:59:00
+Last edited by,,,,EnVision
+Factory preset,,,,No
+
+Filters:
+FITC FP 480,,,,104
+Filter type,,,,Excitation
+Description,,,,X480 CWL=480nm BW=30nm Tmin=70%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved Fluorescence
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+FITC FP P-pol 535,,,,209
+Filter type,,,,Emission (P)
+Description,,,,M535p CWL=535nm BW=40nm Tmin=80%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved FluorescenceFluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+FITC FP S-pol 535,,,,208
+Filter type,,,,Emission (S)
+Description,,,,M535s CWL=535nm BW=40nm Tmin=80%
+Used with,,,,DELFIA - Time-resolved Fluorescence Fluorescence Intensity Fluorescence Polarization LANCE - Time-resolved FluorescenceFluorescence PolarizationFluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+Mirror modules:
+FITC FP,,,,431
+Used by,,,,Top
+Dual,,,,No
+Bias,,,,No
+Description,,,,D505fp
+Used with,,,,Fluorescence Polarization
+Last edited,,,,26/11/2015 14:57:39
+Last edited by,,,,Installation
+Factory preset,,,,Yes
+
+Instrument:
+Serial number,,,,1041378
+Nickname,,,,EnVision
+
+
+
+
+Notifications for plate 1  repeat 1:
+WARNING: Some of the results may be invalid due to saturation of electronics. To fix the problem try to limit the excitation light or decrease the detector gain using the label editor.
+In a case of label using Fluorescence Monochromator you can also try to use less flashes  lower excitation wavelength or higher emission wavelength.
+
+WARNING: Measured signal is saturated in the following wells: G06
+
+
+Plate information 
+Plate,Repeat,Barcode,Measured height,Chamber temperature at start,Chamber temperature at end,Humidity at start,Humidity at end,Ambient temperature at start,Ambient temperature at end,Measurement date,
+1,1,,14.4,18.98,19,61.5,61.1,18.98,19.39,17/11/2020 13:30:28,
+
+
+Background information
+Plate,Label,Result,Signal,Flashes/Time,Meastime,MeasInfo,
+1,Copy of Kris FP Fluorescein anisotropy,0,5180573,60,00:00:00.000,De=1st Ex=Top Em=Top Wdw=N/A (15),
+1,Copy of Kris FP Fluorescein anisotropy,0,5815126,60,00:00:00.000,De=2nd Ex=Top Em=Top Wdw=N/A (142),
+
+PlateNumber,PlateRepeat,Barcode,Group,Well,Label,Kinetic,ScanX,ScanY,MeasInfo,MeasTime,Signal,Flashes/Time,Result,Formula,
+1,1,,1,A01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:10.512,18890869,60,18890869,,
+1,1,,1,A01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:10.186,20668058,60,20668058,,
+1,1,,N/A,A01,N/A,0,0,0,0,N/A,N/A,N/A,-24.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:14.810,27377968,60,27377968,,
+1,1,,1,A02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:14.484,29442193,60,29442193,,
+1,1,,N/A,A02,N/A,0,0,0,0,N/A,N/A,N/A,-33.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:19.111,15983855,60,15983855,,
+1,1,,1,A03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:18.785,18411616,60,18411616,,
+1,1,,N/A,A03,N/A,0,0,0,0,N/A,N/A,N/A,0.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:23.413,21051671,60,21051671,,
+1,1,,1,A04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:23.087,23222549,60,23222549,,
+1,1,,N/A,A04,N/A,0,0,0,0,N/A,N/A,N/A,-20.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:27.705,22837285,60,22837285,,
+1,1,,1,A05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:27.379,25009835,60,25009835,,
+1,1,,N/A,A05,N/A,0,0,0,0,N/A,N/A,N/A,-24.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:32.009,19098793,60,19098793,,
+1,1,,1,A06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:31.683,21248356,60,21248356,,
+1,1,,N/A,A06,N/A,0,0,0,0,N/A,N/A,N/A,-16.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:36.306,6857674,60,6857674,,
+1,1,,1,A07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:35.980,8437124,60,8437124,,
+1,1,,N/A,A07,N/A,0,0,0,0,N/A,N/A,N/A,33.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:40.603,15450688,60,15450688,,
+1,1,,1,A08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:40.277,17069681,60,17069681,,
+1,1,,N/A,A08,N/A,0,0,0,0,N/A,N/A,N/A,-20.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:44.900,9117758,60,9117758,,
+1,1,,1,A09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:44.574,10942566,60,10942566,,
+1,1,,N/A,A09,N/A,0,0,0,0,N/A,N/A,N/A,21.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:49.197,5173602,60,5173602,,
+1,1,,1,A10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:48.872,6638099,60,6638099,,
+1,1,,N/A,A10,N/A,0,0,0,0,N/A,N/A,N/A,54.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:53.496,24984132,60,24984132,,
+1,1,,1,A11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:53.170,27049048,60,27049048,,
+1,1,,N/A,A11,N/A,0,0,0,0,N/A,N/A,N/A,-30.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:57.802,5669945,60,5669945,,
+1,1,,1,A12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:57.476,7072684,60,7072684,,
+1,1,,N/A,A12,N/A,0,0,0,0,N/A,N/A,N/A,40.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:02.097,5271380,60,5271380,,
+1,1,,1,A13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:01.771,6996809,60,6996809,,
+1,1,,N/A,A13,N/A,0,0,0,0,N/A,N/A,N/A,71.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:06.396,17608486,60,17608486,,
+1,1,,1,A14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:06.070,20143093,60,20143093,,
+1,1,,N/A,A14,N/A,0,0,0,0,N/A,N/A,N/A,-2.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:10.696,30671927,60,30671927,,
+1,1,,1,A15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:10.370,32470922,60,32470922,,
+1,1,,N/A,A15,N/A,0,0,0,0,N/A,N/A,N/A,-41.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:14.997,10124140,60,10124140,,
+1,1,,1,A16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:14.671,11865740,60,11865740,,
+1,1,,N/A,A16,N/A,0,0,0,0,N/A,N/A,N/A,9.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:19.300,14290962,60,14290962,,
+1,1,,1,A17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:18.974,15929791,60,15929791,,
+1,1,,N/A,A17,N/A,0,0,0,0,N/A,N/A,N/A,-15.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:23.606,22448613,60,22448613,,
+1,1,,1,A18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:23.280,24799404,60,24799404,,
+1,1,,N/A,A18,N/A,0,0,0,0,N/A,N/A,N/A,-20.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:27.912,12160353,60,12160353,,
+1,1,,1,A19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:27.586,13725819,60,13725819,,
+1,1,,N/A,A19,N/A,0,0,0,0,N/A,N/A,N/A,-9.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:32.220,7725678,60,7725678,,
+1,1,,1,A20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:31.895,9225296,60,9225296,,
+1,1,,N/A,A20,N/A,0,0,0,0,N/A,N/A,N/A,18.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:36.515,14553837,60,14553837,,
+1,1,,1,A21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:36.189,16624360,60,16624360,,
+1,1,,N/A,A21,N/A,0,0,0,0,N/A,N/A,N/A,-3.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:40.810,6074998,60,6074998,,
+1,1,,1,A22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:40.484,7878962,60,7878962,,
+1,1,,N/A,A22,N/A,0,0,0,0,N/A,N/A,N/A,60.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:45.110,17435027,60,17435027,,
+1,1,,1,A23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:44.784,19689088,60,19689088,,
+1,1,,N/A,A23,N/A,0,0,0,0,N/A,N/A,N/A,-9.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,A24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:49.414,11577145,60,11577145,,
+1,1,,1,A24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:49.088,13815280,60,13815280,,
+1,1,,N/A,A24,N/A,0,0,0,0,N/A,N/A,N/A,18.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:10.860,17796311,60,17796311,,
+1,1,,1,C01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:11.186,20431401,60,20431401,,
+1,1,,N/A,C01,N/A,0,0,0,0,N/A,N/A,N/A,-0.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:15.160,25509955,60,25509955,,
+1,1,,1,C02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:15.485,28171246,60,28171246,,
+1,1,,N/A,C02,N/A,0,0,0,0,N/A,N/A,N/A,-20.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:19.461,28040247,60,28040247,,
+1,1,,1,C03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:19.786,30476493,60,30476493,,
+1,1,,N/A,C03,N/A,0,0,0,0,N/A,N/A,N/A,-28.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:23.763,12214416,60,12214416,,
+1,1,,1,C04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:24.088,14140445,60,14140445,,
+1,1,,N/A,C04,N/A,0,0,0,0,N/A,N/A,N/A,3.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:28.056,17962113,60,17962113,,
+1,1,,1,C05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:28.381,19970557,60,19970557,,
+1,1,,N/A,C05,N/A,0,0,0,0,N/A,N/A,N/A,-16.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:32.360,9723523,60,9723523,,
+1,1,,1,C06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:32.685,11568866,60,11568866,,
+1,1,,N/A,C06,N/A,0,0,0,0,N/A,N/A,N/A,17,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:36.657,21680370,60,21680370,,
+1,1,,1,C07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:36.982,23385331,60,23385331,,
+1,1,,N/A,C07,N/A,0,0,0,0,N/A,N/A,N/A,-32,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:40.952,10900895,60,10900895,,
+1,1,,1,C08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:41.277,12418182,60,12418182,,
+1,1,,N/A,C08,N/A,0,0,0,0,N/A,N/A,N/A,-4.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:45.248,8183185,60,8183185,,
+1,1,,1,C09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:45.573,9875442,60,9875442,,
+1,1,,N/A,C09,N/A,0,0,0,0,N/A,N/A,N/A,24.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:49.545,19096342,60,19096342,,
+1,1,,1,C10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:49.870,21759506,60,21759506,,
+1,1,,N/A,C10,N/A,0,0,0,0,N/A,N/A,N/A,-4.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:53.845,5655889,60,5655889,,
+1,1,,1,C11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:54.170,6987602,60,6987602,,
+1,1,,N/A,C11,N/A,0,0,0,0,N/A,N/A,N/A,35.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:58.154,28108279,60,28108279,,
+1,1,,1,C12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:58.479,28212841,60,28212841,,
+1,1,,N/A,C12,N/A,0,0,0,0,N/A,N/A,N/A,-67.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:02.448,6217700,60,6217700,,
+1,1,,1,C13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:02.773,7588250,60,7588250,,
+1,1,,N/A,C13,N/A,0,0,0,0,N/A,N/A,N/A,29.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:06.746,18869024,60,18869024,,
+1,1,,1,C14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:07.071,21227556,60,21227556,,
+1,1,,N/A,C14,N/A,0,0,0,0,N/A,N/A,N/A,-11,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:11.045,18536930,60,18536930,,
+1,1,,1,C15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:11.370,20841577,60,20841577,,
+1,1,,N/A,C15,N/A,0,0,0,0,N/A,N/A,N/A,-11.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:15.348,3440541,60,3440541,,
+1,1,,1,C16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:15.673,4814138,60,4814138,,
+1,1,,N/A,C16,N/A,0,0,0,0,N/A,N/A,N/A,97.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:19.650,8874149,60,8874149,,
+1,1,,1,C17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:19.979,10741192,60,10741192,,
+1,1,,N/A,C17,N/A,0,0,0,0,N/A,N/A,N/A,25.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:23.958,5911434,60,5911434,,
+1,1,,1,C18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:24.283,7525381,60,7525381,,
+1,1,,N/A,C18,N/A,0,0,0,0,N/A,N/A,N/A,50.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:28.261,14011004,60,14011004,,
+1,1,,1,C19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:28.586,15757535,60,15757535,,
+1,1,,N/A,C19,N/A,0,0,0,0,N/A,N/A,N/A,-11.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:32.571,21930290,60,21930290,,
+1,1,,1,C20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:32.896,24156869,60,24156869,,
+1,1,,N/A,C20,N/A,0,0,0,0,N/A,N/A,N/A,-21.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:36.864,18294018,60,18294018,,
+1,1,,1,C21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:37.190,20177301,60,20177301,,
+1,1,,N/A,C21,N/A,0,0,0,0,N/A,N/A,N/A,-20.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:41.161,17769665,60,17769665,,
+1,1,,1,C22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:41.486,19245624,60,19245624,,
+1,1,,N/A,C22,N/A,0,0,0,0,N/A,N/A,N/A,-30,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:45.461,16787667,60,16787667,,
+1,1,,1,C23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:45.786,18776788,60,18776788,,
+1,1,,N/A,C23,N/A,0,0,0,0,N/A,N/A,N/A,-13.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,C24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:49.765,12035470,60,12035470,,
+1,1,,1,C24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:50.090,13650203,60,13650203,,
+1,1,,N/A,C24,N/A,0,0,0,0,N/A,N/A,N/A,-6.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:11.861,32808312,60,32808312,,
+1,1,,1,E01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:11.535,36277475,60,36277475,,
+1,1,,N/A,E01,N/A,0,0,0,0,N/A,N/A,N/A,-19.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:16.161,9180437,60,9180437,,
+1,1,,1,E02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:15.835,11167691,60,11167691,,
+1,1,,N/A,E02,N/A,0,0,0,0,N/A,N/A,N/A,28.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:20.462,14485235,60,14485235,,
+1,1,,1,E03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:20.136,17254459,60,17254459,,
+1,1,,N/A,E03,N/A,0,0,0,0,N/A,N/A,N/A,17.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:24.763,21263992,60,21263992,,
+1,1,,1,E04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:24.437,23309899,60,23309899,,
+1,1,,N/A,E04,N/A,0,0,0,0,N/A,N/A,N/A,-23.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:29.056,26328955,60,26328955,,
+1,1,,1,E05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:28.730,29461500,60,29461500,,
+1,1,,N/A,E05,N/A,0,0,0,0,N/A,N/A,N/A,-13.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:33.361,13764453,60,13764453,,
+1,1,,1,E06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:33.035,15819519,60,15819519,,
+1,1,,N/A,E06,N/A,0,0,0,0,N/A,N/A,N/A,-0.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:37.658,13593101,60,13593101,,
+1,1,,1,E07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:37.332,15732768,60,15732768,,
+1,1,,N/A,E07,N/A,0,0,0,0,N/A,N/A,N/A,3.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:41.952,20532869,60,20532869,,
+1,1,,1,E08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:41.626,23146975,60,23146975,,
+1,1,,N/A,E08,N/A,0,0,0,0,N/A,N/A,N/A,-10,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:46.249,13317624,60,13317624,,
+1,1,,1,E09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:45.923,15331147,60,15331147,,
+1,1,,N/A,E09,N/A,0,0,0,0,N/A,N/A,N/A,0.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:50.547,18276807,60,18276807,,
+1,1,,1,E10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:50.221,20785775,60,20785775,,
+1,1,,N/A,E10,N/A,0,0,0,0,N/A,N/A,N/A,-5.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:54.848,14909791,60,14909791,,
+1,1,,1,E11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:54.521,17063961,60,17063961,,
+1,1,,N/A,E11,N/A,0,0,0,0,N/A,N/A,N/A,-2.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:59.155,16945713,60,16945713,,
+1,1,,1,E12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:58.829,19549889,60,19549889,,
+1,1,,N/A,E12,N/A,0,0,0,0,N/A,N/A,N/A,1.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:03.449,11850813,60,11850813,,
+1,1,,1,E13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:03.123,14132095,60,14132095,,
+1,1,,N/A,E13,N/A,0,0,0,0,N/A,N/A,N/A,18.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:07.748,8949309,60,8949309,,
+1,1,,1,E14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:07.422,10714502,60,10714502,,
+1,1,,N/A,E14,N/A,0,0,0,0,N/A,N/A,N/A,20.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:12.047,6850873,60,6850873,,
+1,1,,1,E15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:11.721,8341044,60,8341044,,
+1,1,,N/A,E15,N/A,0,0,0,0,N/A,N/A,N/A,28.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:16.350,5766261,60,5766261,,
+1,1,,1,E16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:16.024,7160498,60,7160498,,
+1,1,,N/A,E16,N/A,0,0,0,0,N/A,N/A,N/A,38.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:20.655,24431492,60,24431492,,
+1,1,,1,E17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:20.329,26298927,60,26298927,,
+1,1,,N/A,E17,N/A,0,0,0,0,N/A,N/A,N/A,-33,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:24.958,8380270,60,8380270,,
+1,1,,1,E18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:24.632,9866893,60,9866893,,
+1,1,,N/A,E18,N/A,0,0,0,0,N/A,N/A,N/A,11.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:29.264,26586564,60,26586564,,
+1,1,,1,E19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:28.938,28753956,60,28753956,,
+1,1,,N/A,E19,N/A,0,0,0,0,N/A,N/A,N/A,-30.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:33.572,41010097,60,41010097,,
+1,1,,1,E20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:33.246,39960610,60,39960610,,
+1,1,,N/A,E20,N/A,0,0,0,0,N/A,N/A,N/A,-82.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:37.864,8950697,60,8950697,,
+1,1,,1,E21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:37.539,10466725,60,10466725,,
+1,1,,N/A,E21,N/A,0,0,0,0,N/A,N/A,N/A,8.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:42.161,20848872,60,20848872,,
+1,1,,1,E22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:41.835,22356990,60,22356990,,
+1,1,,N/A,E22,N/A,0,0,0,0,N/A,N/A,N/A,-34.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:46.464,10812541,60,10812541,,
+1,1,,1,E23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:46.138,12068338,60,12068338,,
+1,1,,N/A,E23,N/A,0,0,0,0,N/A,N/A,N/A,-14.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,E24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:50.767,11615166,60,11615166,,
+1,1,,1,E24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:50.441,13161912,60,13161912,,
+1,1,,N/A,E24,N/A,0,0,0,0,N/A,N/A,N/A,-7.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:12.211,30317923,60,30317923,,
+1,1,,1,G01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:12.536,32900136,60,32900136,,
+1,1,,N/A,G01,N/A,0,0,0,0,N/A,N/A,N/A,-29,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:16.510,5731772,60,5731772,,
+1,1,,1,G02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:16.835,7633686,60,7633686,,
+1,1,,N/A,G02,N/A,0,0,0,0,N/A,N/A,N/A,73.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:20.812,7919814,60,7919814,,
+1,1,,1,G03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:21.137,9489578,60,9489578,,
+1,1,,N/A,G03,N/A,0,0,0,0,N/A,N/A,N/A,20.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:25.113,18032021,60,18032021,,
+1,1,,1,G04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:25.438,19945990,60,19945990,,
+1,1,,N/A,G04,N/A,0,0,0,0,N/A,N/A,N/A,-19.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:29.407,21528107,60,21528107,,
+1,1,,1,G05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:29.733,24249473,60,24249473,,
+1,1,,N/A,G05,N/A,0,0,0,0,N/A,N/A,N/A,-10.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:33.712,44049991,60,44049991,,
+1,1,,1,G06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:34.037,44024212,60,44024212,,
+1,1,,N/A,G06,N/A,0,0,0,0,N/A,N/A,N/A,-70.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:38.009,17299372,60,17299372,,
+1,1,,1,G07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:38.334,19724139,60,19724139,,
+1,1,,N/A,G07,N/A,0,0,0,0,N/A,N/A,N/A,-4.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:42.303,16675715,60,16675715,,
+1,1,,1,G08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:42.628,18954683,60,18954683,,
+1,1,,N/A,G08,N/A,0,0,0,0,N/A,N/A,N/A,-5.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:46.596,12779277,60,12779277,,
+1,1,,1,G09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:46.921,15313515,60,15313515,,
+1,1,,N/A,G09,N/A,0,0,0,0,N/A,N/A,N/A,20.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:50.894,10732316,60,10732316,,
+1,1,,1,G10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:51.219,12241388,60,12241388,,
+1,1,,N/A,G10,N/A,0,0,0,0,N/A,N/A,N/A,-4.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:55.199,17572408,60,17572408,,
+1,1,,1,G11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:55.524,19125483,60,19125483,,
+1,1,,N/A,G11,N/A,0,0,0,0,N/A,N/A,N/A,-27.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:59.505,7591891,60,7591891,,
+1,1,,1,G12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:59.830,9189295,60,9189295,,
+1,1,,N/A,G12,N/A,0,0,0,0,N/A,N/A,N/A,25.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:03.800,9640692,60,9640692,,
+1,1,,1,G13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:04.125,11383001,60,11383001,,
+1,1,,N/A,G13,N/A,0,0,0,0,N/A,N/A,N/A,13.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:08.098,4280272,60,4280272,,
+1,1,,1,G14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:08.423,5755003,60,5755003,,
+1,1,,N/A,G14,N/A,0,0,0,0,N/A,N/A,N/A,78,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:12.397,6735408,60,6735408,,
+1,1,,1,G15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:12.722,8223462,60,8223462,,
+1,1,,N/A,G15,N/A,0,0,0,0,N/A,N/A,N/A,29.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:16.700,19151742,60,19151742,,
+1,1,,1,G16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:17.025,20952541,60,20952541,,
+1,1,,N/A,G16,N/A,0,0,0,0,N/A,N/A,N/A,-24.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:21.005,6904111,60,6904111,,
+1,1,,1,G17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:21.330,8156932,60,8156932,,
+1,1,,N/A,G17,N/A,0,0,0,0,N/A,N/A,N/A,13.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:25.307,18083671,60,18083671,,
+1,1,,1,G18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:25.633,19657818,60,19657818,,
+1,1,,N/A,G18,N/A,0,0,0,0,N/A,N/A,N/A,-28.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:29.615,17325363,60,17325363,,
+1,1,,1,G19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:29.940,18769429,60,18769429,,
+1,1,,N/A,G19,N/A,0,0,0,0,N/A,N/A,N/A,-29.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:33.923,22640582,60,22640582,,
+1,1,,1,G20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:34.248,23358106,60,23358106,,
+1,1,,N/A,G20,N/A,0,0,0,0,N/A,N/A,N/A,-54.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:38.215,11613223,60,11613223,,
+1,1,,1,G21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:38.540,12937733,60,12937733,,
+1,1,,N/A,G21,N/A,0,0,0,0,N/A,N/A,N/A,-15.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:42.512,5366338,60,5366338,,
+1,1,,1,G22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:42.837,6599205,60,6599205,,
+1,1,,N/A,G22,N/A,0,0,0,0,N/A,N/A,N/A,33.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:46.814,16337363,60,16337363,,
+1,1,,1,G23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:47.139,17788093,60,17788093,,
+1,1,,N/A,G23,N/A,0,0,0,0,N/A,N/A,N/A,-27.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,G24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:51.117,15277671,60,15277671,,
+1,1,,1,G24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:51.442,16713203,60,16713203,,
+1,1,,N/A,G24,N/A,0,0,0,0,N/A,N/A,N/A,-25,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:13.213,11708900,60,11708900,,
+1,1,,1,I01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:12.887,14365610,60,14365610,,
+1,1,,N/A,I01,N/A,0,0,0,0,N/A,N/A,N/A,32.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:17.512,11593307,60,11593307,,
+1,1,,1,I02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:17.186,14101578,60,14101578,,
+1,1,,N/A,I02,N/A,0,0,0,0,N/A,N/A,N/A,28,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:21.813,12751090,60,12751090,,
+1,1,,1,I03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:21.487,15167548,60,15167548,,
+1,1,,N/A,I03,N/A,0,0,0,0,N/A,N/A,N/A,16.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:26.113,7624026,60,7624026,,
+1,1,,1,I04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:25.788,9981143,60,9981143,,
+1,1,,N/A,I04,N/A,0,0,0,0,N/A,N/A,N/A,64.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:30.408,3849147,60,3849147,,
+1,1,,1,I05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:30.083,5295152,60,5295152,,
+1,1,,N/A,I05,N/A,0,0,0,0,N/A,N/A,N/A,89.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:34.713,16290367,60,16290367,,
+1,1,,1,I06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:34.387,18766018,60,18766018,,
+1,1,,N/A,I06,N/A,0,0,0,0,N/A,N/A,N/A,0.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:39.009,15770159,60,15770159,,
+1,1,,1,I07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:38.683,18492991,60,18492991,,
+1,1,,N/A,I07,N/A,0,0,0,0,N/A,N/A,N/A,9.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:43.303,17723966,60,17723966,,
+1,1,,1,I08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:42.977,20526768,60,20526768,,
+1,1,,N/A,I08,N/A,0,0,0,0,N/A,N/A,N/A,3.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:47.600,5223790,60,5223790,,
+1,1,,1,I09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:47.274,6818348,60,6818348,,
+1,1,,N/A,I09,N/A,0,0,0,0,N/A,N/A,N/A,63.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:51.897,11641095,60,11641095,,
+1,1,,1,I10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:51.571,14201037,60,14201037,,
+1,1,,N/A,I10,N/A,0,0,0,0,N/A,N/A,N/A,29.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:56.199,5653803,60,5653803,,
+1,1,,1,I11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:55.874,7195118,60,7195118,,
+1,1,,N/A,I11,N/A,0,0,0,0,N/A,N/A,N/A,50.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:00.506,11943416,60,11943416,,
+1,1,,1,I12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:00.180,14268746,60,14268746,,
+1,1,,N/A,I12,N/A,0,0,0,0,N/A,N/A,N/A,19.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:04.802,10629542,60,10629542,,
+1,1,,1,I13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:04.476,12499520,60,12499520,,
+1,1,,N/A,I13,N/A,0,0,0,0,N/A,N/A,N/A,11.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:09.100,18679734,60,18679734,,
+1,1,,1,I14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:08.774,20960435,60,20960435,,
+1,1,,N/A,I14,N/A,0,0,0,0,N/A,N/A,N/A,-12.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:13.400,8673590,60,8673590,,
+1,1,,1,I15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:13.074,10197629,60,10197629,,
+1,1,,N/A,I15,N/A,0,0,0,0,N/A,N/A,N/A,11.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:17.703,15278336,60,15278336,,
+1,1,,1,I16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:17.377,16492662,60,16492662,,
+1,1,,N/A,I16,N/A,0,0,0,0,N/A,N/A,N/A,-31.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:22.007,18758132,60,18758132,,
+1,1,,1,I17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:21.681,20546293,60,20546293,,
+1,1,,N/A,I17,N/A,0,0,0,0,N/A,N/A,N/A,-24.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:26.309,15274159,60,15274159,,
+1,1,,1,I18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:25.983,16834915,60,16834915,,
+1,1,,N/A,I18,N/A,0,0,0,0,N/A,N/A,N/A,-21.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:30.616,3735075,60,3735075,,
+1,1,,1,I19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:30.290,4444250,60,4444250,,
+1,1,,N/A,I19,N/A,0,0,0,0,N/A,N/A,N/A,17,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:34.923,15968606,60,15968606,,
+1,1,,1,I20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:34.597,17773786,60,17773786,,
+1,1,,N/A,I20,N/A,0,0,0,0,N/A,N/A,N/A,-16.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:39.216,14989167,60,14989167,,
+1,1,,1,I21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:38.890,16062475,60,16062475,,
+1,1,,N/A,I21,N/A,0,0,0,0,N/A,N/A,N/A,-35.3,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:43.512,12687401,60,12687401,,
+1,1,,1,I22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:43.186,12972377,60,12972377,,
+1,1,,N/A,I22,N/A,0,0,0,0,N/A,N/A,N/A,-58.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:47.817,9403954,60,9403954,,
+1,1,,1,I23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:47.491,10536257,60,10536257,,
+1,1,,N/A,I23,N/A,0,0,0,0,N/A,N/A,N/A,-13,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,I24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:52.119,10598317,60,10598317,,
+1,1,,1,I24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:51.793,11743642,60,11743642,,
+1,1,,N/A,I24,N/A,0,0,0,0,N/A,N/A,N/A,-18.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:13.562,11081745,60,11081745,,
+1,1,,1,K01,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:13.888,12945442,60,12945442,,
+1,1,,N/A,K01,N/A,0,0,0,0,N/A,N/A,N/A,7.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:17.862,10059776,60,10059776,,
+1,1,,1,K02,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:18.187,12765386,60,12765386,,
+1,1,,N/A,K02,N/A,0,0,0,0,N/A,N/A,N/A,49.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:22.164,15118536,60,15118536,,
+1,1,,1,K03,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:22.489,16781683,60,16781683,,
+1,1,,N/A,K03,N/A,0,0,0,0,N/A,N/A,N/A,-17.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:26.464,15002105,60,15002105,,
+1,1,,1,K04,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:26.788,17041990,60,17041990,,
+1,1,,N/A,K04,N/A,0,0,0,0,N/A,N/A,N/A,-6.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:30.766,15668356,60,15668356,,
+1,1,,1,K05,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:31.090,18115093,60,18115093,,
+1,1,,N/A,K05,N/A,0,0,0,0,N/A,N/A,N/A,2.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:35.062,17967854,60,17967854,,
+1,1,,1,K06,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:35.388,20916653,60,20916653,,
+1,1,,N/A,K06,N/A,0,0,0,0,N/A,N/A,N/A,6.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:39.359,13088320,60,13088320,,
+1,1,,1,K07,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:39.684,14687661,60,14687661,,
+1,1,,N/A,K07,N/A,0,0,0,0,N/A,N/A,N/A,-12.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:43.653,7786810,60,7786810,,
+1,1,,1,K08,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:43.979,9599726,60,9599726,,
+1,1,,N/A,K08,N/A,0,0,0,0,N/A,N/A,N/A,34.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:47.950,27645867,60,27645867,,
+1,1,,1,K09,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:48.275,30849986,60,30849986,,
+1,1,,N/A,K09,N/A,0,0,0,0,N/A,N/A,N/A,-15,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:52.244,11016043,60,11016043,,
+1,1,,1,K10,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:52.569,13097263,60,13097263,,
+1,1,,N/A,K10,N/A,0,0,0,0,N/A,N/A,N/A,16.6,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:00:56.550,17257726,60,17257726,,
+1,1,,1,K11,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:00:56.875,19787400,60,19787400,,
+1,1,,N/A,K11,N/A,0,0,0,0,N/A,N/A,N/A,-1.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:00.856,15494965,60,15494965,,
+1,1,,1,K12,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:01.181,18322385,60,18322385,,
+1,1,,N/A,K12,N/A,0,0,0,0,N/A,N/A,N/A,13.9,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:05.151,5843647,60,5843647,,
+1,1,,1,K13,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:05.476,7394079,60,7394079,,
+1,1,,N/A,K13,N/A,0,0,0,0,N/A,N/A,N/A,47.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:09.450,13698230,60,13698230,,
+1,1,,1,K14,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:09.775,15729544,60,15729544,,
+1,1,,N/A,K14,N/A,0,0,0,0,N/A,N/A,N/A,-0.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:13.750,12255995,60,12255995,,
+1,1,,1,K15,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:14.075,14082700,60,14082700,,
+1,1,,N/A,K15,N/A,0,0,0,0,N/A,N/A,N/A,-0.4,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:18.052,13805215,60,13805215,,
+1,1,,1,K16,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:18.377,15414059,60,15414059,,
+1,1,,N/A,K16,N/A,0,0,0,0,N/A,N/A,N/A,-14.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:22.356,6216835,60,6216835,,
+1,1,,1,K17,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:22.681,6968000,60,6968000,,
+1,1,,N/A,K17,N/A,0,0,0,0,N/A,N/A,N/A,-12.8,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:26.661,16297720,60,16297720,,
+1,1,,1,K18,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:26.986,17249068,60,17249068,,
+1,1,,N/A,K18,N/A,0,0,0,0,N/A,N/A,N/A,-41.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:30.968,7657920,60,7657920,,
+1,1,,1,K19,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:31.292,8554726,60,8554726,,
+1,1,,N/A,K19,N/A,0,0,0,0,N/A,N/A,N/A,-14.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:35.273,24948851,60,24948851,,
+1,1,,1,K20,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:35.598,26243862,60,26243862,,
+1,1,,N/A,K20,N/A,0,0,0,0,N/A,N/A,N/A,-44.5,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:39.565,10411102,60,10411102,,
+1,1,,1,K21,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:39.891,11340261,60,11340261,,
+1,1,,N/A,K21,N/A,0,0,0,0,N/A,N/A,N/A,-27.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:43.864,8137464,60,8137464,,
+1,1,,1,K22,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:44.189,8952581,60,8952581,,
+1,1,,N/A,K22,N/A,0,0,0,0,N/A,N/A,N/A,-22.1,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:48.167,13595684,60,13595684,,
+1,1,,1,K23,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:48.492,14268154,60,14268154,,
+1,1,,N/A,K23,N/A,0,0,0,0,N/A,N/A,N/A,-45.7,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+1,1,,1,K24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=1st Ex=Top Em=Top Wdw=N/A (15),00:01:52.469,13088864,60,13088864,,
+1,1,,1,K24,Copy of Kris FP Fluorescein anisotropy(1),0,0,0,De=2nd Ex=Top Em=Top Wdw=N/A (142),00:01:52.794,14028991,60,14028991,,
+1,1,,N/A,K24,N/A,0,0,0,0,N/A,N/A,N/A,-35.2,Calc 1: mP value for FP measurement = 1000 * (S - G * P) / (S + G * P) where S = <detector 2 or Copy of Kris FP Fluorescein anisotropy(1) channel 2> P = <detector 1 or Copy of Kris FP Fluorescein anisotropy(1) channel 1> G = G-factor,
+
+Exported with EnVision Workstation version 1.13.3009.1401
