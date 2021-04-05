@@ -42,8 +42,8 @@ exp_g = {'plate_1': 1.15, 'plate_1_repeat': 1.15, 'plate_2_1': 1.15, 'plate_2_re
 # invalidated platemap for invalidate test
 inval_platemap = "example_output/invalidate/inval_platemap_out.csv"
 
-prot_trac_data = "test_data/protein-tracer_data_set.csv"
-prot_trac_platemap = "test_data/protein-tracer_platemap.csv"
+prot_trac_data = "test_data/protein_tracer_data_set.csv"
+prot_trac_platemap = "test_data/protein_tracer_platemap.csv"
 prot_trac_p_s_correct = "example_output/background_correct/protein-tracer_p_s_correct.pkl"
 prot_trac_r_i = "example_output/calc_r_i/protein-tracer_r_i_i_percent.pkl"
 prot_trac_mean_r_i = "example_output/calc_mean_r_i/protein-tracer_mean_r_i_dicts.pkl"
