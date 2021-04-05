@@ -182,12 +182,11 @@ def test_final_fit_df():
     act_ff = test_obj.final_fit
     pd.testing.assert_frame_equal(act_ff, exp_ff)
         
-@pytest.mark.raises()
+@pytest.mark.raises(exception=PlateSizeError)
 def test_plate_size_error():
     """Test for error raised by read_in_envision function if the 'size' parameter passed by the user is not either 384 or 96."""
     
     test_obj = FA.read_in_envision(data_csv=plate_1, platemap_csv=plate_map_file, data_type='plate', size=100)
-
 
 @pytest.mark.raises()
 def test_incorrect_data_type_list():
@@ -195,20 +194,17 @@ def test_incorrect_data_type_list():
     
     test_obj = FA.read_in_envision(data_csv=plate_1, platemap_csv=plate_map_file, data_type='list', size=384)
     
-    
 @pytest.mark.raises()
 def test_incorrect_data_type_plate():
     """Test for error raised during data read in by read_in_envision function if data_type = plate but raw data file is in list format."""
         
     test_obj = FA.read_in_envision(data_csv=list_A, platemap_csv=plate_map_file, data_type='plate', size=384)
-    
-    
+     
 @pytest.mark.raises()
 def test_incorrect_data_type():
     """Test for error raised by read_in_envision function if the 'data_type' argument passed by the user is neither plate nor list."""
         
     test_obj = FA.read_in_envision(data_csv=list_A, platemap_csv=plate_map_file, data_type='typo', size=384)
-
 
 @pytest.mark.raises()
 def test_invalidate_error():
@@ -216,7 +212,6 @@ def test_invalidate_error():
     
     test_obj = FA.read_in_envision(plate_2_repeat, plate_map_file, 'plate', 384)
     test_obj.invalidate()   # execute the invalidate function without specifying well ids, rows or columns to be invalidated
-
 
 
 test_obj = FA.read_in_envision(prot_trac_data, prot_trac_platemap, 'plate', 384)
@@ -290,8 +285,6 @@ def test_logistic_fit():
     pd.testing.assert_frame_equal(act_fit_params, exp_fit_params, check_dtype=False)   # compare the empty fit params df to the example one
          
 
-
-
 def test_calc_amount_bound():
 
     # update the final_fit df with rmin and rmax values because calc_lambda is not tested
@@ -308,14 +301,3 @@ def test_calc_amount_bound():
     for ptc in ptc_list:   # for each protein-tracer pair compare the amount bound dfs to the example ones
         act_ab_dict = test_obj.data_dict['repeat_1']['data']['amount_bound']
         pd.testing.assert_frame_equal(act_ab_dict[ptc], exp_ab_dict[ptc])
-
-
-def test_single_site_fit():
-
-    # execute the tested function
-    test_obj.single_site_fit()
-    test_obj.single_site_fit(prot=['Protein 1'], trac=['Tracer'], sigma='sem', bounds=([0,0],[200, 20000]))
-    act_fit_params = test_obj.final_fit
-    exp_fit_params = pd.read_csv(prot_trac_ss_final_fit, index_col=[0,1,2])
-    
-    pd.testing.assert_frame_equal(act_fit_params, exp_fit_params, check_dtype=False)  
