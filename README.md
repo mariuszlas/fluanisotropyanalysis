@@ -1,6 +1,6 @@
 # Fluorescence Anisotropy Analysis
 
-[![Python package](https://github.com/mariuszlas/fluanisotropyanalysis/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/mariuszlas/fluanisotropyanalysis/actions/workflows/python-package-test.yml)
+[![build](https://github.com/mariuszlas/fluanisotropyanalysis/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/mariuszlas/fluanisotropyanalysis/actions/workflows/python-package-test.yml)
 
 Read and analyse data from fluorescence anisotropy assays.
 
