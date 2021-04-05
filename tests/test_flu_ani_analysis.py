@@ -6,50 +6,50 @@ from matplotlib.testing.compare import compare_images
 from fluanisotropyanalysis.flu_ani_analysis import FA 
 
 # platemap file for read_in_envision and invalidated tests
-plate_map_file = "tests\\test_data\\plate_map_for_read_in_env_&_inval.csv"
+plate_map_file = "test_data\\plate_map_for_read_in_env_&_inval.csv"
 
 # raw data files in .csv format for read_in_envision tests
-plate_1 = "tests\\test_data\\read_in_envision\\plate1.csv"
-plate_1_repeat = "tests\\test_data\\read_in_envision\\plate1_repeat.csv"
-plate_2_1 = "tests\\test_data\\read_in_envision\\plate2_1.csv"
-plate_2_repeat = "tests\\test_data\\read_in_envision\\plate2_repeat.csv"
-plate_2_repeat_96 = "tests\\test_data\\read_in_envision\\plate2_repeat _96.csv"
-list_A = "tests\\test_data\\read_in_envision\\listA.csv"
-list_A_repeat = "tests\\test_data\\read_in_envision\\listA_repeat.csv"
-list_B = "tests\\test_data\\read_in_envision\\listB.csv"
-list_B_repeat_end = "tests\\test_data\\read_in_envision\\listB_repeat _end.csv"
-list_B_repeat_96 = "tests\\test_data\\read_in_envision\\listB_repeat _96.csv"
-list_C = "tests\\test_data\\read_in_envision\\listC.csv"
+plate_1 = "test_data\\read_in_envision\\plate1.csv"
+plate_1_repeat = "test_data\\read_in_envision\\plate1_repeat.csv"
+plate_2_1 = "test_data\\read_in_envision\\plate2_1.csv"
+plate_2_repeat = "test_data\\read_in_envision\\plate2_repeat.csv"
+plate_2_repeat_96 = "test_data\\read_in_envision\\plate2_repeat _96.csv"
+list_A = "test_data\\read_in_envision\\listA.csv"
+list_A_repeat = "test_data\\read_in_envision\\listA_repeat.csv"
+list_B = "test_data\\read_in_envision\\listB.csv"
+list_B_repeat_end = "test_data\\read_in_envision\\listB_repeat _end.csv"
+list_B_repeat_96 = "test_data\\read_in_envision\\listB_repeat _96.csv"
+list_C = "test_data\\read_in_envision\\listC.csv"
 
 # files containing lists of expected data frames in .pkl format for read_in_envision tests
-plate_1_test = "tests\\example_output\\read_in_envision\\plate_1_out.pkl"
-plate_1_repeat_test = "tests\\example_output\\read_in_envision\\plate_1_repeat_out.pkl"
-plate_2_1_test = "tests\\example_output\\read_in_envision\\plate_2_1_out.pkl"
-plate_2_repeat_test = "tests\\example_output\\read_in_envision\\plate_2_repeat_out.pkl"
-plate_2_repeat_96_test = "tests\\example_output\\read_in_envision\\plate_2_repeat_96_out.pkl"
-list_A_test = "tests\\example_output\\read_in_envision\\list_A_out.pkl"
-list_A_repeat_test = "tests\\example_output\\read_in_envision\\list_A_repeat_out.pkl"
-list_B_test = "tests\\example_output\\read_in_envision\\list_B_out.pkl"
-list_B_repeat_end_test = "tests\\example_output\\read_in_envision\\list_B_repeat_end_out.pkl"
-list_B_repeat_96_test = "tests\\example_output\\read_in_envision\\list_B_repeat_96_out.pkl"
-list_C_test = "tests\\example_output\\read_in_envision\\list_C_out.pkl"
-ff_df = "tests\\example_output\\read_in_envision\\final_fit_df.pkl"    # final_fit data frame
+plate_1_test = "example_output\\read_in_envision\\plate_1_out.pkl"
+plate_1_repeat_test = "example_output\\read_in_envision\\plate_1_repeat_out.pkl"
+plate_2_1_test = "example_output\\read_in_envision\\plate_2_1_out.pkl"
+plate_2_repeat_test = "example_output\\read_in_envision\\plate_2_repeat_out.pkl"
+plate_2_repeat_96_test = "example_output\\read_in_envision\\plate_2_repeat_96_out.pkl"
+list_A_test = "example_output\\read_in_envision\\list_A_out.pkl"
+list_A_repeat_test = "example_output\\read_in_envision\\list_A_repeat_out.pkl"
+list_B_test = "example_output\\read_in_envision\\list_B_out.pkl"
+list_B_repeat_end_test = "example_output\\read_in_envision\\list_B_repeat_end_out.pkl"
+list_B_repeat_96_test = "example_output\\read_in_envision\\list_B_repeat_96_out.pkl"
+list_C_test = "example_output\\read_in_envision\\list_C_out.pkl"
+ff_df = "example_output\\read_in_envision\\final_fit_df.pkl"    # final_fit data frame
 
 # expected values of g-factor for read_in_envision tests
 exp_g = {'plate_1': 1.15, 'plate_1_repeat': 1.15, 'plate_2_1': 1.15, 'plate_2_repeat': 1.15, 'plate_2_repeat_96': 1.0, 
         'list_A': 1.15, 'list_A_repeat': 1.15, 'list_B': 1.15, 'list_B_repeat_96': 1.0, 'list_B_repeat_end': 1.15, 'list_C': 1.15}
 
 # invalidated platemap for invalidate test
-inval_platemap = "tests\\example_output\\invalidate\\inval_platemap_out.csv"
+inval_platemap = "example_output\\invalidate\\inval_platemap_out.csv"
 
-prot_trac_data = "tests\\test_data\\protein-tracer_data_set.csv"
-prot_trac_platemap = "tests\\test_data\\protein-tracer_platemap.csv"
-prot_trac_p_s_correct = "tests\\example_output\\background_correct\\protein-tracer_p_s_correct.pkl"
-prot_trac_r_i = "tests\\example_output\\calc_r_i\\protein-tracer_r_i_i_percent.pkl"
-prot_trac_mean_r_i = "tests\\example_output\\calc_mean_r_i\\protein-tracer_mean_r_i_dicts.pkl"
-prot_trac_log_fit_params = "tests\\example_output\\logistic_fit\\protein-tracer_log_fit_params.csv"
-prot_trac_amount_b = "tests\\example_output\\calc_amount_bound\\protein-tracer_mean_ab_dict.pkl"
-prot_trac_ss_final_fit = "tests\\example_output\\single_site_fit\\protein-tracer_final_fit_params.csv"
+prot_trac_data = "test_data\\protein-tracer_data_set.csv"
+prot_trac_platemap = "test_data\\protein-tracer_platemap.csv"
+prot_trac_p_s_correct = "example_output\\background_correct\\protein-tracer_p_s_correct.pkl"
+prot_trac_r_i = "example_output\\calc_r_i\\protein-tracer_r_i_i_percent.pkl"
+prot_trac_mean_r_i = "example_output\\calc_mean_r_i\\protein-tracer_mean_r_i_dicts.pkl"
+prot_trac_log_fit_params = "example_output\\logistic_fit\\protein-tracer_log_fit_params.csv"
+prot_trac_amount_b = "example_output\\calc_amount_bound\\protein-tracer_mean_ab_dict.pkl"
+prot_trac_ss_final_fit = "example_output\\single_site_fit\\protein-tracer_final_fit_params.csv"
 
 
 @pytest.fixture
@@ -209,19 +209,6 @@ def test_incorrect_data_type():
         
     test_obj = FA.read_in_envision(data_csv=list_A, platemap_csv=plate_map_file, data_type='typo', size=384)
 
-    
-"""
-def test_invalidate():
-    #Test whether the invalidate function turns the value of the 'Valid' column to False in a given set of well ids, columns and rows.
-    
-    test_obj = FA.read_in_envision(plate_2_repeat, plate_map_file, 'plate', 384)   # read in actual data and plate map
-    test_obj.invalidate(wells=['A2', 'B3', 'E4'], rows=['C', 'G'], columns=[7,8,12,20])   # invalidate specific well ids, rows and columns
-    
-    exp_platemap = pd.read_csv(inval_platemap, index_col=[0])   # read in an example platemap with invalidated well ids, rows and columns
-    act_platemap = test_obj.plate_map
-    
-    pd.testing.assert_frame_equal(act_platemap, exp_platemap, check_dtype=False)   # compare the two dfs without checking the data types because the example df was not read in using the read_in_envision function
-"""
 
 @pytest.mark.raises()
 def test_invalidate_error():
@@ -229,28 +216,6 @@ def test_invalidate_error():
     
     test_obj = FA.read_in_envision(plate_2_repeat, plate_map_file, 'plate', 384)
     test_obj.invalidate()   # execute the invalidate function without specifying well ids, rows or columns to be invalidated
-
-
-
-
-"""
-##### fails due to different resolution of the generated figure from the example one    
-def test_visualise():
-    
-    actual_img = 'C:\\Users\\Bartek\\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\result_images\\actual_img.png'
-    expected_img = 'C:\\Users\\Bartek\Documents\\Fluorescence-Anisotropy-Analysis\\tests\\baseline_images\\expected_img.png'
-    
-    # creaate the FA class object and save the visualised platemap
-    test_obj = FA.read_in_envision(data_csv=HsHis6_PEX5C_vs_HsPEX5C, platemap_csv=Hs_His6_PEX5C_vs_HsPEX5C_platemap, data_type='plate', size=384)
-    test_obj.visualise(labelby='Protein Concentration', colorby='Type', title='Test plot', export=actual_img)
-    
-    result = compare_images(expected_img, actual_img, tol=1)   # compare the actual and expected images
-    
-    if os.path.isfile(actual_img):   # remove the actual image if it has been created
-        os.remove(actual_img)
-    
-    assert result == None
-"""
 
 
 
