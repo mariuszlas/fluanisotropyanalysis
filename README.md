@@ -1,5 +1,7 @@
 # Fluorescence Anisotropy Analysis
 
+[![Python package](https://github.com/mariuszlas/fluanisotropyanalysis/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/mariuszlas/fluanisotropyanalysis/actions/workflows/python-package-test.yml)
+
 Read and analyse data from fluorescence anisotropy assays.
 
 The pacakge is best used within the interactive environment of [Jupyter Notebook](https://jupyter.org/) (accessible via [Anaconda](https://www.anaconda.com/products/individual)).
