@@ -3,6 +3,7 @@ import pytest
 import pickle
 import pandas as pd
 from matplotlib.testing.compare import compare_images    
+from fluanisotropyanalysis.flu_ani_analysis import FA 
 
 # platemap file for read_in_envision and invalidated tests
 plate_map_file = "tests\\test_data\\plate_map_for_read_in_env_&_inval.csv"
