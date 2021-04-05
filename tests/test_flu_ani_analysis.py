@@ -6,20 +6,20 @@ from matplotlib.testing.compare import compare_images
 from fluanisotropyanalysis.flu_ani_analysis import FA 
 
 # platemap file for read_in_envision and invalidated tests
-plate_map_file = "test_data/plate_map_for_read_in_env_&_inval.csv"
+plate_map_file = "tests/test_data/plate_map_for_read_in_env_&_inval.csv"
 
 # raw data files in .csv format for read_in_envision tests
-plate_1 = "test_data/read_in_envision/plate1.csv"
-plate_1_repeat = "test_data/read_in_envision/plate1_repeat.csv"
-plate_2_1 = "test_data/read_in_envision/plate2_1.csv"
-plate_2_repeat = "test_data/read_in_envision/plate2_repeat.csv"
-plate_2_repeat_96 = "test_data/read_in_envision/plate2_repeat _96.csv"
-list_A = "test_data/read_in_envision/listA.csv"
-list_A_repeat = "test_data/read_in_envision/listA_repeat.csv"
-list_B = "test_data/read_in_envision/listB.csv"
-list_B_repeat_end = "test_data/read_in_envision/listB_repeat _end.csv"
-list_B_repeat_96 = "test_data/read_in_envision/listB_repeat _96.csv"
-list_C = "test_data/read_in_envision/listC.csv"
+plate_1 = "tests/test_data/read_in_envision/plate1.csv"
+plate_1_repeat = "tests/test_data/read_in_envision/plate1_repeat.csv"
+plate_2_1 = "tests/test_data/read_in_envision/plate2_1.csv"
+plate_2_repeat = "tests/test_data/read_in_envision/plate2_repeat.csv"
+plate_2_repeat_96 = "tests/test_data/read_in_envision/plate2_repeat _96.csv"
+list_A = "tests/test_data/read_in_envision/listA.csv"
+list_A_repeat = "tests/test_data/read_in_envision/listA_repeat.csv"
+list_B = "tests/test_data/read_in_envision/listB.csv"
+list_B_repeat_end = "tests/test_data/read_in_envision/listB_repeat _end.csv"
+list_B_repeat_96 = "tests/test_data/read_in_envision/listB_repeat _96.csv"
+list_C = "tests/test_data/read_in_envision/listC.csv"
 
 # files containing lists of expected data frames in .pkl format for read_in_envision tests
 plate_1_test = "example_output/read_in_envision/plate_1_out.pkl"
@@ -42,8 +42,8 @@ exp_g = {'plate_1': 1.15, 'plate_1_repeat': 1.15, 'plate_2_1': 1.15, 'plate_2_re
 # invalidated platemap for invalidate test
 inval_platemap = "example_output/invalidate/inval_platemap_out.csv"
 
-prot_trac_data = "test_data/protein_tracer_data_set.csv"
-prot_trac_platemap = "test_data/protein_tracer_platemap.csv"
+prot_trac_data = "tests/test_data/protein_tracer_data_set.csv"
+prot_trac_platemap = "tests/test_data/protein_tracer_platemap.csv"
 prot_trac_p_s_correct = "example_output/background_correct/protein-tracer_p_s_correct.pkl"
 prot_trac_r_i = "example_output/calc_r_i/protein-tracer_r_i_i_percent.pkl"
 prot_trac_mean_r_i = "example_output/calc_mean_r_i/protein-tracer_mean_r_i_dicts.pkl"
