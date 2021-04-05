@@ -182,7 +182,7 @@ def test_final_fit_df():
     act_ff = test_obj.final_fit
     pd.testing.assert_frame_equal(act_ff, exp_ff)
         
-@pytest.mark.raises(exception=PlateSizeError)
+@pytest.mark.raises()
 def test_plate_size_error():
     """Test for error raised by read_in_envision function if the 'size' parameter passed by the user is not either 384 or 96."""
     
