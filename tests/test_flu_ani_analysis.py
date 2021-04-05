@@ -22,34 +22,34 @@ list_B_repeat_96 = "tests/test_data/read_in_envision/listB_repeat _96.csv"
 list_C = "tests/test_data/read_in_envision/listC.csv"
 
 # files containing lists of expected data frames in .pkl format for read_in_envision tests
-plate_1_test = "example_output/read_in_envision/plate_1_out.pkl"
-plate_1_repeat_test = "example_output/read_in_envision/plate_1_repeat_out.pkl"
-plate_2_1_test = "example_output/read_in_envision/plate_2_1_out.pkl"
-plate_2_repeat_test = "example_output/read_in_envision/plate_2_repeat_out.pkl"
-plate_2_repeat_96_test = "example_output/read_in_envision/plate_2_repeat_96_out.pkl"
-list_A_test = "example_output/read_in_envision/list_A_out.pkl"
-list_A_repeat_test = "example_output/read_in_envision/list_A_repeat_out.pkl"
-list_B_test = "example_output/read_in_envision/list_B_out.pkl"
-list_B_repeat_end_test = "example_output/read_in_envision/list_B_repeat_end_out.pkl"
-list_B_repeat_96_test = "example_output/read_in_envision/list_B_repeat_96_out.pkl"
-list_C_test = "example_output/read_in_envision/list_C_out.pkl"
-ff_df = "example_output/read_in_envision/final_fit_df.pkl"    # final_fit data frame
+plate_1_test = "tests/example_output/read_in_envision/plate_1_out.pkl"
+plate_1_repeat_test = "tests/example_output/read_in_envision/plate_1_repeat_out.pkl"
+plate_2_1_test = "tests/example_output/read_in_envision/plate_2_1_out.pkl"
+plate_2_repeat_test = "tests/example_output/read_in_envision/plate_2_repeat_out.pkl"
+plate_2_repeat_96_test = "tests/example_output/read_in_envision/plate_2_repeat_96_out.pkl"
+list_A_test = "tests/example_output/read_in_envision/list_A_out.pkl"
+list_A_repeat_test = "tests/example_output/read_in_envision/list_A_repeat_out.pkl"
+list_B_test = "tests/example_output/read_in_envision/list_B_out.pkl"
+list_B_repeat_end_test = "tests/example_output/read_in_envision/list_B_repeat_end_out.pkl"
+list_B_repeat_96_test = "tests/example_output/read_in_envision/list_B_repeat_96_out.pkl"
+list_C_test = "tests/example_output/read_in_envision/list_C_out.pkl"
+ff_df = "tests/example_output/read_in_envision/final_fit_df.pkl"    # final_fit data frame
 
 # expected values of g-factor for read_in_envision tests
 exp_g = {'plate_1': 1.15, 'plate_1_repeat': 1.15, 'plate_2_1': 1.15, 'plate_2_repeat': 1.15, 'plate_2_repeat_96': 1.0, 
         'list_A': 1.15, 'list_A_repeat': 1.15, 'list_B': 1.15, 'list_B_repeat_96': 1.0, 'list_B_repeat_end': 1.15, 'list_C': 1.15}
 
 # invalidated platemap for invalidate test
-inval_platemap = "example_output/invalidate/inval_platemap_out.csv"
+inval_platemap = "tests/example_output/invalidate/inval_platemap_out.csv"
 
 prot_trac_data = "tests/test_data/protein_tracer_data_set.csv"
 prot_trac_platemap = "tests/test_data/protein_tracer_platemap.csv"
-prot_trac_p_s_correct = "example_output/background_correct/protein-tracer_p_s_correct.pkl"
-prot_trac_r_i = "example_output/calc_r_i/protein-tracer_r_i_i_percent.pkl"
-prot_trac_mean_r_i = "example_output/calc_mean_r_i/protein-tracer_mean_r_i_dicts.pkl"
-prot_trac_log_fit_params = "example_output/logistic_fit/protein-tracer_log_fit_params.csv"
-prot_trac_amount_b = "example_output/calc_amount_bound/protein-tracer_mean_ab_dict.pkl"
-prot_trac_ss_final_fit = "example_output/single_site_fit/protein-tracer_final_fit_params.csv"
+prot_trac_p_s_correct = "tests/example_output/background_correct/protein-tracer_p_s_correct.pkl"
+prot_trac_r_i = "tests/example_output/calc_r_i/protein-tracer_r_i_i_percent.pkl"
+prot_trac_mean_r_i = "tests/example_output/calc_mean_r_i/protein-tracer_mean_r_i_dicts.pkl"
+prot_trac_log_fit_params = "tests/example_output/logistic_fit/protein-tracer_log_fit_params.csv"
+prot_trac_amount_b = "tests/example_output/calc_amount_bound/protein-tracer_mean_ab_dict.pkl"
+prot_trac_ss_final_fit = "tests/example_output/single_site_fit/protein-tracer_final_fit_params.csv"
 
 
 @pytest.fixture
