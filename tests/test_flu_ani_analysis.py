@@ -6,50 +6,50 @@ from matplotlib.testing.compare import compare_images
 from fluanisotropyanalysis.flu_ani_analysis import FA 
 
 # platemap file for read_in_envision and invalidated tests
-plate_map_file = "test_data\\plate_map_for_read_in_env_&_inval.csv"
+plate_map_file = "test_data/plate_map_for_read_in_env_&_inval.csv"
 
 # raw data files in .csv format for read_in_envision tests
-plate_1 = "test_data\\read_in_envision\\plate1.csv"
-plate_1_repeat = "test_data\\read_in_envision\\plate1_repeat.csv"
-plate_2_1 = "test_data\\read_in_envision\\plate2_1.csv"
-plate_2_repeat = "test_data\\read_in_envision\\plate2_repeat.csv"
-plate_2_repeat_96 = "test_data\\read_in_envision\\plate2_repeat _96.csv"
-list_A = "test_data\\read_in_envision\\listA.csv"
-list_A_repeat = "test_data\\read_in_envision\\listA_repeat.csv"
-list_B = "test_data\\read_in_envision\\listB.csv"
-list_B_repeat_end = "test_data\\read_in_envision\\listB_repeat _end.csv"
-list_B_repeat_96 = "test_data\\read_in_envision\\listB_repeat _96.csv"
-list_C = "test_data\\read_in_envision\\listC.csv"
+plate_1 = "test_data/read_in_envision/plate1.csv"
+plate_1_repeat = "test_data/read_in_envision/plate1_repeat.csv"
+plate_2_1 = "test_data/read_in_envision/plate2_1.csv"
+plate_2_repeat = "test_data/read_in_envision/plate2_repeat.csv"
+plate_2_repeat_96 = "test_data/read_in_envision/plate2_repeat _96.csv"
+list_A = "test_data/read_in_envision/listA.csv"
+list_A_repeat = "test_data/read_in_envision/listA_repeat.csv"
+list_B = "test_data/read_in_envision/listB.csv"
+list_B_repeat_end = "test_data/read_in_envision/listB_repeat _end.csv"
+list_B_repeat_96 = "test_data/read_in_envision/listB_repeat _96.csv"
+list_C = "test_data/read_in_envision/listC.csv"
 
 # files containing lists of expected data frames in .pkl format for read_in_envision tests
-plate_1_test = "example_output\\read_in_envision\\plate_1_out.pkl"
-plate_1_repeat_test = "example_output\\read_in_envision\\plate_1_repeat_out.pkl"
-plate_2_1_test = "example_output\\read_in_envision\\plate_2_1_out.pkl"
-plate_2_repeat_test = "example_output\\read_in_envision\\plate_2_repeat_out.pkl"
-plate_2_repeat_96_test = "example_output\\read_in_envision\\plate_2_repeat_96_out.pkl"
-list_A_test = "example_output\\read_in_envision\\list_A_out.pkl"
-list_A_repeat_test = "example_output\\read_in_envision\\list_A_repeat_out.pkl"
-list_B_test = "example_output\\read_in_envision\\list_B_out.pkl"
-list_B_repeat_end_test = "example_output\\read_in_envision\\list_B_repeat_end_out.pkl"
-list_B_repeat_96_test = "example_output\\read_in_envision\\list_B_repeat_96_out.pkl"
-list_C_test = "example_output\\read_in_envision\\list_C_out.pkl"
-ff_df = "example_output\\read_in_envision\\final_fit_df.pkl"    # final_fit data frame
+plate_1_test = "example_output/read_in_envision/plate_1_out.pkl"
+plate_1_repeat_test = "example_output/read_in_envision/plate_1_repeat_out.pkl"
+plate_2_1_test = "example_output/read_in_envision/plate_2_1_out.pkl"
+plate_2_repeat_test = "example_output/read_in_envision/plate_2_repeat_out.pkl"
+plate_2_repeat_96_test = "example_output/read_in_envision/plate_2_repeat_96_out.pkl"
+list_A_test = "example_output/read_in_envision/list_A_out.pkl"
+list_A_repeat_test = "example_output/read_in_envision/list_A_repeat_out.pkl"
+list_B_test = "example_output/read_in_envision/list_B_out.pkl"
+list_B_repeat_end_test = "example_output/read_in_envision/list_B_repeat_end_out.pkl"
+list_B_repeat_96_test = "example_output/read_in_envision/list_B_repeat_96_out.pkl"
+list_C_test = "example_output/read_in_envision/list_C_out.pkl"
+ff_df = "example_output/read_in_envision/final_fit_df.pkl"    # final_fit data frame
 
 # expected values of g-factor for read_in_envision tests
 exp_g = {'plate_1': 1.15, 'plate_1_repeat': 1.15, 'plate_2_1': 1.15, 'plate_2_repeat': 1.15, 'plate_2_repeat_96': 1.0, 
         'list_A': 1.15, 'list_A_repeat': 1.15, 'list_B': 1.15, 'list_B_repeat_96': 1.0, 'list_B_repeat_end': 1.15, 'list_C': 1.15}
 
 # invalidated platemap for invalidate test
-inval_platemap = "example_output\\invalidate\\inval_platemap_out.csv"
+inval_platemap = "example_output/invalidate/inval_platemap_out.csv"
 
-prot_trac_data = "test_data\\protein-tracer_data_set.csv"
-prot_trac_platemap = "test_data\\protein-tracer_platemap.csv"
-prot_trac_p_s_correct = "example_output\\background_correct\\protein-tracer_p_s_correct.pkl"
-prot_trac_r_i = "example_output\\calc_r_i\\protein-tracer_r_i_i_percent.pkl"
-prot_trac_mean_r_i = "example_output\\calc_mean_r_i\\protein-tracer_mean_r_i_dicts.pkl"
-prot_trac_log_fit_params = "example_output\\logistic_fit\\protein-tracer_log_fit_params.csv"
-prot_trac_amount_b = "example_output\\calc_amount_bound\\protein-tracer_mean_ab_dict.pkl"
-prot_trac_ss_final_fit = "example_output\\single_site_fit\\protein-tracer_final_fit_params.csv"
+prot_trac_data = "test_data/protein-tracer_data_set.csv"
+prot_trac_platemap = "test_data/protein-tracer_platemap.csv"
+prot_trac_p_s_correct = "example_output/background_correct/protein-tracer_p_s_correct.pkl"
+prot_trac_r_i = "example_output/calc_r_i/protein-tracer_r_i_i_percent.pkl"
+prot_trac_mean_r_i = "example_output/calc_mean_r_i/protein-tracer_mean_r_i_dicts.pkl"
+prot_trac_log_fit_params = "example_output/logistic_fit/protein-tracer_log_fit_params.csv"
+prot_trac_amount_b = "example_output/calc_amount_bound/protein-tracer_mean_ab_dict.pkl"
+prot_trac_ss_final_fit = "example_output/single_site_fit/protein-tracer_final_fit_params.csv"
 
 
 @pytest.fixture
