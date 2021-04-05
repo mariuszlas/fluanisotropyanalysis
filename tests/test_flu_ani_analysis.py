@@ -181,48 +181,10 @@ def test_final_fit_df():
     test_obj = FA.read_in_envision(data_csv=plate_1, platemap_csv=plate_map_file, data_type='plate', size=384)
     act_ff = test_obj.final_fit
     pd.testing.assert_frame_equal(act_ff, exp_ff)
-        
-#@pytest.mark.raises()
-def test_plate_size_error():
-    """Test for error raised by read_in_envision function if the 'size' parameter passed by the user is not either 384 or 96."""
-    with pytest.raises(PlateSizeError):
-        test_obj = FA.read_in_envision(data_csv=plate_1, platemap_csv=plate_map_file, data_type='plate', size=100)
-
-@pytest.mark.raises()
-def test_incorrect_data_type_list():
-    """Test for error raised during data read in by read_in_envision function if data_type = list but raw data file is in plate format."""
-    
-    test_obj = FA.read_in_envision(data_csv=plate_1, platemap_csv=plate_map_file, data_type='list', size=384)
-    
-@pytest.mark.raises()
-def test_incorrect_data_type_plate():
-    """Test for error raised during data read in by read_in_envision function if data_type = plate but raw data file is in list format."""
-        
-    test_obj = FA.read_in_envision(data_csv=list_A, platemap_csv=plate_map_file, data_type='plate', size=384)
-     
-@pytest.mark.raises()
-def test_incorrect_data_type():
-    """Test for error raised by read_in_envision function if the 'data_type' argument passed by the user is neither plate nor list."""
-        
-    test_obj = FA.read_in_envision(data_csv=list_A, platemap_csv=plate_map_file, data_type='typo', size=384)
-
-@pytest.mark.raises()
-def test_invalidate_error():
-    """Test whether the 'invalidate' function raises an error if no arguments are passed."""
-    
-    test_obj = FA.read_in_envision(plate_2_repeat, plate_map_file, 'plate', 384)
-    test_obj.invalidate()   # execute the invalidate function without specifying well ids, rows or columns to be invalidated
 
 
 test_obj = FA.read_in_envision(prot_trac_data, prot_trac_platemap, 'plate', 384)
-    
-@pytest.mark.raises()
-def test_no_backg_subt():
-    """Test for an error raised if the calc_r_i function is called with 'correct=True' but background subtraction has not been performed"""
-    
-    # try executing the tested function without prior execution of the background_correct() funciton
-    test_obj.calc_r_i(correct=True, plot_i=False)    
-    
+     
     
 def test_background_correct():
     """Tests whether the background correction function performs correct calculations to get the background corrected values 
