@@ -44,6 +44,7 @@ inval_platemap = "tests/example_output/invalidate/inval_platemap_out.csv"
 
 prot_trac_data = "tests/test_data/protein_tracer_data_set.csv"
 prot_trac_platemap = "tests/test_data/protein_tracer_platemap.csv"
+prot_trac_platemap_df = "tests/example_output/read_in_envision/protein-tracer_platemap_df.csv"
 prot_trac_p_s_correct = "tests/example_output/background_correct/protein-tracer_p_s_correct.pkl"
 prot_trac_r_i = "tests/example_output/calc_r_i/protein-tracer_r_i_i_percent.pkl"
 prot_trac_mean_r_i = "tests/example_output/calc_mean_r_i/protein-tracer_mean_r_i_dicts.pkl"
@@ -174,7 +175,8 @@ def test_list_C(get_testing_data):
       
 
 def test_final_fit_df():
-    
+    """Test whether the final_fit data frame was constructed correctly
+    """
     with open(ff_df, 'rb') as file:   # load the final_fit data frame from .pkl file
         exp_ff = pickle.load(file)
     
@@ -183,9 +185,31 @@ def test_final_fit_df():
     pd.testing.assert_frame_equal(act_ff, exp_ff)
 
 
+#def test_invalidate():
+#    #Test whether the invalidate function turns the value of the 'Valid' column to False in a given set of well ids, columns and rows.
+#    
+#    test_obj = FA.read_in_envision(plate_2_repeat, plate_map_file, 'plate', 384)   # read in actual data and plate map
+#    test_obj.invalidate(wells=['A2', 'B3', 'E4'], rows=['C', 'G'], columns=[7,8,12,20])   # invalidate specific well ids, rows and columns
+#    
+#    exp_platemap = pd.read_csv(inval_platemap, index_col=[0])   # read in an example platemap with invalidated well ids, rows and columns
+#    act_platemap = test_obj.plate_map
+#    
+#    pd.testing.assert_frame_equal(act_platemap, exp_platemap, check_dtype=False)   # compare the two dfs without checking the data types because the example df was not read in using the read_in_envision function
+
+
+
 test_obj = FA.read_in_envision(prot_trac_data, prot_trac_platemap, 'plate', 384)
      
-    
+#def test_platemap_df():
+#    """Test whether the platemap data frame was constructed properly
+#    """
+#    with open(prot_trac_platemap_df, 'rb') as file:
+#        exp_platemap_df = pd.read_csv(file, index_col=0)
+#    
+#    act_platemap_df = test_obj.plate_map
+#    pd.testing.assert_frame_equal(act_platemap_df, exp_platemap_df, check_dtype=False)
+
+
 def test_background_correct():
     """Tests whether the background correction function performs correct calculations to get the background corrected values 
     of p and s channel signal
@@ -263,3 +287,14 @@ def test_calc_amount_bound():
     for ptc in ptc_list:   # for each protein-tracer pair compare the amount bound dfs to the example ones
         act_ab_dict = test_obj.data_dict['repeat_1']['data']['amount_bound']
         pd.testing.assert_frame_equal(act_ab_dict[ptc], exp_ab_dict[ptc])
+
+
+def test_single_site_fit():
+
+    # execute the tested function
+    test_obj.single_site_fit()
+    test_obj.single_site_fit(prot=['Protein 1'], trac=['Tracer'], sigma='sem', bounds=([0,0],[200, 20000]))
+    act_fit_params = test_obj.final_fit
+    exp_fit_params = pd.read_csv(prot_trac_ss_final_fit, index_col=[0,1,2])
+    
+    pd.testing.assert_frame_equal(act_fit_params, exp_fit_params, check_dtype=False)

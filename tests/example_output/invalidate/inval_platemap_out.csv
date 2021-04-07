@@ -1,385 +1,385 @@
-,Type,Contents,Protein Name,Protein Concentration,Tracer Name,Tracer Concentration,Competitor Name,Competitor Concentration,Concentration Units,Valid
-A1,compound,,Protein A,10000.0,Tracer A,200.0,,,nM,True
-A2,compound,,Protein A,6666.67,Tracer A,200.0,,,nM,False
-A3,compound,,Protein A,4444.44,Tracer A,200.0,,,nM,True
-A4,compound,,Protein A,2962.96,Tracer A,200.0,,,nM,True
-A5,compound,,Protein A,1975.31,Tracer A,200.0,,,nM,True
-A6,compound,,Protein A,1316.87,Tracer A,200.0,,,nM,True
-A7,compound,,Protein A,877.91,Tracer A,200.0,,,nM,False
-A8,compound,,Protein A,585.28,Tracer A,200.0,,,nM,False
-A9,compound,,Protein A,390.18,Tracer A,200.0,,,nM,True
-A10,compound,,Protein A,260.12,Tracer A,200.0,,,nM,True
-A11,compound,,Protein A,173.42,Tracer A,200.0,,,nM,True
-A12,compound,,Protein A,115.61,Tracer A,200.0,,,nM,False
-A13,compound,,Protein A,77.07,Tracer A,200.0,,,nM,True
-A14,compound,,Protein A,51.38,Tracer A,200.0,,,nM,True
-A15,compound,,Protein A,34.25,Tracer A,200.0,,,nM,True
-A16,compound,,Protein A,22.84,Tracer A,200.0,,,nM,True
-A17,compound,,Protein A,15.22,Tracer A,200.0,,,nM,True
-A18,compound,,Protein A,10.15,Tracer A,200.0,,,nM,True
-A19,compound,,Protein A,6.77,Tracer A,200.0,,,nM,True
-A20,compound,,Protein A,4.51,Tracer A,200.0,,,nM,False
-A21,compound,,Protein A,3.01,Tracer A,200.0,,,nM,True
-A22,compound,,Protein A,2.0,Tracer A,200.0,,,nM,True
-A23,compound,,Protein A,1.34,Tracer A,200.0,,,nM,True
-A24,compound,,Protein A,0.0,Tracer A,200.0,,,nM,True
-B1,compound,,Protein A,10000.0,Tracer A,200.0,,,nM,True
-B2,compound,,Protein A,6666.67,Tracer A,200.0,,,nM,True
-B3,compound,,Protein A,4444.44,Tracer A,200.0,,,nM,False
-B4,compound,,Protein A,2962.96,Tracer A,200.0,,,nM,True
-B5,compound,,Protein A,1975.31,Tracer A,200.0,,,nM,True
-B6,compound,,Protein A,1316.87,Tracer A,200.0,,,nM,True
-B7,compound,,Protein A,877.91,Tracer A,200.0,,,nM,False
-B8,compound,,Protein A,585.28,Tracer A,200.0,,,nM,False
-B9,compound,,Protein A,390.18,Tracer A,200.0,,,nM,True
-B10,compound,,Protein A,260.12,Tracer A,200.0,,,nM,True
-B11,compound,,Protein A,173.42,Tracer A,200.0,,,nM,True
-B12,compound,,Protein A,115.61,Tracer A,200.0,,,nM,False
-B13,compound,,Protein A,77.07,Tracer A,200.0,,,nM,True
-B14,compound,,Protein A,51.38,Tracer A,200.0,,,nM,True
-B15,compound,,Protein A,34.25,Tracer A,200.0,,,nM,True
-B16,compound,,Protein A,22.84,Tracer A,200.0,,,nM,True
-B17,compound,,Protein A,15.22,Tracer A,200.0,,,nM,True
-B18,compound,,Protein A,10.15,Tracer A,200.0,,,nM,True
-B19,compound,,Protein A,6.77,Tracer A,200.0,,,nM,True
-B20,compound,,Protein A,4.51,Tracer A,200.0,,,nM,False
-B21,compound,,Protein A,3.01,Tracer A,200.0,,,nM,True
-B22,compound,,Protein A,2.0,Tracer A,200.0,,,nM,True
-B23,compound,,Protein A,1.34,Tracer A,200.0,,,nM,True
-B24,compound,,Protein A,0.0,Tracer A,200.0,,,nM,True
-C1,compound,,Protein A,10000.0,Tracer A,200.0,,,nM,False
-C2,compound,,Protein A,6666.67,Tracer A,200.0,,,nM,False
-C3,compound,,Protein A,4444.44,Tracer A,200.0,,,nM,False
-C4,compound,,Protein A,2962.96,Tracer A,200.0,,,nM,False
-C5,compound,,Protein A,1975.31,Tracer A,200.0,,,nM,False
-C6,compound,,Protein A,1316.87,Tracer A,200.0,,,nM,False
-C7,compound,,Protein A,877.91,Tracer A,200.0,,,nM,False
-C8,compound,,Protein A,585.28,Tracer A,200.0,,,nM,False
-C9,compound,,Protein A,390.18,Tracer A,200.0,,,nM,False
-C10,compound,,Protein A,260.12,Tracer A,200.0,,,nM,False
-C11,compound,,Protein A,173.42,Tracer A,200.0,,,nM,False
-C12,compound,,Protein A,115.61,Tracer A,200.0,,,nM,False
-C13,compound,,Protein A,77.07,Tracer A,200.0,,,nM,False
-C14,compound,,Protein A,51.38,Tracer A,200.0,,,nM,False
-C15,compound,,Protein A,34.25,Tracer A,200.0,,,nM,False
-C16,compound,,Protein A,22.84,Tracer A,200.0,,,nM,False
-C17,compound,,Protein A,15.22,Tracer A,200.0,,,nM,False
-C18,compound,,Protein A,10.15,Tracer A,200.0,,,nM,False
-C19,compound,,Protein A,6.77,Tracer A,200.0,,,nM,False
-C20,compound,,Protein A,4.51,Tracer A,200.0,,,nM,False
-C21,compound,,Protein A,3.01,Tracer A,200.0,,,nM,False
-C22,compound,,Protein A,2.0,Tracer A,200.0,,,nM,False
-C23,compound,,Protein A,1.34,Tracer A,200.0,,,nM,False
-C24,compound,,Protein A,0.0,Tracer A,200.0,,,nM,False
-D1,blank,,Protein A,10000.0,,,,,nM,True
-D2,blank,,Protein A,6666.67,,,,,nM,True
-D3,blank,,Protein A,4444.44,,,,,nM,True
-D4,blank,,Protein A,2962.96,,,,,nM,True
-D5,blank,,Protein A,1975.31,,,,,nM,True
-D6,blank,,Protein A,1316.87,,,,,nM,True
-D7,blank,,Protein A,877.91,,,,,nM,False
-D8,blank,,Protein A,585.28,,,,,nM,False
-D9,blank,,Protein A,390.18,,,,,nM,True
-D10,blank,,Protein A,260.12,,,,,nM,True
-D11,blank,,Protein A,173.42,,,,,nM,True
-D12,blank,,Protein A,115.61,,,,,nM,False
-D13,blank,,Protein A,77.07,,,,,nM,True
-D14,blank,,Protein A,51.38,,,,,nM,True
-D15,blank,,Protein A,34.25,,,,,nM,True
-D16,blank,,Protein A,22.84,,,,,nM,True
-D17,blank,,Protein A,15.22,,,,,nM,True
-D18,blank,,Protein A,10.15,,,,,nM,True
-D19,blank,,Protein A,6.77,,,,,nM,True
-D20,blank,,Protein A,4.51,,,,,nM,False
-D21,blank,,Protein A,3.01,,,,,nM,True
-D22,blank,,Protein A,2.0,,,,,nM,True
-D23,blank,,Protein A,1.34,,,,,nM,True
-D24,blank,,Protein A,0.0,,,,,nM,True
-E1,blank,,Protein A,10000.0,,,,,nM,True
-E2,blank,,Protein A,6666.67,,,,,nM,True
-E3,blank,,Protein A,4444.44,,,,,nM,True
-E4,blank,,Protein A,2962.96,,,,,nM,False
-E5,blank,,Protein A,1975.31,,,,,nM,True
-E6,blank,,Protein A,1316.87,,,,,nM,True
-E7,blank,,Protein A,877.91,,,,,nM,False
-E8,blank,,Protein A,585.28,,,,,nM,False
-E9,blank,,Protein A,390.18,,,,,nM,True
-E10,blank,,Protein A,260.12,,,,,nM,True
-E11,blank,,Protein A,173.42,,,,,nM,True
-E12,blank,,Protein A,115.61,,,,,nM,False
-E13,blank,,Protein A,77.07,,,,,nM,True
-E14,blank,,Protein A,51.38,,,,,nM,True
-E15,blank,,Protein A,34.25,,,,,nM,True
-E16,blank,,Protein A,22.84,,,,,nM,True
-E17,blank,,Protein A,15.22,,,,,nM,True
-E18,blank,,Protein A,10.15,,,,,nM,True
-E19,blank,,Protein A,6.77,,,,,nM,True
-E20,blank,,Protein A,4.51,,,,,nM,False
-E21,blank,,Protein A,3.01,,,,,nM,True
-E22,blank,,Protein A,2.0,,,,,nM,True
-E23,blank,,Protein A,1.34,,,,,nM,True
-E24,blank,,Protein A,0.0,,,,,nM,True
-F1,blank,,Protein A,10000.0,,,,,nM,True
-F2,blank,,Protein A,6666.67,,,,,nM,True
-F3,blank,,Protein A,4444.44,,,,,nM,True
-F4,blank,,Protein A,2962.96,,,,,nM,True
-F5,blank,,Protein A,1975.31,,,,,nM,True
-F6,blank,,Protein A,1316.87,,,,,nM,True
-F7,blank,,Protein A,877.91,,,,,nM,False
-F8,blank,,Protein A,585.28,,,,,nM,False
-F9,blank,,Protein A,390.18,,,,,nM,True
-F10,blank,,Protein A,260.12,,,,,nM,True
-F11,blank,,Protein A,173.42,,,,,nM,True
-F12,blank,,Protein A,115.61,,,,,nM,False
-F13,blank,,Protein A,77.07,,,,,nM,True
-F14,blank,,Protein A,51.38,,,,,nM,True
-F15,blank,,Protein A,34.25,,,,,nM,True
-F16,blank,,Protein A,22.84,,,,,nM,True
-F17,blank,,Protein A,15.22,,,,,nM,True
-F18,blank,,Protein A,10.15,,,,,nM,True
-F19,blank,,Protein A,6.77,,,,,nM,True
-F20,blank,,Protein A,4.51,,,,,nM,False
-F21,blank,,Protein A,3.01,,,,,nM,True
-F22,blank,,Protein A,2.0,,,,,nM,True
-F23,blank,,Protein A,1.34,,,,,nM,True
-F24,blank,,Protein A,0.0,,,,,nM,True
-G1,compound,,Protein B,10000.0,Tracer A,200.0,,,nM,False
-G2,compound,,Protein B,6666.67,Tracer A,200.0,,,nM,False
-G3,compound,,Protein B,4444.44,Tracer A,200.0,,,nM,False
-G4,compound,,Protein B,2962.96,Tracer A,200.0,,,nM,False
-G5,compound,,Protein B,1975.31,Tracer A,200.0,,,nM,False
-G6,compound,,Protein B,1316.87,Tracer A,200.0,,,nM,False
-G7,compound,,Protein B,877.91,Tracer A,200.0,,,nM,False
-G8,compound,,Protein B,585.28,Tracer A,200.0,,,nM,False
-G9,compound,,Protein B,390.18,Tracer A,200.0,,,nM,False
-G10,compound,,Protein B,260.12,Tracer A,200.0,,,nM,False
-G11,compound,,Protein B,173.42,Tracer A,200.0,,,nM,False
-G12,compound,,Protein B,115.61,Tracer A,200.0,,,nM,False
-G13,compound,,Protein B,77.07,Tracer A,200.0,,,nM,False
-G14,compound,,Protein B,51.38,Tracer A,200.0,,,nM,False
-G15,compound,,Protein B,34.25,Tracer A,200.0,,,nM,False
-G16,compound,,Protein B,22.84,Tracer A,200.0,,,nM,False
-G17,compound,,Protein B,15.22,Tracer A,200.0,,,nM,False
-G18,compound,,Protein B,10.15,Tracer A,200.0,,,nM,False
-G19,compound,,Protein B,6.77,Tracer A,200.0,,,nM,False
-G20,compound,,Protein B,4.51,Tracer A,200.0,,,nM,False
-G21,compound,,Protein B,3.01,Tracer A,200.0,,,nM,False
-G22,compound,,Protein B,2.0,Tracer A,200.0,,,nM,False
-G23,compound,,Protein B,1.34,Tracer A,200.0,,,nM,False
-G24,compound,,Protein B,0.0,Tracer A,200.0,,,nM,False
-H1,compound,,Protein B,10000.0,Tracer A,200.0,,,nM,True
-H2,compound,,Protein B,6666.67,Tracer A,200.0,,,nM,True
-H3,compound,,Protein B,4444.44,Tracer A,200.0,,,nM,True
-H4,compound,,Protein B,2962.96,Tracer A,200.0,,,nM,True
-H5,compound,,Protein B,1975.31,Tracer A,200.0,,,nM,True
-H6,compound,,Protein B,1316.87,Tracer A,200.0,,,nM,True
-H7,compound,,Protein B,877.91,Tracer A,200.0,,,nM,False
-H8,compound,,Protein B,585.28,Tracer A,200.0,,,nM,False
-H9,compound,,Protein B,390.18,Tracer A,200.0,,,nM,True
-H10,compound,,Protein B,260.12,Tracer A,200.0,,,nM,True
-H11,compound,,Protein B,173.42,Tracer A,200.0,,,nM,True
-H12,compound,,Protein B,115.61,Tracer A,200.0,,,nM,False
-H13,compound,,Protein B,77.07,Tracer A,200.0,,,nM,True
-H14,compound,,Protein B,51.38,Tracer A,200.0,,,nM,True
-H15,compound,,Protein B,34.25,Tracer A,200.0,,,nM,True
-H16,compound,,Protein B,22.84,Tracer A,200.0,,,nM,True
-H17,compound,,Protein B,15.22,Tracer A,200.0,,,nM,True
-H18,compound,,Protein B,10.15,Tracer A,200.0,,,nM,True
-H19,compound,,Protein B,6.77,Tracer A,200.0,,,nM,True
-H20,compound,,Protein B,4.51,Tracer A,200.0,,,nM,False
-H21,compound,,Protein B,3.01,Tracer A,200.0,,,nM,True
-H22,compound,,Protein B,2.0,Tracer A,200.0,,,nM,True
-H23,compound,,Protein B,1.34,Tracer A,200.0,,,nM,True
-H24,compound,,Protein B,0.0,Tracer A,200.0,,,nM,True
-I1,compound,,Protein B,10000.0,Tracer A,200.0,,,nM,True
-I2,compound,,Protein B,6666.67,Tracer A,200.0,,,nM,True
-I3,compound,,Protein B,4444.44,Tracer A,200.0,,,nM,True
-I4,compound,,Protein B,2962.96,Tracer A,200.0,,,nM,True
-I5,compound,,Protein B,1975.31,Tracer A,200.0,,,nM,True
-I6,compound,,Protein B,1316.87,Tracer A,200.0,,,nM,True
-I7,compound,,Protein B,877.91,Tracer A,200.0,,,nM,False
-I8,compound,,Protein B,585.28,Tracer A,200.0,,,nM,False
-I9,compound,,Protein B,390.18,Tracer A,200.0,,,nM,True
-I10,compound,,Protein B,260.12,Tracer A,200.0,,,nM,True
-I11,compound,,Protein B,173.42,Tracer A,200.0,,,nM,True
-I12,compound,,Protein B,115.61,Tracer A,200.0,,,nM,False
-I13,compound,,Protein B,77.07,Tracer A,200.0,,,nM,True
-I14,compound,,Protein B,51.38,Tracer A,200.0,,,nM,True
-I15,compound,,Protein B,34.25,Tracer A,200.0,,,nM,True
-I16,compound,,Protein B,22.84,Tracer A,200.0,,,nM,True
-I17,compound,,Protein B,15.22,Tracer A,200.0,,,nM,True
-I18,compound,,Protein B,10.15,Tracer A,200.0,,,nM,True
-I19,compound,,Protein B,6.77,Tracer A,200.0,,,nM,True
-I20,compound,,Protein B,4.51,Tracer A,200.0,,,nM,False
-I21,compound,,Protein B,3.01,Tracer A,200.0,,,nM,True
-I22,compound,,Protein B,2.0,Tracer A,200.0,,,nM,True
-I23,compound,,Protein B,1.34,Tracer A,200.0,,,nM,True
-I24,compound,,Protein B,0.0,Tracer A,200.0,,,nM,True
-J1,blank,,Protein B,10000.0,,,,,nM,True
-J2,blank,,Protein B,6666.67,,,,,nM,True
-J3,blank,,Protein B,4444.44,,,,,nM,True
-J4,blank,,Protein B,2962.96,,,,,nM,True
-J5,blank,,Protein B,1975.31,,,,,nM,True
-J6,blank,,Protein B,1316.87,,,,,nM,True
-J7,blank,,Protein B,877.91,,,,,nM,False
-J8,blank,,Protein B,585.28,,,,,nM,False
-J9,blank,,Protein B,390.18,,,,,nM,True
-J10,blank,,Protein B,260.12,,,,,nM,True
-J11,blank,,Protein B,173.42,,,,,nM,True
-J12,blank,,Protein B,115.61,,,,,nM,False
-J13,blank,,Protein B,77.07,,,,,nM,True
-J14,blank,,Protein B,51.38,,,,,nM,True
-J15,blank,,Protein B,34.25,,,,,nM,True
-J16,blank,,Protein B,22.84,,,,,nM,True
-J17,blank,,Protein B,15.22,,,,,nM,True
-J18,blank,,Protein B,10.15,,,,,nM,True
-J19,blank,,Protein B,6.77,,,,,nM,True
-J20,blank,,Protein B,4.51,,,,,nM,False
-J21,blank,,Protein B,3.01,,,,,nM,True
-J22,blank,,Protein B,2.0,,,,,nM,True
-J23,blank,,Protein B,1.34,,,,,nM,True
-J24,blank,,Protein B,0.0,,,,,nM,True
-K1,blank,,Protein B,10000.0,,,,,nM,True
-K2,blank,,Protein B,6666.67,,,,,nM,True
-K3,blank,,Protein B,4444.44,,,,,nM,True
-K4,blank,,Protein B,2962.96,,,,,nM,True
-K5,blank,,Protein B,1975.31,,,,,nM,True
-K6,blank,,Protein B,1316.87,,,,,nM,True
-K7,blank,,Protein B,877.91,,,,,nM,False
-K8,blank,,Protein B,585.28,,,,,nM,False
-K9,blank,,Protein B,390.18,,,,,nM,True
-K10,blank,,Protein B,260.12,,,,,nM,True
-K11,blank,,Protein B,173.42,,,,,nM,True
-K12,blank,,Protein B,115.61,,,,,nM,False
-K13,blank,,Protein B,77.07,,,,,nM,True
-K14,blank,,Protein B,51.38,,,,,nM,True
-K15,blank,,Protein B,34.25,,,,,nM,True
-K16,blank,,Protein B,22.84,,,,,nM,True
-K17,blank,,Protein B,15.22,,,,,nM,True
-K18,blank,,Protein B,10.15,,,,,nM,True
-K19,blank,,Protein B,6.77,,,,,nM,True
-K20,blank,,Protein B,4.51,,,,,nM,False
-K21,blank,,Protein B,3.01,,,,,nM,True
-K22,blank,,Protein B,2.0,,,,,nM,True
-K23,blank,,Protein B,1.34,,,,,nM,True
-K24,blank,,Protein B,0.0,,,,,nM,True
-L1,blank,,Protein B,10000.0,,,,,nM,True
-L2,blank,,Protein B,6666.67,,,,,nM,True
-L3,blank,,Protein B,4444.44,,,,,nM,True
-L4,blank,,Protein B,2962.96,,,,,nM,True
-L5,blank,,Protein B,1975.31,,,,,nM,True
-L6,blank,,Protein B,1316.87,,,,,nM,True
-L7,blank,,Protein B,877.91,,,,,nM,False
-L8,blank,,Protein B,585.28,,,,,nM,False
-L9,blank,,Protein B,390.18,,,,,nM,True
-L10,blank,,Protein B,260.12,,,,,nM,True
-L11,blank,,Protein B,173.42,,,,,nM,True
-L12,blank,,Protein B,115.61,,,,,nM,False
-L13,blank,,Protein B,77.07,,,,,nM,True
-L14,blank,,Protein B,51.38,,,,,nM,True
-L15,blank,,Protein B,34.25,,,,,nM,True
-L16,blank,,Protein B,22.84,,,,,nM,True
-L17,blank,,Protein B,15.22,,,,,nM,True
-L18,blank,,Protein B,10.15,,,,,nM,True
-L19,blank,,Protein B,6.77,,,,,nM,True
-L20,blank,,Protein B,4.51,,,,,nM,False
-L21,blank,,Protein B,3.01,,,,,nM,True
-L22,blank,,Protein B,2.0,,,,,nM,True
-L23,blank,,Protein B,1.34,,,,,nM,True
-L24,blank,,Protein B,0.0,,,,,nM,True
-M1,empty,,,,,,,,,True
-M2,empty,,,,,,,,,True
-M3,empty,,,,,,,,,True
-M4,empty,,,,,,,,,True
-M5,empty,,,,,,,,,True
-M6,empty,,,,,,,,,True
-M7,empty,,,,,,,,,False
-M8,empty,,,,,,,,,False
-M9,empty,,,,,,,,,True
-M10,empty,,,,,,,,,True
-M11,empty,,,,,,,,,True
-M12,empty,,,,,,,,,False
-M13,empty,,,,,,,,,True
-M14,empty,,,,,,,,,True
-M15,empty,,,,,,,,,True
-M16,empty,,,,,,,,,True
-M17,empty,,,,,,,,,True
-M18,empty,,,,,,,,,True
-M19,empty,,,,,,,,,True
-M20,empty,,,,,,,,,False
-M21,empty,,,,,,,,,True
-M22,empty,,,,,,,,,True
-M23,empty,,,,,,,,,True
-M24,empty,,,,,,,,,True
-N1,empty,,,,,,,,,True
-N2,empty,,,,,,,,,True
-N3,empty,,,,,,,,,True
-N4,empty,,,,,,,,,True
-N5,empty,,,,,,,,,True
-N6,empty,,,,,,,,,True
-N7,empty,,,,,,,,,False
-N8,empty,,,,,,,,,False
-N9,empty,,,,,,,,,True
-N10,empty,,,,,,,,,True
-N11,empty,,,,,,,,,True
-N12,empty,,,,,,,,,False
-N13,empty,,,,,,,,,True
-N14,empty,,,,,,,,,True
-N15,empty,,,,,,,,,True
-N16,empty,,,,,,,,,True
-N17,empty,,,,,,,,,True
-N18,empty,,,,,,,,,True
-N19,empty,,,,,,,,,True
-N20,empty,,,,,,,,,False
-N21,empty,,,,,,,,,True
-N22,empty,,,,,,,,,True
-N23,empty,,,,,,,,,True
-N24,empty,,,,,,,,,True
-O1,empty,,,,,,,,,True
-O2,empty,,,,,,,,,True
-O3,empty,,,,,,,,,True
-O4,empty,,,,,,,,,True
-O5,empty,,,,,,,,,True
-O6,empty,,,,,,,,,True
-O7,empty,,,,,,,,,False
-O8,empty,,,,,,,,,False
-O9,empty,,,,,,,,,True
-O10,empty,,,,,,,,,True
-O11,empty,,,,,,,,,True
-O12,empty,,,,,,,,,False
-O13,empty,,,,,,,,,True
-O14,empty,,,,,,,,,True
-O15,empty,,,,,,,,,True
-O16,empty,,,,,,,,,True
-O17,empty,,,,,,,,,True
-O18,empty,,,,,,,,,True
-O19,empty,,,,,,,,,True
-O20,empty,,,,,,,,,False
-O21,empty,,,,,,,,,True
-O22,empty,,,,,,,,,True
-O23,empty,,,,,,,,,True
-O24,empty,,,,,,,,,True
-P1,empty,,,,,,,,,True
-P2,empty,,,,,,,,,True
-P3,empty,,,,,,,,,True
-P4,empty,,,,,,,,,True
-P5,empty,,,,,,,,,True
-P6,empty,,,,,,,,,True
-P7,empty,,,,,,,,,False
-P8,empty,,,,,,,,,False
-P9,empty,,,,,,,,,True
-P10,empty,,,,,,,,,True
-P11,empty,,,,,,,,,True
-P12,empty,,,,,,,,,False
-P13,empty,,,,,,,,,True
-P14,empty,,,,,,,,,True
-P15,empty,,,,,,,,,True
-P16,empty,,,,,,,,,True
-P17,empty,,,,,,,,,True
-P18,empty,,,,,,,,,True
-P19,empty,,,,,,,,,True
-P20,empty,,,,,,,,,False
-P21,empty,,,,,,,,,True
-P22,empty,,,,,,,,,True
-P23,empty,,,,,,,,,True
-P24,empty,,,,,,,,,True
+,Type,Contents,Protein Name,Protein Concentration,Tracer Name,Tracer Concentration,Competitor Name,Competitor Concentration,Concentration Units,Valid
+A1,compound,,Protein 1,10000.0,Tracer,200.0,,,nM,True
+A2,compound,,Protein 1,6666.67,Tracer,200.0,,,nM,False
+A3,compound,,Protein 1,4444.44,Tracer,200.0,,,nM,True
+A4,compound,,Protein 1,2962.96,Tracer,200.0,,,nM,True
+A5,compound,,Protein 1,1975.31,Tracer,200.0,,,nM,True
+A6,compound,,Protein 1,1316.87,Tracer,200.0,,,nM,True
+A7,compound,,Protein 1,877.91,Tracer,200.0,,,nM,False
+A8,compound,,Protein 1,585.28,Tracer,200.0,,,nM,False
+A9,compound,,Protein 1,390.18,Tracer,200.0,,,nM,True
+A10,compound,,Protein 1,260.12,Tracer,200.0,,,nM,True
+A11,compound,,Protein 1,173.42,Tracer,200.0,,,nM,True
+A12,compound,,Protein 1,115.61,Tracer,200.0,,,nM,False
+A13,compound,,Protein 1,77.07,Tracer,200.0,,,nM,True
+A14,compound,,Protein 1,51.38,Tracer,200.0,,,nM,True
+A15,compound,,Protein 1,34.25,Tracer,200.0,,,nM,True
+A16,compound,,Protein 1,22.84,Tracer,200.0,,,nM,True
+A17,compound,,Protein 1,15.22,Tracer,200.0,,,nM,True
+A18,compound,,Protein 1,10.15,Tracer,200.0,,,nM,True
+A19,compound,,Protein 1,6.77,Tracer,200.0,,,nM,True
+A20,compound,,Protein 1,4.51,Tracer,200.0,,,nM,False
+A21,compound,,Protein 1,3.01,Tracer,200.0,,,nM,True
+A22,compound,,Protein 1,2.0,Tracer,200.0,,,nM,True
+A23,compound,,Protein 1,1.34,Tracer,200.0,,,nM,True
+A24,compound,,Protein 1,0.0,Tracer,200.0,,,nM,True
+B1,compound,,Protein 1,10000.0,Tracer,200.0,,,nM,True
+B2,compound,,Protein 1,6666.67,Tracer,200.0,,,nM,True
+B3,compound,,Protein 1,4444.44,Tracer,200.0,,,nM,False
+B4,compound,,Protein 1,2962.96,Tracer,200.0,,,nM,True
+B5,compound,,Protein 1,1975.31,Tracer,200.0,,,nM,True
+B6,compound,,Protein 1,1316.87,Tracer,200.0,,,nM,True
+B7,compound,,Protein 1,877.91,Tracer,200.0,,,nM,False
+B8,compound,,Protein 1,585.28,Tracer,200.0,,,nM,False
+B9,compound,,Protein 1,390.18,Tracer,200.0,,,nM,True
+B10,compound,,Protein 1,260.12,Tracer,200.0,,,nM,True
+B11,compound,,Protein 1,173.42,Tracer,200.0,,,nM,True
+B12,compound,,Protein 1,115.61,Tracer,200.0,,,nM,False
+B13,compound,,Protein 1,77.07,Tracer,200.0,,,nM,True
+B14,compound,,Protein 1,51.38,Tracer,200.0,,,nM,True
+B15,compound,,Protein 1,34.25,Tracer,200.0,,,nM,True
+B16,compound,,Protein 1,22.84,Tracer,200.0,,,nM,True
+B17,compound,,Protein 1,15.22,Tracer,200.0,,,nM,True
+B18,compound,,Protein 1,10.15,Tracer,200.0,,,nM,True
+B19,compound,,Protein 1,6.77,Tracer,200.0,,,nM,True
+B20,compound,,Protein 1,4.51,Tracer,200.0,,,nM,False
+B21,compound,,Protein 1,3.01,Tracer,200.0,,,nM,True
+B22,compound,,Protein 1,2.0,Tracer,200.0,,,nM,True
+B23,compound,,Protein 1,1.34,Tracer,200.0,,,nM,True
+B24,compound,,Protein 1,0.0,Tracer,200.0,,,nM,True
+C1,compound,,Protein 1,10000.0,Tracer,200.0,,,nM,False
+C2,compound,,Protein 1,6666.67,Tracer,200.0,,,nM,False
+C3,compound,,Protein 1,4444.44,Tracer,200.0,,,nM,False
+C4,compound,,Protein 1,2962.96,Tracer,200.0,,,nM,False
+C5,compound,,Protein 1,1975.31,Tracer,200.0,,,nM,False
+C6,compound,,Protein 1,1316.87,Tracer,200.0,,,nM,False
+C7,compound,,Protein 1,877.91,Tracer,200.0,,,nM,False
+C8,compound,,Protein 1,585.28,Tracer,200.0,,,nM,False
+C9,compound,,Protein 1,390.18,Tracer,200.0,,,nM,False
+C10,compound,,Protein 1,260.12,Tracer,200.0,,,nM,False
+C11,compound,,Protein 1,173.42,Tracer,200.0,,,nM,False
+C12,compound,,Protein 1,115.61,Tracer,200.0,,,nM,False
+C13,compound,,Protein 1,77.07,Tracer,200.0,,,nM,False
+C14,compound,,Protein 1,51.38,Tracer,200.0,,,nM,False
+C15,compound,,Protein 1,34.25,Tracer,200.0,,,nM,False
+C16,compound,,Protein 1,22.84,Tracer,200.0,,,nM,False
+C17,compound,,Protein 1,15.22,Tracer,200.0,,,nM,False
+C18,compound,,Protein 1,10.15,Tracer,200.0,,,nM,False
+C19,compound,,Protein 1,6.77,Tracer,200.0,,,nM,False
+C20,compound,,Protein 1,4.51,Tracer,200.0,,,nM,False
+C21,compound,,Protein 1,3.01,Tracer,200.0,,,nM,False
+C22,compound,,Protein 1,2.0,Tracer,200.0,,,nM,False
+C23,compound,,Protein 1,1.34,Tracer,200.0,,,nM,False
+C24,compound,,Protein 1,0.0,Tracer,200.0,,,nM,False
+D1,blank,,Protein 1,10000.0,,,,,nM,True
+D2,blank,,Protein 1,6666.67,,,,,nM,True
+D3,blank,,Protein 1,4444.44,,,,,nM,True
+D4,blank,,Protein 1,2962.96,,,,,nM,True
+D5,blank,,Protein 1,1975.31,,,,,nM,True
+D6,blank,,Protein 1,1316.87,,,,,nM,True
+D7,blank,,Protein 1,877.91,,,,,nM,False
+D8,blank,,Protein 1,585.28,,,,,nM,False
+D9,blank,,Protein 1,390.18,,,,,nM,True
+D10,blank,,Protein 1,260.12,,,,,nM,True
+D11,blank,,Protein 1,173.42,,,,,nM,True
+D12,blank,,Protein 1,115.61,,,,,nM,False
+D13,blank,,Protein 1,77.07,,,,,nM,True
+D14,blank,,Protein 1,51.38,,,,,nM,True
+D15,blank,,Protein 1,34.25,,,,,nM,True
+D16,blank,,Protein 1,22.84,,,,,nM,True
+D17,blank,,Protein 1,15.22,,,,,nM,True
+D18,blank,,Protein 1,10.15,,,,,nM,True
+D19,blank,,Protein 1,6.77,,,,,nM,True
+D20,blank,,Protein 1,4.51,,,,,nM,False
+D21,blank,,Protein 1,3.01,,,,,nM,True
+D22,blank,,Protein 1,2.0,,,,,nM,True
+D23,blank,,Protein 1,1.34,,,,,nM,True
+D24,blank,,Protein 1,0.0,,,,,nM,True
+E1,blank,,Protein 1,10000.0,,,,,nM,True
+E2,blank,,Protein 1,6666.67,,,,,nM,True
+E3,blank,,Protein 1,4444.44,,,,,nM,True
+E4,blank,,Protein 1,2962.96,,,,,nM,False
+E5,blank,,Protein 1,1975.31,,,,,nM,True
+E6,blank,,Protein 1,1316.87,,,,,nM,True
+E7,blank,,Protein 1,877.91,,,,,nM,False
+E8,blank,,Protein 1,585.28,,,,,nM,False
+E9,blank,,Protein 1,390.18,,,,,nM,True
+E10,blank,,Protein 1,260.12,,,,,nM,True
+E11,blank,,Protein 1,173.42,,,,,nM,True
+E12,blank,,Protein 1,115.61,,,,,nM,False
+E13,blank,,Protein 1,77.07,,,,,nM,True
+E14,blank,,Protein 1,51.38,,,,,nM,True
+E15,blank,,Protein 1,34.25,,,,,nM,True
+E16,blank,,Protein 1,22.84,,,,,nM,True
+E17,blank,,Protein 1,15.22,,,,,nM,True
+E18,blank,,Protein 1,10.15,,,,,nM,True
+E19,blank,,Protein 1,6.77,,,,,nM,True
+E20,blank,,Protein 1,4.51,,,,,nM,False
+E21,blank,,Protein 1,3.01,,,,,nM,True
+E22,blank,,Protein 1,2.0,,,,,nM,True
+E23,blank,,Protein 1,1.34,,,,,nM,True
+E24,blank,,Protein 1,0.0,,,,,nM,True
+F1,blank,,Protein 1,10000.0,,,,,nM,True
+F2,blank,,Protein 1,6666.67,,,,,nM,True
+F3,blank,,Protein 1,4444.44,,,,,nM,True
+F4,blank,,Protein 1,2962.96,,,,,nM,True
+F5,blank,,Protein 1,1975.31,,,,,nM,True
+F6,blank,,Protein 1,1316.87,,,,,nM,True
+F7,blank,,Protein 1,877.91,,,,,nM,False
+F8,blank,,Protein 1,585.28,,,,,nM,False
+F9,blank,,Protein 1,390.18,,,,,nM,True
+F10,blank,,Protein 1,260.12,,,,,nM,True
+F11,blank,,Protein 1,173.42,,,,,nM,True
+F12,blank,,Protein 1,115.61,,,,,nM,False
+F13,blank,,Protein 1,77.07,,,,,nM,True
+F14,blank,,Protein 1,51.38,,,,,nM,True
+F15,blank,,Protein 1,34.25,,,,,nM,True
+F16,blank,,Protein 1,22.84,,,,,nM,True
+F17,blank,,Protein 1,15.22,,,,,nM,True
+F18,blank,,Protein 1,10.15,,,,,nM,True
+F19,blank,,Protein 1,6.77,,,,,nM,True
+F20,blank,,Protein 1,4.51,,,,,nM,False
+F21,blank,,Protein 1,3.01,,,,,nM,True
+F22,blank,,Protein 1,2.0,,,,,nM,True
+F23,blank,,Protein 1,1.34,,,,,nM,True
+F24,blank,,Protein 1,0.0,,,,,nM,True
+G1,compound,,Protein 2,10000.0,Tracer,200.0,,,nM,False
+G2,compound,,Protein 2,6666.67,Tracer,200.0,,,nM,False
+G3,compound,,Protein 2,4444.44,Tracer,200.0,,,nM,False
+G4,compound,,Protein 2,2962.96,Tracer,200.0,,,nM,False
+G5,compound,,Protein 2,1975.31,Tracer,200.0,,,nM,False
+G6,compound,,Protein 2,1316.87,Tracer,200.0,,,nM,False
+G7,compound,,Protein 2,877.91,Tracer,200.0,,,nM,False
+G8,compound,,Protein 2,585.28,Tracer,200.0,,,nM,False
+G9,compound,,Protein 2,390.18,Tracer,200.0,,,nM,False
+G10,compound,,Protein 2,260.12,Tracer,200.0,,,nM,False
+G11,compound,,Protein 2,173.42,Tracer,200.0,,,nM,False
+G12,compound,,Protein 2,115.61,Tracer,200.0,,,nM,False
+G13,compound,,Protein 2,77.07,Tracer,200.0,,,nM,False
+G14,compound,,Protein 2,51.38,Tracer,200.0,,,nM,False
+G15,compound,,Protein 2,34.25,Tracer,200.0,,,nM,False
+G16,compound,,Protein 2,22.84,Tracer,200.0,,,nM,False
+G17,compound,,Protein 2,15.22,Tracer,200.0,,,nM,False
+G18,compound,,Protein 2,10.15,Tracer,200.0,,,nM,False
+G19,compound,,Protein 2,6.77,Tracer,200.0,,,nM,False
+G20,compound,,Protein 2,4.51,Tracer,200.0,,,nM,False
+G21,compound,,Protein 2,3.01,Tracer,200.0,,,nM,False
+G22,compound,,Protein 2,2.0,Tracer,200.0,,,nM,False
+G23,compound,,Protein 2,1.34,Tracer,200.0,,,nM,False
+G24,compound,,Protein 2,0.0,Tracer,200.0,,,nM,False
+H1,compound,,Protein 2,10000.0,Tracer,200.0,,,nM,True
+H2,compound,,Protein 2,6666.67,Tracer,200.0,,,nM,True
+H3,compound,,Protein 2,4444.44,Tracer,200.0,,,nM,True
+H4,compound,,Protein 2,2962.96,Tracer,200.0,,,nM,True
+H5,compound,,Protein 2,1975.31,Tracer,200.0,,,nM,True
+H6,compound,,Protein 2,1316.87,Tracer,200.0,,,nM,True
+H7,compound,,Protein 2,877.91,Tracer,200.0,,,nM,False
+H8,compound,,Protein 2,585.28,Tracer,200.0,,,nM,False
+H9,compound,,Protein 2,390.18,Tracer,200.0,,,nM,True
+H10,compound,,Protein 2,260.12,Tracer,200.0,,,nM,True
+H11,compound,,Protein 2,173.42,Tracer,200.0,,,nM,True
+H12,compound,,Protein 2,115.61,Tracer,200.0,,,nM,False
+H13,compound,,Protein 2,77.07,Tracer,200.0,,,nM,True
+H14,compound,,Protein 2,51.38,Tracer,200.0,,,nM,True
+H15,compound,,Protein 2,34.25,Tracer,200.0,,,nM,True
+H16,compound,,Protein 2,22.84,Tracer,200.0,,,nM,True
+H17,compound,,Protein 2,15.22,Tracer,200.0,,,nM,True
+H18,compound,,Protein 2,10.15,Tracer,200.0,,,nM,True
+H19,compound,,Protein 2,6.77,Tracer,200.0,,,nM,True
+H20,compound,,Protein 2,4.51,Tracer,200.0,,,nM,False
+H21,compound,,Protein 2,3.01,Tracer,200.0,,,nM,True
+H22,compound,,Protein 2,2.0,Tracer,200.0,,,nM,True
+H23,compound,,Protein 2,1.34,Tracer,200.0,,,nM,True
+H24,compound,,Protein 2,0.0,Tracer,200.0,,,nM,True
+I1,compound,,Protein 2,10000.0,Tracer,200.0,,,nM,True
+I2,compound,,Protein 2,6666.67,Tracer,200.0,,,nM,True
+I3,compound,,Protein 2,4444.44,Tracer,200.0,,,nM,True
+I4,compound,,Protein 2,2962.96,Tracer,200.0,,,nM,True
+I5,compound,,Protein 2,1975.31,Tracer,200.0,,,nM,True
+I6,compound,,Protein 2,1316.87,Tracer,200.0,,,nM,True
+I7,compound,,Protein 2,877.91,Tracer,200.0,,,nM,False
+I8,compound,,Protein 2,585.28,Tracer,200.0,,,nM,False
+I9,compound,,Protein 2,390.18,Tracer,200.0,,,nM,True
+I10,compound,,Protein 2,260.12,Tracer,200.0,,,nM,True
+I11,compound,,Protein 2,173.42,Tracer,200.0,,,nM,True
+I12,compound,,Protein 2,115.61,Tracer,200.0,,,nM,False
+I13,compound,,Protein 2,77.07,Tracer,200.0,,,nM,True
+I14,compound,,Protein 2,51.38,Tracer,200.0,,,nM,True
+I15,compound,,Protein 2,34.25,Tracer,200.0,,,nM,True
+I16,compound,,Protein 2,22.84,Tracer,200.0,,,nM,True
+I17,compound,,Protein 2,15.22,Tracer,200.0,,,nM,True
+I18,compound,,Protein 2,10.15,Tracer,200.0,,,nM,True
+I19,compound,,Protein 2,6.77,Tracer,200.0,,,nM,True
+I20,compound,,Protein 2,4.51,Tracer,200.0,,,nM,False
+I21,compound,,Protein 2,3.01,Tracer,200.0,,,nM,True
+I22,compound,,Protein 2,2.0,Tracer,200.0,,,nM,True
+I23,compound,,Protein 2,1.34,Tracer,200.0,,,nM,True
+I24,compound,,Protein 2,0.0,Tracer,200.0,,,nM,True
+J1,blank,,Protein 2,10000.0,,,,,nM,True
+J2,blank,,Protein 2,6666.67,,,,,nM,True
+J3,blank,,Protein 2,4444.44,,,,,nM,True
+J4,blank,,Protein 2,2962.96,,,,,nM,True
+J5,blank,,Protein 2,1975.31,,,,,nM,True
+J6,blank,,Protein 2,1316.87,,,,,nM,True
+J7,blank,,Protein 2,877.91,,,,,nM,False
+J8,blank,,Protein 2,585.28,,,,,nM,False
+J9,blank,,Protein 2,390.18,,,,,nM,True
+J10,blank,,Protein 2,260.12,,,,,nM,True
+J11,blank,,Protein 2,173.42,,,,,nM,True
+J12,blank,,Protein 2,115.61,,,,,nM,False
+J13,blank,,Protein 2,77.07,,,,,nM,True
+J14,blank,,Protein 2,51.38,,,,,nM,True
+J15,blank,,Protein 2,34.25,,,,,nM,True
+J16,blank,,Protein 2,22.84,,,,,nM,True
+J17,blank,,Protein 2,15.22,,,,,nM,True
+J18,blank,,Protein 2,10.15,,,,,nM,True
+J19,blank,,Protein 2,6.77,,,,,nM,True
+J20,blank,,Protein 2,4.51,,,,,nM,False
+J21,blank,,Protein 2,3.01,,,,,nM,True
+J22,blank,,Protein 2,2.0,,,,,nM,True
+J23,blank,,Protein 2,1.34,,,,,nM,True
+J24,blank,,Protein 2,0.0,,,,,nM,True
+K1,blank,,Protein 2,10000.0,,,,,nM,True
+K2,blank,,Protein 2,6666.67,,,,,nM,True
+K3,blank,,Protein 2,4444.44,,,,,nM,True
+K4,blank,,Protein 2,2962.96,,,,,nM,True
+K5,blank,,Protein 2,1975.31,,,,,nM,True
+K6,blank,,Protein 2,1316.87,,,,,nM,True
+K7,blank,,Protein 2,877.91,,,,,nM,False
+K8,blank,,Protein 2,585.28,,,,,nM,False
+K9,blank,,Protein 2,390.18,,,,,nM,True
+K10,blank,,Protein 2,260.12,,,,,nM,True
+K11,blank,,Protein 2,173.42,,,,,nM,True
+K12,blank,,Protein 2,115.61,,,,,nM,False
+K13,blank,,Protein 2,77.07,,,,,nM,True
+K14,blank,,Protein 2,51.38,,,,,nM,True
+K15,blank,,Protein 2,34.25,,,,,nM,True
+K16,blank,,Protein 2,22.84,,,,,nM,True
+K17,blank,,Protein 2,15.22,,,,,nM,True
+K18,blank,,Protein 2,10.15,,,,,nM,True
+K19,blank,,Protein 2,6.77,,,,,nM,True
+K20,blank,,Protein 2,4.51,,,,,nM,False
+K21,blank,,Protein 2,3.01,,,,,nM,True
+K22,blank,,Protein 2,2.0,,,,,nM,True
+K23,blank,,Protein 2,1.34,,,,,nM,True
+K24,blank,,Protein 2,0.0,,,,,nM,True
+L1,blank,,Protein 2,10000.0,,,,,nM,True
+L2,blank,,Protein 2,6666.67,,,,,nM,True
+L3,blank,,Protein 2,4444.44,,,,,nM,True
+L4,blank,,Protein 2,2962.96,,,,,nM,True
+L5,blank,,Protein 2,1975.31,,,,,nM,True
+L6,blank,,Protein 2,1316.87,,,,,nM,True
+L7,blank,,Protein 2,877.91,,,,,nM,False
+L8,blank,,Protein 2,585.28,,,,,nM,False
+L9,blank,,Protein 2,390.18,,,,,nM,True
+L10,blank,,Protein 2,260.12,,,,,nM,True
+L11,blank,,Protein 2,173.42,,,,,nM,True
+L12,blank,,Protein 2,115.61,,,,,nM,False
+L13,blank,,Protein 2,77.07,,,,,nM,True
+L14,blank,,Protein 2,51.38,,,,,nM,True
+L15,blank,,Protein 2,34.25,,,,,nM,True
+L16,blank,,Protein 2,22.84,,,,,nM,True
+L17,blank,,Protein 2,15.22,,,,,nM,True
+L18,blank,,Protein 2,10.15,,,,,nM,True
+L19,blank,,Protein 2,6.77,,,,,nM,True
+L20,blank,,Protein 2,4.51,,,,,nM,False
+L21,blank,,Protein 2,3.01,,,,,nM,True
+L22,blank,,Protein 2,2.0,,,,,nM,True
+L23,blank,,Protein 2,1.34,,,,,nM,True
+L24,blank,,Protein 2,0.0,,,,,nM,True
+M1,empty,,,,,,,,,True
+M2,empty,,,,,,,,,True
+M3,empty,,,,,,,,,True
+M4,empty,,,,,,,,,True
+M5,empty,,,,,,,,,True
+M6,empty,,,,,,,,,True
+M7,empty,,,,,,,,,False
+M8,empty,,,,,,,,,False
+M9,empty,,,,,,,,,True
+M10,empty,,,,,,,,,True
+M11,empty,,,,,,,,,True
+M12,empty,,,,,,,,,False
+M13,empty,,,,,,,,,True
+M14,empty,,,,,,,,,True
+M15,empty,,,,,,,,,True
+M16,empty,,,,,,,,,True
+M17,empty,,,,,,,,,True
+M18,empty,,,,,,,,,True
+M19,empty,,,,,,,,,True
+M20,empty,,,,,,,,,False
+M21,empty,,,,,,,,,True
+M22,empty,,,,,,,,,True
+M23,empty,,,,,,,,,True
+M24,empty,,,,,,,,,True
+N1,empty,,,,,,,,,True
+N2,empty,,,,,,,,,True
+N3,empty,,,,,,,,,True
+N4,empty,,,,,,,,,True
+N5,empty,,,,,,,,,True
+N6,empty,,,,,,,,,True
+N7,empty,,,,,,,,,False
+N8,empty,,,,,,,,,False
+N9,empty,,,,,,,,,True
+N10,empty,,,,,,,,,True
+N11,empty,,,,,,,,,True
+N12,empty,,,,,,,,,False
+N13,empty,,,,,,,,,True
+N14,empty,,,,,,,,,True
+N15,empty,,,,,,,,,True
+N16,empty,,,,,,,,,True
+N17,empty,,,,,,,,,True
+N18,empty,,,,,,,,,True
+N19,empty,,,,,,,,,True
+N20,empty,,,,,,,,,False
+N21,empty,,,,,,,,,True
+N22,empty,,,,,,,,,True
+N23,empty,,,,,,,,,True
+N24,empty,,,,,,,,,True
+O1,empty,,,,,,,,,True
+O2,empty,,,,,,,,,True
+O3,empty,,,,,,,,,True
+O4,empty,,,,,,,,,True
+O5,empty,,,,,,,,,True
+O6,empty,,,,,,,,,True
+O7,empty,,,,,,,,,False
+O8,empty,,,,,,,,,False
+O9,empty,,,,,,,,,True
+O10,empty,,,,,,,,,True
+O11,empty,,,,,,,,,True
+O12,empty,,,,,,,,,False
+O13,empty,,,,,,,,,True
+O14,empty,,,,,,,,,True
+O15,empty,,,,,,,,,True
+O16,empty,,,,,,,,,True
+O17,empty,,,,,,,,,True
+O18,empty,,,,,,,,,True
+O19,empty,,,,,,,,,True
+O20,empty,,,,,,,,,False
+O21,empty,,,,,,,,,True
+O22,empty,,,,,,,,,True
+O23,empty,,,,,,,,,True
+O24,empty,,,,,,,,,True
+P1,empty,,,,,,,,,True
+P2,empty,,,,,,,,,True
+P3,empty,,,,,,,,,True
+P4,empty,,,,,,,,,True
+P5,empty,,,,,,,,,True
+P6,empty,,,,,,,,,True
+P7,empty,,,,,,,,,False
+P8,empty,,,,,,,,,False
+P9,empty,,,,,,,,,True
+P10,empty,,,,,,,,,True
+P11,empty,,,,,,,,,True
+P12,empty,,,,,,,,,False
+P13,empty,,,,,,,,,True
+P14,empty,,,,,,,,,True
+P15,empty,,,,,,,,,True
+P16,empty,,,,,,,,,True
+P17,empty,,,,,,,,,True
+P18,empty,,,,,,,,,True
+P19,empty,,,,,,,,,True
+P20,empty,,,,,,,,,False
+P21,empty,,,,,,,,,True
+P22,empty,,,,,,,,,True
+P23,empty,,,,,,,,,True
+P24,empty,,,,,,,,,True
