@@ -293,7 +293,7 @@ def test_single_site_fit():
 
     # execute the tested function
     test_obj.single_site_fit()
-    test_obj.single_site_fit(prot=['Protein 1'], trac=['Tracer'], sigma='sem', bounds=([0,0],[200, 20000]))
+    #test_obj.single_site_fit(prot=['Protein 1'], trac=['Tracer'], sigma='sem', bounds=([0,0],[200, 20000]))
     act_fit_params = test_obj.final_fit
     exp_fit_params = pd.read_csv(prot_trac_ss_final_fit, index_col=[0,1,2])
     
