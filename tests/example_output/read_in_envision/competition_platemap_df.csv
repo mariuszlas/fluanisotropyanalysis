@@ -1,0 +1,385 @@
+,Type,Contents,Protein Name,Protein Concentration,Tracer Name,Tracer Concentration,Competitor Name,Competitor Concentration,Concentration Units,Valid
+A1,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,500000.0,nM,True
+A2,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,250000.0,nM,True
+A3,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,125000.0,nM,True
+A4,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,62500.0,nM,True
+A5,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,31250.0,nM,True
+A6,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,15625.0,nM,True
+A7,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,7812.5,nM,True
+A8,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,3906.25,nM,True
+A9,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,1953.125,nM,True
+A10,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,976.5625,nM,True
+A11,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,488.28125,nM,True
+A12,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,244.140625,nM,True
+A13,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,122.0703125,nM,True
+A14,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,61.03515625,nM,True
+A15,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,30.51757813,nM,True
+A16,compound,,Protein,5000.0,Tracer,50.0,Competitor 1,15.25878906,nM,True
+A17,empty,,,,,,,,,True
+A18,empty,,,,,,,,,True
+A19,blank,,Protein,5000.0,,,Competitor 2,500000.0,nM,True
+A20,blank,,Protein,5000.0,,,Competitor 2,500000.0,nM,True
+A21,blank,,Protein,5000.0,,,Competitor 2,500000.0,nM,True
+A22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,500000.0,nM,True
+A23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,500000.0,nM,True
+A24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,500000.0,nM,True
+B1,blank,,Protein,5000.0,,,Competitor 1,500000.0,nM,True
+B2,blank,,Protein,5000.0,,,Competitor 1,250000.0,nM,True
+B3,blank,,Protein,5000.0,,,Competitor 1,125000.0,nM,True
+B4,blank,,Protein,5000.0,,,Competitor 1,62500.0,nM,True
+B5,blank,,Protein,5000.0,,,Competitor 1,31250.0,nM,True
+B6,blank,,Protein,5000.0,,,Competitor 1,15625.0,nM,True
+B7,blank,,Protein,5000.0,,,Competitor 1,7812.5,nM,True
+B8,blank,,Protein,5000.0,,,Competitor 1,3906.25,nM,True
+B9,blank,,Protein,5000.0,,,Competitor 1,1953.125,nM,True
+B10,blank,,Protein,5000.0,,,Competitor 1,976.5625,nM,True
+B11,blank,,Protein,5000.0,,,Competitor 1,488.28125,nM,True
+B12,blank,,Protein,5000.0,,,Competitor 1,244.140625,nM,True
+B13,blank,,Protein,5000.0,,,Competitor 1,122.0703125,nM,True
+B14,blank,,Protein,5000.0,,,Competitor 1,61.03515625,nM,True
+B15,blank,,Protein,5000.0,,,Competitor 1,30.51757813,nM,True
+B16,blank,,Protein,5000.0,,,Competitor 1,15.25878906,nM,True
+B17,empty,,,,,,,,,True
+B18,empty,,,,,,,,,True
+B19,blank,,Protein,5000.0,,,Competitor 2,250000.0,nM,True
+B20,blank,,Protein,5000.0,,,Competitor 2,250000.0,nM,True
+B21,blank,,Protein,5000.0,,,Competitor 2,250000.0,nM,True
+B22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,250000.0,nM,True
+B23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,250000.0,nM,True
+B24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,250000.0,nM,True
+C1,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,500000.0,nM,True
+C2,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,250000.0,nM,True
+C3,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,125000.0,nM,True
+C4,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,62500.0,nM,True
+C5,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,31250.0,nM,True
+C6,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,15625.0,nM,True
+C7,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,7812.5,nM,True
+C8,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,3906.25,nM,True
+C9,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,1953.125,nM,True
+C10,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,976.5625,nM,True
+C11,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,488.28125,nM,True
+C12,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,244.140625,nM,True
+C13,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,122.0703125,nM,True
+C14,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,61.03515625,nM,True
+C15,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,30.51757813,nM,True
+C16,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,15.25878906,nM,True
+C17,empty,,,,,,,,,True
+C18,empty,,,,,,,,,True
+C19,blank,,Protein,5000.0,,,Competitor 2,125000.0,nM,True
+C20,blank,,Protein,5000.0,,,Competitor 2,125000.0,nM,True
+C21,blank,,Protein,5000.0,,,Competitor 2,125000.0,nM,True
+C22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,125000.0,nM,True
+C23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,125000.0,nM,True
+C24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,125000.0,nM,True
+D1,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,500000.0,nM,True
+D2,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,250000.0,nM,True
+D3,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,125000.0,nM,True
+D4,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,62500.0,nM,True
+D5,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,31250.0,nM,True
+D6,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,15625.0,nM,True
+D7,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,7812.5,nM,True
+D8,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,3906.25,nM,True
+D9,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,1953.125,nM,True
+D10,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,976.5625,nM,True
+D11,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,488.28125,nM,True
+D12,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,244.140625,nM,True
+D13,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,122.0703125,nM,True
+D14,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,61.03515625,nM,True
+D15,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,30.51757813,nM,True
+D16,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,15.25878906,nM,True
+D17,empty,,,,,,,,,True
+D18,empty,,,,,,,,,True
+D19,blank,,Protein,5000.0,,,Competitor 2,62500.0,nM,True
+D20,blank,,Protein,5000.0,,,Competitor 2,62500.0,nM,True
+D21,blank,,Protein,5000.0,,,Competitor 2,62500.0,nM,True
+D22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,62500.0,nM,True
+D23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,62500.0,nM,True
+D24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,62500.0,nM,True
+E1,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,500000.0,nM,True
+E2,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,250000.0,nM,True
+E3,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,125000.0,nM,True
+E4,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,62500.0,nM,True
+E5,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,31250.0,nM,True
+E6,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,15625.0,nM,True
+E7,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,7812.5,nM,True
+E8,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,3906.25,nM,True
+E9,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,1953.125,nM,True
+E10,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,976.5625,nM,True
+E11,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,488.28125,nM,True
+E12,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,244.140625,nM,True
+E13,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,122.0703125,nM,True
+E14,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,61.03515625,nM,True
+E15,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,30.51757813,nM,True
+E16,compound,,Protein,5000.0,Tracer,50.0,Competitor 3,15.25878906,nM,True
+E17,empty,,,,,,,,,True
+E18,empty,,,,,,,,,True
+E19,blank,,Protein,5000.0,,,Competitor 2,31250.0,nM,True
+E20,blank,,Protein,5000.0,,,Competitor 2,31250.0,nM,True
+E21,blank,,Protein,5000.0,,,Competitor 2,31250.0,nM,True
+E22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,31250.0,nM,True
+E23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,31250.0,nM,True
+E24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,31250.0,nM,True
+F1,blank,,Protein,5000.0,,,Competitor 3,500000.0,nM,True
+F2,blank,,Protein,5000.0,,,Competitor 3,250000.0,nM,True
+F3,blank,,Protein,5000.0,,,Competitor 3,125000.0,nM,True
+F4,blank,,Protein,5000.0,,,Competitor 3,62500.0,nM,True
+F5,blank,,Protein,5000.0,,,Competitor 3,31250.0,nM,True
+F6,blank,,Protein,5000.0,,,Competitor 3,15625.0,nM,True
+F7,blank,,Protein,5000.0,,,Competitor 3,7812.5,nM,True
+F8,blank,,Protein,5000.0,,,Competitor 3,3906.25,nM,True
+F9,blank,,Protein,5000.0,,,Competitor 3,1953.125,nM,True
+F10,blank,,Protein,5000.0,,,Competitor 3,976.5625,nM,True
+F11,blank,,Protein,5000.0,,,Competitor 3,488.28125,nM,True
+F12,blank,,Protein,5000.0,,,Competitor 3,244.140625,nM,True
+F13,blank,,Protein,5000.0,,,Competitor 3,122.0703125,nM,True
+F14,blank,,Protein,5000.0,,,Competitor 3,61.03515625,nM,True
+F15,blank,,Protein,5000.0,,,Competitor 3,30.51757813,nM,True
+F16,blank,,Protein,5000.0,,,Competitor 3,15.25878906,nM,True
+F17,empty,,,,,,,,,True
+F18,empty,,,,,,,,,True
+F19,blank,,Protein,5000.0,,,Competitor 2,15625.0,nM,True
+F20,blank,,Protein,5000.0,,,Competitor 2,15625.0,nM,True
+F21,blank,,Protein,5000.0,,,Competitor 2,15625.0,nM,True
+F22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,15625.0,nM,True
+F23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,15625.0,nM,True
+F24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,15625.0,nM,True
+G1,blank,,Protein,5000.0,,,Competitor 3,500000.0,nM,True
+G2,blank,,Protein,5000.0,,,Competitor 3,250000.0,nM,True
+G3,blank,,Protein,5000.0,,,Competitor 3,125000.0,nM,True
+G4,blank,,Protein,5000.0,,,Competitor 3,62500.0,nM,True
+G5,blank,,Protein,5000.0,,,Competitor 3,31250.0,nM,True
+G6,blank,,Protein,5000.0,,,Competitor 3,15625.0,nM,True
+G7,blank,,Protein,5000.0,,,Competitor 3,7812.5,nM,True
+G8,blank,,Protein,5000.0,,,Competitor 3,3906.25,nM,True
+G9,blank,,Protein,5000.0,,,Competitor 3,1953.125,nM,True
+G10,blank,,Protein,5000.0,,,Competitor 3,976.5625,nM,True
+G11,blank,,Protein,5000.0,,,Competitor 3,488.28125,nM,True
+G12,blank,,Protein,5000.0,,,Competitor 3,244.140625,nM,True
+G13,blank,,Protein,5000.0,,,Competitor 3,122.0703125,nM,True
+G14,blank,,Protein,5000.0,,,Competitor 3,61.03515625,nM,True
+G15,blank,,Protein,5000.0,,,Competitor 3,30.51757813,nM,True
+G16,blank,,Protein,5000.0,,,Competitor 3,15.25878906,nM,True
+G17,empty,,,,,,,,,True
+G18,empty,,,,,,,,,True
+G19,blank,,Protein,5000.0,,,Competitor 2,7812.5,nM,True
+G20,blank,,Protein,5000.0,,,Competitor 2,7812.5,nM,True
+G21,blank,,Protein,5000.0,,,Competitor 2,7812.5,nM,True
+G22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,7812.5,nM,True
+G23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,7812.5,nM,True
+G24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,7812.5,nM,True
+H1,blank,,Protein,5000.0,,,Competitor 3,500000.0,nM,True
+H2,blank,,Protein,5000.0,,,Competitor 3,250000.0,nM,True
+H3,blank,,Protein,5000.0,,,Competitor 3,125000.0,nM,True
+H4,blank,,Protein,5000.0,,,Competitor 3,62500.0,nM,True
+H5,blank,,Protein,5000.0,,,Competitor 3,31250.0,nM,True
+H6,blank,,Protein,5000.0,,,Competitor 3,15625.0,nM,True
+H7,blank,,Protein,5000.0,,,Competitor 3,7812.5,nM,True
+H8,blank,,Protein,5000.0,,,Competitor 3,3906.25,nM,True
+H9,blank,,Protein,5000.0,,,Competitor 3,1953.125,nM,True
+H10,blank,,Protein,5000.0,,,Competitor 3,976.5625,nM,True
+H11,blank,,Protein,5000.0,,,Competitor 3,488.28125,nM,True
+H12,blank,,Protein,5000.0,,,Competitor 3,244.140625,nM,True
+H13,blank,,Protein,5000.0,,,Competitor 3,122.0703125,nM,True
+H14,blank,,Protein,5000.0,,,Competitor 3,61.03515625,nM,True
+H15,blank,,Protein,5000.0,,,Competitor 3,30.51757813,nM,True
+H16,blank,,Protein,5000.0,,,Competitor 3,15.25878906,nM,True
+H17,empty,,,,,,,,,True
+H18,empty,,,,,,,,,True
+H19,blank,,Protein,5000.0,,,Competitor 2,3906.25,nM,True
+H20,blank,,Protein,5000.0,,,Competitor 2,3906.25,nM,True
+H21,blank,,Protein,5000.0,,,Competitor 2,3906.25,nM,True
+H22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,3906.25,nM,True
+H23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,3906.25,nM,True
+H24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,3906.25,nM,True
+I1,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,500000.0,nM,True
+I2,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,250000.0,nM,True
+I3,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,125000.0,nM,True
+I4,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,62500.0,nM,True
+I5,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,31250.0,nM,True
+I6,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,15625.0,nM,True
+I7,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,7812.5,nM,True
+I8,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,3906.25,nM,True
+I9,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,1953.125,nM,True
+I10,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,976.5625,nM,True
+I11,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,488.28125,nM,True
+I12,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,244.140625,nM,True
+I13,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,122.0703125,nM,True
+I14,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,61.03515625,nM,True
+I15,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,30.51757813,nM,True
+I16,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,15.25878906,nM,True
+I17,empty,,,,,,,,,True
+I18,empty,,,,,,,,,True
+I19,blank,,Protein,5000.0,,,Competitor 2,1953.125,nM,True
+I20,blank,,Protein,5000.0,,,Competitor 2,1953.125,nM,True
+I21,blank,,Protein,5000.0,,,Competitor 2,1953.125,nM,True
+I22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,1953.125,nM,True
+I23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,1953.125,nM,True
+I24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,1953.125,nM,True
+J1,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,500000.0,nM,True
+J2,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,250000.0,nM,True
+J3,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,125000.0,nM,True
+J4,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,62500.0,nM,True
+J5,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,31250.0,nM,True
+J6,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,15625.0,nM,True
+J7,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,7812.5,nM,True
+J8,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,3906.25,nM,True
+J9,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,1953.125,nM,True
+J10,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,976.5625,nM,True
+J11,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,488.28125,nM,True
+J12,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,244.140625,nM,True
+J13,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,122.0703125,nM,True
+J14,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,61.03515625,nM,True
+J15,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,30.51757813,nM,True
+J16,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,15.25878906,nM,True
+J17,empty,,,,,,,,,True
+J18,empty,,,,,,,,,True
+J19,blank,,Protein,5000.0,,,Competitor 2,976.5625,nM,True
+J20,blank,,Protein,5000.0,,,Competitor 2,976.5625,nM,True
+J21,blank,,Protein,5000.0,,,Competitor 2,976.5625,nM,True
+J22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,976.5625,nM,True
+J23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,976.5625,nM,True
+J24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,976.5625,nM,True
+K1,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,500000.0,nM,True
+K2,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,250000.0,nM,True
+K3,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,125000.0,nM,True
+K4,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,62500.0,nM,True
+K5,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,31250.0,nM,True
+K6,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,15625.0,nM,True
+K7,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,7812.5,nM,True
+K8,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,3906.25,nM,True
+K9,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,1953.125,nM,True
+K10,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,976.5625,nM,True
+K11,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,488.28125,nM,True
+K12,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,244.140625,nM,True
+K13,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,122.0703125,nM,True
+K14,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,61.03515625,nM,True
+K15,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,30.51757813,nM,True
+K16,compound,,Protein,5000.0,Tracer,50.0,Competitor 4,15.25878906,nM,True
+K17,empty,,,,,,,,,True
+K18,empty,,,,,,,,,True
+K19,blank,,Protein,5000.0,,,Competitor 2,488.28125,nM,True
+K20,blank,,Protein,5000.0,,,Competitor 2,488.28125,nM,True
+K21,blank,,Protein,5000.0,,,Competitor 2,488.28125,nM,True
+K22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,488.28125,nM,True
+K23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,488.28125,nM,True
+K24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,488.28125,nM,True
+L1,blank,,Protein,5000.0,,,Competitor 4,500000.0,nM,True
+L2,blank,,Protein,5000.0,,,Competitor 4,250000.0,nM,True
+L3,blank,,Protein,5000.0,,,Competitor 4,125000.0,nM,True
+L4,blank,,Protein,5000.0,,,Competitor 4,62500.0,nM,True
+L5,blank,,Protein,5000.0,,,Competitor 4,31250.0,nM,True
+L6,blank,,Protein,5000.0,,,Competitor 4,15625.0,nM,True
+L7,blank,,Protein,5000.0,,,Competitor 4,7812.5,nM,True
+L8,blank,,Protein,5000.0,,,Competitor 4,3906.25,nM,True
+L9,blank,,Protein,5000.0,,,Competitor 4,1953.125,nM,True
+L10,blank,,Protein,5000.0,,,Competitor 4,976.5625,nM,True
+L11,blank,,Protein,5000.0,,,Competitor 4,488.28125,nM,True
+L12,blank,,Protein,5000.0,,,Competitor 4,244.140625,nM,True
+L13,blank,,Protein,5000.0,,,Competitor 4,122.0703125,nM,True
+L14,blank,,Protein,5000.0,,,Competitor 4,61.03515625,nM,True
+L15,blank,,Protein,5000.0,,,Competitor 4,30.51757813,nM,True
+L16,blank,,Protein,5000.0,,,Competitor 4,15.25878906,nM,True
+L17,empty,,,,,,,,,True
+L18,empty,,,,,,,,,True
+L19,blank,,Protein,5000.0,,,Competitor 2,244.140625,nM,True
+L20,blank,,Protein,5000.0,,,Competitor 2,244.140625,nM,True
+L21,blank,,Protein,5000.0,,,Competitor 2,244.140625,nM,True
+L22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,244.140625,nM,True
+L23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,244.140625,nM,True
+L24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,244.140625,nM,True
+M1,blank,,Protein,5000.0,,,Competitor 4,500000.0,nM,True
+M2,blank,,Protein,5000.0,,,Competitor 4,250000.0,nM,True
+M3,blank,,Protein,5000.0,,,Competitor 4,125000.0,nM,True
+M4,blank,,Protein,5000.0,,,Competitor 4,62500.0,nM,True
+M5,blank,,Protein,5000.0,,,Competitor 4,31250.0,nM,True
+M6,blank,,Protein,5000.0,,,Competitor 4,15625.0,nM,True
+M7,blank,,Protein,5000.0,,,Competitor 4,7812.5,nM,True
+M8,blank,,Protein,5000.0,,,Competitor 4,3906.25,nM,True
+M9,blank,,Protein,5000.0,,,Competitor 4,1953.125,nM,True
+M10,blank,,Protein,5000.0,,,Competitor 4,976.5625,nM,True
+M11,blank,,Protein,5000.0,,,Competitor 4,488.28125,nM,True
+M12,blank,,Protein,5000.0,,,Competitor 4,244.140625,nM,True
+M13,blank,,Protein,5000.0,,,Competitor 4,122.0703125,nM,True
+M14,blank,,Protein,5000.0,,,Competitor 4,61.03515625,nM,True
+M15,blank,,Protein,5000.0,,,Competitor 4,30.51757813,nM,True
+M16,blank,,Protein,5000.0,,,Competitor 4,15.25878906,nM,True
+M17,empty,,,,,,,,,True
+M18,empty,,,,,,,,,True
+M19,blank,,Protein,5000.0,,,Competitor 2,122.0703125,nM,True
+M20,blank,,Protein,5000.0,,,Competitor 2,122.0703125,nM,True
+M21,blank,,Protein,5000.0,,,Competitor 2,122.0703125,nM,True
+M22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,122.0703125,nM,True
+M23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,122.0703125,nM,True
+M24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,122.0703125,nM,True
+N1,blank,,Protein,5000.0,,,Competitor 4,500000.0,nM,True
+N2,blank,,Protein,5000.0,,,Competitor 4,250000.0,nM,True
+N3,blank,,Protein,5000.0,,,Competitor 4,125000.0,nM,True
+N4,blank,,Protein,5000.0,,,Competitor 4,62500.0,nM,True
+N5,blank,,Protein,5000.0,,,Competitor 4,31250.0,nM,True
+N6,blank,,Protein,5000.0,,,Competitor 4,15625.0,nM,True
+N7,blank,,Protein,5000.0,,,Competitor 4,7812.5,nM,True
+N8,blank,,Protein,5000.0,,,Competitor 4,3906.25,nM,True
+N9,blank,,Protein,5000.0,,,Competitor 4,1953.125,nM,True
+N10,blank,,Protein,5000.0,,,Competitor 4,976.5625,nM,True
+N11,blank,,Protein,5000.0,,,Competitor 4,488.28125,nM,True
+N12,blank,,Protein,5000.0,,,Competitor 4,244.140625,nM,True
+N13,blank,,Protein,5000.0,,,Competitor 4,122.0703125,nM,True
+N14,blank,,Protein,5000.0,,,Competitor 4,61.03515625,nM,True
+N15,blank,,Protein,5000.0,,,Competitor 4,30.51757813,nM,True
+N16,blank,,Protein,5000.0,,,Competitor 4,15.25878906,nM,True
+N17,empty,,,,,,,,,True
+N18,empty,,,,,,,,,True
+N19,blank,,Protein,5000.0,,,Competitor 2,61.03515625,nM,True
+N20,blank,,Protein,5000.0,,,Competitor 2,61.03515625,nM,True
+N21,blank,,Protein,5000.0,,,Competitor 2,61.03515625,nM,True
+N22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,61.03515625,nM,True
+N23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,61.03515625,nM,True
+N24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,61.03515625,nM,True
+O1,empty,,,,,,,,,True
+O2,empty,,,,,,,,,True
+O3,empty,,,,,,,,,True
+O4,empty,,,,,,,,,True
+O5,empty,,,,,,,,,True
+O6,empty,,,,,,,,,True
+O7,empty,,,,,,,,,True
+O8,empty,,,,,,,,,True
+O9,empty,,,,,,,,,True
+O10,empty,,,,,,,,,True
+O11,empty,,,,,,,,,True
+O12,empty,,,,,,,,,True
+O13,empty,,,,,,,,,True
+O14,empty,,,,,,,,,True
+O15,empty,,,,,,,,,True
+O16,empty,,,,,,,,,True
+O17,empty,,,,,,,,,True
+O18,empty,,,,,,,,,True
+O19,blank,,Protein,5000.0,,,Competitor 2,30.51757813,nM,True
+O20,blank,,Protein,5000.0,,,Competitor 2,30.51757813,nM,True
+O21,blank,,Protein,5000.0,,,Competitor 2,30.51757813,nM,True
+O22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,30.51757813,nM,True
+O23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,30.51757813,nM,True
+O24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,30.51757813,nM,True
+P1,empty,,,,,,,,,True
+P2,empty,,,,,,,,,True
+P3,empty,,,,,,,,,True
+P4,empty,,,,,,,,,True
+P5,empty,,,,,,,,,True
+P6,empty,,,,,,,,,True
+P7,empty,,,,,,,,,True
+P8,empty,,,,,,,,,True
+P9,empty,,,,,,,,,True
+P10,empty,,,,,,,,,True
+P11,empty,,,,,,,,,True
+P12,empty,,,,,,,,,True
+P13,empty,,,,,,,,,True
+P14,empty,,,,,,,,,True
+P15,empty,,,,,,,,,True
+P16,empty,,,,,,,,,True
+P17,empty,,,,,,,,,True
+P18,empty,,,,,,,,,True
+P19,blank,,Protein,5000.0,,,Competitor 2,15.25878906,nM,True
+P20,blank,,Protein,5000.0,,,Competitor 2,15.25878906,nM,True
+P21,blank,,Protein,5000.0,,,Competitor 2,15.25878906,nM,True
+P22,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,15.25878906,nM,True
+P23,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,15.25878906,nM,True
+P24,compound,,Protein,5000.0,Tracer,50.0,Competitor 2,15.25878906,nM,True
