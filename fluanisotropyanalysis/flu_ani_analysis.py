@@ -77,8 +77,9 @@ class FA:
         else:
             c_names_print = c_names
         
-        FA.final_fit = pd.DataFrame(index=pd.MultiIndex.from_product([p_names, t_names, c_names]), columns=col_names)  
-        FA.final_fit["lambda"] = 1   # set the default lambda value as 1
+        final_fit = pd.DataFrame(index=pd.MultiIndex.from_product([p_names, t_names, c_names]), columns=col_names)  
+        final_fit["lambda"] = 1   # set the default lambda value as 1
+        self.final_fit = final_fit  
             
         print("Data was uploaded!\n")
         print(f"Number of repeats: {len(self.data_dict)} \nValue of g-factor: {self.g_factor} \nOverall number of empty cells is {int(nan)} in {len(frames)} data frames.\nProteins: {p_names}\nTracers: {t_names}\nCompetitors: {c_names_print}\n")
@@ -611,12 +612,12 @@ class FA:
             # create data frame for storing the fitting params and set lambda value to 1
             cols = ['rmin','rmin error', 'rmax', f'rmax error', 'r_EC50', 'r_EC50 error', 'r_hill', 'r_hill error', 'Ifree', 
                     'Ifree error', 'Ibound', 'Ibound error', 'I_EC50', 'I_EC50 error', 'I_hill', 'I_hill error', 'lambda']   
-            data['fit_params'] = pd.DataFrame(index=FA.final_fit.index, columns=cols)   
+            data['fit_params'] = pd.DataFrame(index=self.final_fit.index, columns=cols)   
             data['fit_params']['lambda'] = 1
             
-            if set(FA.final_fit.index.get_level_values(2).unique()) != {'-'}:    # if it is a competition experiment create also data frme for storing the ic50 curve fitting params
+            if set(self.final_fit.index.get_level_values(2).unique()) != {'-'}:    # if it is a competition experiment create also data frme for storing the ic50 curve fitting params
                 cols_comp = ['min','min error', 'max', 'max error', 'IC50', 'IC50 error', 'hill', 'hill error']      
-                data['fit_params_com'] = pd.DataFrame(index=FA.final_fit.index, columns=cols_comp)
+                data['fit_params_com'] = pd.DataFrame(index=self.final_fit.index, columns=cols_comp)
         
         print('The mean anisotropy and intensity were successfully calculated.') 
        
@@ -673,9 +674,9 @@ class FA:
                     w_info.append(info)
 
         if approve == True:   # execute the function for displying and handling the widgets
-            return FA._widget(self.data_dict, w_info, df)
+            return FA._widget(self.data_dict, w_info, self.final_fit, df)
             
-    def _widget(data_dict, w_info, df):
+    def _widget(data_dict, w_info, final_fit, df):
         """Function for generating and displaying the widgets with lambda values.
         It generates widgets for each tuple in the w_info list.
         
@@ -683,6 +684,8 @@ class FA:
         :type data_dict: dict
         :param w_info: A list of tuples containg information needed for the generation of widgets
         :type w_info: list
+        :param final_fit: Data frame with final fitting parameters
+        :type final_fit: pandas df
         :param df: Data frame with calculated lambda values
         :type df: pandas df
         """
@@ -720,13 +723,13 @@ class FA:
                 
                 if lambdas[i].value == True:   # if the lambda checkbox was ticked, the widget's 'value' attribute is True 
                     if index not in added_lambda:   # if lambda for this protein-tracer pair has not yet been added 
-                        FA.final_fit.loc[index, "lambda"] = df.loc[index, "lambda"]   # add the calculated lambda to the final_fit df
-                        FA.final_fit.loc[index, cols] = data_dict[f'repeat_{reps[i].value[-1]}']['data']['fit_params'].loc[index, cols]   #add rmin, rmax and their errors to the final_fit df
+                        final_fit.loc[index, "lambda"] = df.loc[index, "lambda"]   # add the calculated lambda to the final_fit df
+                        final_fit.loc[index, cols] = data_dict[f'repeat_{reps[i].value[-1]}']['data']['fit_params'].loc[index, cols]   #add rmin, rmax and their errors to the final_fit df
                         added_lambda.append(index)  
                         
                 if rminmax[i].value == True:
                     if index not in added_lambda and index not in added_rminmax:   # if neither lambda nor rmin/rmax for this protein-tracer pair have been added 
-                        FA.final_fit.loc[index, cols] = data_dict[f'repeat_{reps[i].value[-1]}']['data']['fit_params'].loc[index, cols]
+                        final_fit.loc[index, cols] = data_dict[f'repeat_{reps[i].value[-1]}']['data']['fit_params'].loc[index, cols]
                         added_rminmax.append(index)
             
             print('Selected values were saved.')
@@ -741,17 +744,17 @@ class FA:
         The amount bound is calculated as a mean for all replicates for each protein, tracer or competitor concentration
         along with its standard deviation and standard error.
         """
-        ptc_list = list(FA.final_fit[FA.final_fit['rmin'].isna()].index)   # list of indexes for which rmin and rmax are not defined
+        ptc_list = list(self.final_fit[self.final_fit['rmin'].isna()].index)   # list of indexes for which rmin and rmax are not defined
         if ptc_list != []: 
             raise DataError(f"The 'rmin' and 'rmax' values are not defined for the following proteins and tracers: {ptc_list}.\nUse 'calc_lambda' function or 'set_fitparams' to choose 'rmin' and 'rmax' values.")
                             
         for key, value in self.data_dict.items():
             metadata, data = value.values()
-            data['amount_bound'] = FA._calc_amount_bound(data['r_corrected'], self.plate_map)   # create dictionary 'r_mean' with mean anisotropy data frames for each protein-tracer pair
+            data['amount_bound'] = FA._calc_amount_bound(data['r_corrected'], self.plate_map, self.final_fit)   # create dictionary 'r_mean' with mean anisotropy data frames for each protein-tracer pair
         
         print('The amount of fluorescent tracer bound was successfully calculated.')
             
-    def _calc_amount_bound(df, platemap):
+    def _calc_amount_bound(df, platemap, final_fit):
         """Calculates the amount from anisotropy data.
         
         :param df: Data frame with anisotropy values
@@ -765,7 +768,7 @@ class FA:
         subset = join_pm[(join_pm['Type'] != 'blank') & (join_pm['Type'] != 'empty')].fillna({'Competitor Name': '-'})   # take only non-blank and non-empty wells, in case of protein/tracer titration set competitor name as '-'
 
         re_idx = subset.set_index(pd.MultiIndex.from_frame(subset[['Protein Name','Tracer Name','Competitor Name']])).rename_axis([None,None,None])   # replace the index with multiindex (protein-tracer-competitor) and remove its names
-        join_ff = re_idx.join(FA.final_fit[['rmin','rmax','lambda']])   # join the final_fit df to the anisotropy df on multiindex
+        join_ff = re_idx.join(final_fit[['rmin','rmax','lambda']])   # join the final_fit df to the anisotropy df on multiindex
 
         # calcualte the amount bound (all parameters needed are already in the data frame)
         join_ff['mean'] = (((((join_ff["lambda"] * (join_ff['rmax']-join_ff['r_corrected'])) / (join_ff['r_corrected'] - join_ff['rmin']))) +1) **(-1)) * join_ff['Tracer Concentration']   
@@ -785,7 +788,7 @@ class FA:
         
         return split
     
-    def _calc_Ki(ptc, params_df, platemap):
+    def _calc_Ki(ptc, params_df, platemap, final_fit):
         """Calculates Ki, Ki* (based on the actual protein concentration determined from the ic50 plot) and their errors.
         
         :param ptc_pair: Tuple of 3 strings: protein, tracer and competitor name for which the Ki is calculated
@@ -798,7 +801,7 @@ class FA:
         :rtype: tuple
         """
         IC50, IC50_err, pmax = tuple(params_df.loc[ptc, ['IC50','IC50 error','max']])    # get IC50 and the upper asymptote of IC50 plot   
-        Kd, Kd_err = tuple(FA.final_fit.loc[ptc, ['Kd','Kd error']])     # get Kd and its error
+        Kd, Kd_err = tuple(final_fit.loc[ptc, ['Kd','Kd error']])     # get Kd and its error
         LT = float(platemap['Tracer Concentration'].dropna().unique())
         PT = float(platemap['Protein Concentration'].dropna().unique())
         PT_2 = ( (Kd*pmax) / (LT-pmax) ) + pmax    # protein conc calculated based on upper asymptote of IC50 plot
@@ -1026,9 +1029,9 @@ class FA:
                     params = FA._curve_fit(FA._LB, amount_b, t_type, 'ssb', **kwargs)
                     
                     if t_type == 'Protein':
-                        FA.final_fit.loc[ptc, ['Kd', 'Kd error', 'LT', 'LT error']] = params  
+                        self.final_fit.loc[ptc, ['Kd', 'Kd error', 'LT', 'LT error']] = params  
                     if t_type == 'Tarcer':
-                        FA.final_fit.loc[ptc, ['Kd', 'Kd error', 'PT', 'PT error']] = params
+                        self.final_fit.loc[ptc, ['Kd', 'Kd error', 'PT', 'PT error']] = params
                     
                 except RuntimeError as e:  
                     error_info = (rep, ptc, e)
@@ -1362,7 +1365,7 @@ class FA:
         
         print('The figures were successfully exported.')
     
-    def _plot_kd(data_df, ptc, t_type, err, rep, unit, exp, leg, dpi):
+    def _plot_kd(data_df, ptc, final_fit, t_type, err, rep, unit, exp, leg, dpi):
         """Plots amount bound against protein or tracer concentration with a fitted curve on a separate figure for a specific protein-tracer pair.
         
         :param data_df: Data frame with mean values of amount of tracer bound and their associated errors
@@ -1389,13 +1392,13 @@ class FA:
         
         # define the x axis data and labels for protein and tracer titration cases
         if t_type == 'Protein':   
-            LT, LTe, Kd, Kde = tuple(FA.final_fit.loc[ptc, ['LT','LT error','Kd','Kd error']]) 
+            LT, LTe, Kd, Kde = tuple(final_fit.loc[ptc, ['LT','LT error','Kd','Kd error']]) 
             text = '$L_{T}$ = ' + f'{LT:,.2f} \u00B1 {LTe:,.2f}\n' + '$K_{d}$ = ' + f'{Kd:,.2f} \u00B1 {Kde:,.2f}'  
             xlabel = f'[{ptc[0]}] ({unit})'
             params = (LT, Kd)
             
         if t_type == 'Tracer':
-            PT, PTe, Kd, Kde = tuple(FA.final_fit.loc[ptc, ['PT','PT error','Kd','Kd error']])
+            PT, PTe, Kd, Kde = tuple(final_fit.loc[ptc, ['PT','PT error','Kd','Kd error']])
             text = '$P_{T}$ = ' + f'{PT:,.2f} \u00B1 {PTe:,.2f}\n' + '$K_{d}$ = ' + f'{Kd:,.2f} \u00B1 {Kde:,.2f}'
             xlabel = f'[{ptc[1]}] ({unit})'
             params = (PT, Kd)
@@ -1422,7 +1425,7 @@ class FA:
         if type(exp) == str:   # save the figure to user defined directory
             fig.savefig(f"{exp}Kd_plot_rep_{rep[0][-1]}_{str(ptc[0])}_{str(ptc[1])}.png", dpi=dpi)
     
-    def _overlay_kd_plots(plate_map, data_dict, ptc_list, t_type, err, unit, exp, leg, dpi):   
+    def _overlay_kd_plots(plate_map, data_dict, ptc_list, final_fit, t_type, err, unit, exp, leg, dpi):   
         """Creates a figure with overlayed plots for specified protein-tracer pairs and repeats 
         
         :param plate_map: Platemap
@@ -1461,12 +1464,12 @@ class FA:
                 drop = data_df[ data_df[f'{t_type} Concentration'] != 0].dropna(subset=['mean'])   # exclude the protein concentration = 0 point and any NaNs from data fitting
                 
                 if t_type == 'Protein':  
-                    LT, LTe, Kd, Kde = tuple(FA.final_fit.loc[ptc, ['LT','LT error','Kd','Kd error']]) 
+                    LT, LTe, Kd, Kde = tuple(final_fit.loc[ptc, ['LT','LT error','Kd','Kd error']]) 
                     text = '$L_{T}$ = ' + f'{LT:,.2f} \u00B1 {LTe:,.2f}\n' + '$K_{d}$ = ' + f'{Kd:,.2f} \u00B1 {Kde:,.2f}'  
                     params = (LT, Kd)
                 
                 if t_type == 'Tracer':   
-                    PT, PTe, Kd, Kde = tuple(FA.final_fit.loc[ptc, ['PT','PT error','Kd','Kd error']])
+                    PT, PTe, Kd, Kde = tuple(final_fit.loc[ptc, ['PT','PT error','Kd','Kd error']])
                     text = '$P_{T}$ = ' + f'{PT:,.2f} \u00B1 {PTe:,.2f}\n' + '$K_{d}$ = ' + f'{Kd:,.2f} \u00B1 {Kde:,.2f}'
                     params = (PT, Kd)
                 
@@ -1535,9 +1538,9 @@ class FA:
                 
                 for ptc in ptc_list:    # iterate through the list of protein-tracer names to create a separate figure for each pair
                     data_df = data['amount_bound'][ptc]   # extract the correct df with amount bound for a given protein-tracer pair
-                    FA._plot_kd(data_df, ptc, t_type, err, rep, unit, export, legend, dpi)
+                    FA._plot_kd(data_df, ptc, self.final_fit, t_type, err, rep, unit, export, legend, dpi)
         else:
-            FA._overlay_kd_plots(self.plate_map, data_dict, ptc_list, t_type, err, unit, export, legend, dpi)
+            FA._overlay_kd_plots(self.plate_map, data_dict, ptc_list, self.final_fit, t_type, err, unit, export, legend, dpi)
         
     def _plot_ic50(data_df, params_df, ptc, err, rep, unit, exp, leg, dpi):
         """Plots amount bound against protein or tracer concentration with a fitted curve on a separate figure. 
@@ -1623,7 +1626,7 @@ class FA:
             
             for ptc in data['amount_bound'].keys():    # iterate through the list of protein-tracer names to create a separate figure for each pair
                 data_df = data['amount_bound'][ptc]   # extract the correct df with amount bound for a given protein-tracer pair
-                params = FA._calc_Ki(ptc, params_df, self.plate_map)    # calculate Ki, Ki* and LT
+                params = FA._calc_Ki(ptc, params_df, self.plate_map, self.final_fit)    # calculate Ki, Ki* and LT
                 params_df.loc[ptc, ['Ki','Ki error','Ki*','Ki* error']] = params[0:4]   # instert Ki into the fit_params_com df
                 
                 if key in data_dict.keys() and ptc in ptc_list:   # plot figures only for user specified proteins, tracersandcompetitors
@@ -1644,10 +1647,10 @@ class FA:
         wrong_cols = []
         
         for key, value in kwargs.items():   # iterate over the kwargs dictionary
-            if key not in FA.final_fit.columns:
+            if key not in self.final_fit.columns:
                 wrong_cols.append(key)
             else:
-                FA.final_fit.loc[(prot, trac), key] = value   # overwrite the parameters in fitting params df with all params passed as keyword arguments
+                self.final_fit.loc[(prot, trac), key] = value   # overwrite the parameters in fitting params df with all params passed as keyword arguments
         
         if wrong_cols != []:
             warnings.warn(f'No such columns in the final_fit data frame:\n{wrong_cols}')
@@ -1661,9 +1664,9 @@ class FA:
         :type file_type: 'str'
         """
         if file_type == 'csv':   # export as csv file
-            FA.final_fit.to_csv(path_or_buf=f"{path}final_fit_params.csv")
+            self.final_fit.to_csv(path_or_buf=f"{path}final_fit_params.csv")
         if file_type == 'excel':   # export as excel file
-            FA.final_fit.to_excel(excel_writer=f"{path}all_fit_params.xlsx", sheet_name="final_fit_params")
+            self.final_fit.to_excel(excel_writer=f"{path}all_fit_params.xlsx", sheet_name="final_fit_params")
     
         for key, value in self.data_dict.items():   #iterate over all repeats
             metadata, data = value.values()
@@ -1696,12 +1699,12 @@ class FA:
         else:   # no competitor name, so delete the first column containg only '-' 
             df.drop(df.columns[0], axis=1, inplace=True)
 
-        cols = df.columns.intersection(FA.final_fit.columns)   # columns common to imported df and final_fit df
+        cols = df.columns.intersection(self.final_fit.columns)   # columns common to imported df and final_fit df
 
         for index in list(df.index):   # iterate over the indexes of imported df
-            FA.final_fit.loc[index, cols] = df.loc[index, cols].tolist()   # overwrite the existing values in the final_fit df with the ones from imported df
+            self.final_fit.loc[index, cols] = df.loc[index, cols].tolist()   # overwrite the existing values in the final_fit df with the ones from imported df
 
-        col_diff = list(df.columns.difference(FA.final_fit.columns))   # list of clumns present in imported df but absent from final_fit df
+        col_diff = list(df.columns.difference(self.final_fit.columns))   # list of clumns present in imported df but absent from final_fit df
         if col_diff != []:   # display warning about missing columns in the final_fit
             warnings.warn(f"The final_fit data frame does not contain following columns:\n'{col_diff}'")
         
