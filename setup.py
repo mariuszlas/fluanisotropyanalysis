@@ -5,7 +5,7 @@ with open("README.md", "r") as rd:
 
 setuptools.setup(
         name='fluanisotropyanalysis',
-        version='1.0.0',
+        version='1.0.1',
         author='Mariusz Las, Stuart Warriner',
         author_email='mariusz.las@outlook.com, s.l.warriner@leeds.ac.uk',
         url = 'https://github.com/mariuszlas/Fluorescence-Anisotropy-Analysis',
@@ -20,5 +20,5 @@ setuptools.setup(
         ],
         python_requires='>=3.8',
         setup_requires=['wheel'],
-        install_requires=['platemapping']
+        install_requires=['platemapping>=2.0.0','pandas>=1.1.3','numpy>=1.19']
 )
