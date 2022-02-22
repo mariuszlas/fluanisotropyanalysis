@@ -12,6 +12,7 @@ The documentation of the `fluanisotropyanalysis` package can be accessed [here](
 A demonstrational Jupyter Notebook file with a step-by-step guide presenting the functionality and typical workflow can be accessed [here](https://github.com/mariuszlas/fluanisotropyanalysis/tree/main/docs/demo).
 
 ## Installation
+The package can be installed globally from the PyPI repository. Jupyter Notebook must already be installed as it is not included as a dependecy of this package.
 `pip install fluanisotropyanalysis`
 
 #### Dependencies
